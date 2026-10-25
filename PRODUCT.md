@@ -34,16 +34,19 @@ Leistungen (bestätigt):
 - Renovierungen
 
 Standort und Einsatzgebiet:
-- Firmensitz: 69181 Leimen (genaue Straße noch offen, nötig fürs Impressum)
-- Einsatzgebiet: Umkreis von etwa 40 km um Leimen; konkrete Orte noch zu bestätigen
+- Firmensitz: Julius-Becker-Straße 14, 69181 Leimen
+- Einsatzgebiet: Umkreis von etwa 40 km um Leimen. Auf der Website nur die wichtigsten Orte nennen, keine lange Liste: Leimen, Heidelberg, Mannheim, Wiesloch, Walldorf, Schwetzingen, Hockenheim, Sinsheim, Speyer – „und Umgebung“.
+
+Impressum:
+- Inhaber: Besim Kameri
+- Anschrift: Julius-Becker-Straße 14, 69181 Leimen
+- USt-IdNr.: DE363727089
 
 Kontakt:
 - Telefon: 0152 36695793 (Link: `tel:+4915236695793`)
 - E-Mail: kameribau@hotmail.com
 
 Offen:
-- Genaue Adresse und Angaben für das Impressum (Inhaber, ggf. USt-IdNr.)
-- Liste der Orte im Einsatzgebiet
 - Alleinstellungsmerkmale
 - Hosting
 
@@ -51,12 +54,12 @@ Sprache der Website: Deutsch.
 
 ## Brand Commitments
 
-Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ ist der Name von Repository und E-Mail-Adresse, nicht der Markenname auf der Website. Ein bestehendes Logo ist vorhanden (Datei noch nicht im Repository).
+Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ ist der Name von Repository und E-Mail-Adresse, nicht der Markenname auf der Website. Ein bestehendes Logo ist vorhanden (gehört nach `bilder/`).
 
 ## Evidence on Hand
 
-- Logo: vorhanden, noch nicht hochgeladen.
-- Projektfotos: echte Fotos abgeschlossener Projekte vorhanden, noch nicht hochgeladen.
+- Logo: vorhanden, kommt nach `bilder/`.
+- Projektfotos: echte Fotos abgeschlossener Projekte vorhanden, kommen nach `bilder/projekte/`.
 - Kundenstimmen, Zahlen, Zertifikate, Auszeichnungen: **keine vorhanden** – nicht erfinden.
 
 ## Product Principles
