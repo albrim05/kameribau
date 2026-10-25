@@ -31,6 +31,9 @@
   --flaeche: #f4f4f3;
   --flaeche-tief: #e6e6e4;
   --linie: #d6d6d3;
+  --feldrand: #8c8c89;
+  --platzhalter: #6f6f6d;
+  --scrollleiste: #b9b9b6;
   --tinte: #1f1f1f;
   --text: #3a3a3a;
   --leise: #676765;
@@ -70,7 +73,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--kopf-hoehe) + 16px);
-  scrollbar-color: #b9b9b6 var(--flaeche);
+  scrollbar-color: var(--scrollleiste) var(--flaeche);
 }
 
 body {
@@ -303,7 +306,7 @@ summary {
 
 .marke img {
   width: auto;
-  height: 56px;
+  height: 64px;
 }
 
 .navi {
@@ -339,18 +342,19 @@ summary {
   gap: 10px;
   min-height: 48px;
   padding: 0 18px;
-  background: var(--flaeche);
-  color: var(--tinte);
+  background: var(--rot);
+  color: var(--weiss);
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
   transition: background-color 180ms ease, transform 140ms var(--ease-out);
 }
 
 .kopf-telefon svg {
   width: 19px;
   height: 19px;
-  color: var(--rot);
 }
 
 .kopf-telefon:active {
@@ -365,7 +369,7 @@ summary {
     transform: scaleX(1);
   }
   .kopf-telefon:hover {
-    background: var(--flaeche-tief);
+    background: var(--rot-tief);
   }
 }
 
@@ -485,17 +489,17 @@ summary {
 }
 
 .leistung ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: 4px 32px;
   margin-top: 18px;
+  padding-left: 1.1em;
+  list-style: square;
+  color: var(--leise);
 }
 
-.leistung li {
-  padding: 5px 12px;
-  background: var(--flaeche);
-  font-size: var(--t-klein);
-  color: var(--text);
+.leistung li::marker {
+  color: var(--rot);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -538,6 +542,11 @@ summary {
   max-width: 42ch;
   margin: 20px 0 32px;
   font-size: var(--t-lead);
+}
+
+.kostenlos .textlink {
+  display: inline-block;
+  padding-block: 12px;
 }
 
 /* Ablauf */
@@ -667,6 +676,24 @@ summary {
   color: var(--rot);
 }
 
+.ortcheck-antwort.ja {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ortcheck-antwort.ja svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: var(--rot);
+}
+
+.ortcheck-antwort.weit {
+  color: var(--text);
+  font-weight: 400;
+}
+
 .karte svg {
   width: 100%;
   max-width: 560px;
@@ -692,6 +719,17 @@ summary {
 .abschnitt-kopf-schmal {
   display: block;
   margin-bottom: 0;
+}
+
+.fragen-hinweis {
+  margin-top: 20px;
+  max-width: 28ch;
+}
+
+.fragen-hinweis .textlink {
+  color: var(--tinte);
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .fragen {
@@ -855,7 +893,7 @@ textarea {
   width: 100%;
   min-height: 52px;
   padding: 12px 14px;
-  border: 1.5px solid var(--linie);
+  border: 1.5px solid var(--feldrand);
   border-radius: 0;
   background: var(--weiss);
   color: var(--tinte);
@@ -870,7 +908,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: #6f6f6d;
+  color: var(--platzhalter);
 }
 
 input:focus,
@@ -880,7 +918,8 @@ textarea:focus {
   border-color: var(--tinte);
 }
 
-[aria-invalid="true"] {
+[aria-invalid="true"],
+[aria-invalid="true"]:focus {
   border-color: var(--rot);
 }
 
@@ -888,12 +927,10 @@ textarea:focus {
   input:hover,
   select:hover,
   textarea:hover {
-    border-color: #b3b3b0;
-  }
-  input:focus:hover,
-  select:focus:hover,
-  textarea:focus:hover {
     border-color: var(--tinte);
+  }
+  [aria-invalid="true"]:hover {
+    border-color: var(--rot);
   }
 }
 
@@ -916,6 +953,48 @@ textarea:focus {
 .formular-status {
   color: var(--tinte);
   font-weight: 600;
+}
+
+.formular-status.fehlgeschlagen {
+  color: var(--rot-tief);
+}
+
+.formular-status a {
+  color: inherit;
+}
+
+.formular[aria-busy="true"] button[type="submit"] {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.falle {
+  position: absolute;
+  width: 1px;
+  height: 1px; /* taste-skill-ignore: unsichtbare Spam-Falle */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formular-danke {
+  display: grid;
+  gap: 12px;
+  padding: clamp(28px, 3.5vw, 44px);
+  background: var(--weiss);
+  color: var(--text);
+}
+
+.formular-danke h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.formular-danke svg {
+  width: 26px;
+  height: 26px;
+  color: var(--rot);
 }
 
 /* ---------- Fuß ---------- */
@@ -947,6 +1026,12 @@ textarea:focus {
 .fuss a {
   text-decoration: none;
   transition: color 180ms ease;
+}
+
+.fuss-links a {
+  display: block;
+  width: fit-content;
+  padding-block: 3px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -981,13 +1066,13 @@ textarea:focus {
     animation: bild-ruhe 1400ms var(--ease-soft) both;
   }
 
-  .js [data-zeigen] {
+  .bewegung [data-zeigen] {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-out);
     transition-delay: var(--verzug, 0ms);
   }
-  .js [data-zeigen].ist-da {
+  .bewegung [data-zeigen].ist-da {
     opacity: 1;
     transform: none;
   }
@@ -1051,6 +1136,10 @@ textarea:focus {
   .kostenlos-bild {
     min-height: 0;
     aspect-ratio: 16 / 10;
+    order: 2;
+  }
+  .kunden-bild {
+    order: 2;
   }
   .kostenlos-text {
     padding: 48px var(--rand);
@@ -1068,7 +1157,7 @@ textarea:focus {
     --kopf-hoehe: 68px;
   }
   .marke img {
-    height: 44px;
+    height: 50px;
   }
   .kopf-telefon {
     width: 48px;
@@ -1109,6 +1198,12 @@ textarea:focus {
   .orte {
     grid-template-columns: 1fr;
   }
+  .karte {
+    display: none;
+  }
+  .fuss-links a {
+    padding-block: 11px;
+  }
   .feld-reihe {
     grid-template-columns: 1fr;
   }
@@ -1130,6 +1225,7 @@ textarea:focus {
     gap: 8px;
     padding: 10px var(--rand) calc(10px + env(safe-area-inset-bottom, 0px));
     background: var(--weiss);
+    transition: transform 240ms var(--ease-out), visibility 0s linear 0s;
     /* schwebende Leiste über dem Inhalt */
     box-shadow: 0 -10px 30px -18px rgb(0 0 0 / 0.4); /* taste-skill-ignore */
   }
@@ -1151,6 +1247,11 @@ textarea:focus {
   .leiste svg {
     width: 20px;
     height: 20px;
+  }
+  .leiste.weg {
+    transform: translateY(110%);
+    visibility: hidden;
+    transition: transform 200ms var(--ease-out), visibility 0s linear 200ms;
   }
   .leiste-anruf {
     background: var(--rot);
@@ -1207,6 +1308,10 @@ textarea:focus {
   .ortcheck,
   .formular {
     display: none;
+  }
+  [data-zeigen] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 

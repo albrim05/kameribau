@@ -6,6 +6,7 @@ colors:
   flaeche: "#f4f4f3"
   flaeche-tief: "#e6e6e4"
   linie: "#d6d6d3"
+  feldrand: "#8c8c89"
   tinte: "#1f1f1f"
   text: "#3a3a3a"
   leise: "#676765"
@@ -93,11 +94,12 @@ components:
     rounded: "{rounded.keine}"
     padding: "12px 14px"
     height: "52px"
-  chip:
-    backgroundColor: "{colors.flaeche}"
-    textColor: "{colors.text}"
+  kopf-telefon:
+    backgroundColor: "{colors.rot}"
+    textColor: "{colors.weiss}"
     rounded: "{rounded.keine}"
-    padding: "5px 12px"
+    padding: "0 18px"
+    height: "48px"
 ---
 
 # Design System: Kameri – alles rund ums Haus
@@ -112,7 +114,7 @@ Der Inhaber hat diesen Stil gewählt („modern und hochwertig“) und zwei frü
 
 **Key Characteristics:**
 - Geteilter Start: Text links, hohes Foto rechts bis an den Rand
-- Leistungen als 2×2-Raster mit großen Fotos, Text und kleinen Stichwort-Chips
+- Leistungen als 2×2-Raster mit großen Fotos, Text und einer kurzen Stichwortliste
 - Flächen in Hellgrau statt Linien, ein dunkler Kontaktbereich
 - Telefon überall erreichbar, am Handy als feste Leiste unten
 
@@ -145,7 +147,7 @@ Der Inhaber hat diesen Stil gewählt („modern und hochwertig“) und zwei frü
 
 ## Layout
 
-Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand `clamp(80px, 10vw, 140px)`. Kopf klebt oben (84px, Handy 68px). Ab 860px stapeln sich alle Zweispalter; am Handy kommt erst der Text, dann das Foto, und eine feste Leiste unten bietet Anrufen und WhatsApp.
+Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand `clamp(80px, 10vw, 140px)`. Kopf klebt oben (84px, Handy 68px). Ab 860px stapeln sich alle Zweispalter; am Handy kommt erst der Text, dann das Foto, die Karte entfällt (die Ortsliste reicht), und eine feste Leiste unten bietet Anrufen und WhatsApp. Sie weicht, solange die Start-Knöpfe oder der Kontaktbereich sichtbar sind oder im Formular getippt wird.
 
 ## Elevation & Depth
 
@@ -161,14 +163,14 @@ Eckig: Knöpfe, Felder, Fotos und Chips ohne Rundung.
 - **Rot**: Hauptaktion (Anrufen, Anfrage senden). **Rahmen**: Nebenaktion (WhatsApp). **Dunkel**: Formular-Knopf auf heller Fläche. **Hell**: Rahmenknopf auf dunklem Grund.
 - Drücken: `scale(0.97)` in 140ms; Hover nur bei Maus.
 
-### Chips
-Kleine Stichworte unter jeder Leistung, hellgrau, eckig, 15px.
+### Stichwortliste
+Unter jeder Leistung eine zweispaltige Liste mit roten Quadrat-Markern in Leise-Grau. Keine Kästchen, damit nichts wie ein Knopf aussieht.
 
 ### Inputs / Fields
-52px, 1.5px Rand in Linie-Grau, Fokus in Tinte, Fehler in Rot mit Text darunter, Schrift 17px (kein Zoom auf iOS).
+52px, 1.5px Rand in Feldrand-Grau (#8c8c89, ausreichend Kontrast), Fokus in Tinte, Fehler in Rot (auch im Fokus) mit Text darunter, Schrift 17px (kein Zoom auf iOS). Das Anfrageformular sendet über Web3Forms, sobald ein Schlüssel in `seite.js` steht; bis dahin öffnet es das E-Mail-Programm.
 
 ### Navigation
-Logo links, fünf Ankerlinks mit roter Unterstreichung beim Hover, Telefon-Knopf rechts. Unter 960px nur Logo und Telefon.
+Logo links (64px hoch, Handy 50px), fünf Ankerlinks mit roter Unterstreichung beim Hover, roter Telefon-Knopf rechts. Unter 960px nur Logo und Telefon.
 
 ### Fragen
 `details`-Felder auf Hellgrau mit Plus, das sich beim Öffnen zum Kreuz dreht.
