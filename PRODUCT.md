@@ -65,8 +65,12 @@ Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ is
 ## Evidence on Hand
 
 - Logo: `bilder/400PngdpiLogo.png`.
-- Projektfotos: echte Fotos vorhanden, werden **später** in `bilder/projekte/` nachgereicht. Bis dahin muss die Website ohne Projektfotos vollständig und glaubwürdig wirken – keine Stockfotos als Ersatz für eigene Projekte, der Fotobereich lässt sich später ohne Umbau befüllen.
+- Projektfotos: echte Fotos vorhanden, werden **später** in `bilder/projekte/` nachgereicht. Bis dahin nutzt die Website auf Wunsch des Inhabers Unsplash-Beispielfotos (`bilder/fotos/`, im Fuß als Beispielbilder gekennzeichnet). Sie werden nie als eigene Projekte ausgegeben und später durch echte Fotos ersetzt.
 - Kundenstimmen, Zahlen, Zertifikate, Auszeichnungen: **keine vorhanden** – nicht erfinden.
+
+## Look
+
+Vom Inhaber gewählt: modern und hochwertig. Weißer Grund, große Fotos, ruhige Typografie, Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift.
 
 ## Voice
 
@@ -75,6 +79,6 @@ Kurze, konkrete Sätze im Ton des Inhabers. Kein Werbesprech, keine glatten KI-F
 ## Product Principles
 
 1. Trockenbau steht vorn; die übrigen Leistungen ergänzen ihn, ohne ihn zu verdrängen.
-2. Echte Arbeit zeigen: Projektfotos sind der stärkste Beweis, keine Stockbilder als Ersatz für eigene Projekte.
+2. Echte Arbeit zeigen: Projektfotos sind der stärkste Beweis. Beispielfotos sind nur Übergang und werden nicht als eigene Projekte ausgegeben.
 3. Privat- und Geschäftskunden finden beide schnell ihren Weg zur Anfrage.
 4. Nur belegbare Aussagen – keine erfundenen Bewertungen, Jahreszahlen oder Versprechen.

@@ -1,12 +1,21 @@
+// Kopf bekommt beim Scrollen einen Schatten
+(function () {
+  var kopf = document.querySelector(".kopf");
+  if (!kopf) return;
+  function pruefe() { kopf.classList.toggle("gescrollt", window.scrollY > 8); }
+  window.addEventListener("scroll", pruefe, { passive: true });
+  pruefe();
+})();
+
 // Abschnitte einblenden, sobald sie ins Bild kommen (einmal, Teile nacheinander)
 (function () {
-  var teile = document.querySelectorAll("[data-reveal]");
-  var gruppen = new Map();
+  var teile = document.querySelectorAll("[data-zeigen]");
+  var zaehler = new Map();
   teile.forEach(function (el) {
-    var abschnitt = el.closest("section, header") || document.body;
-    var n = gruppen.get(abschnitt) || 0;
-    el.style.setProperty("--verzug", Math.min(n, 6) * 80 + "ms");
-    gruppen.set(abschnitt, n + 1);
+    var eltern = el.parentElement;
+    var n = zaehler.get(eltern) || 0;
+    el.style.setProperty("--verzug", Math.min(n, 4) * 70 + "ms");
+    zaehler.set(eltern, n + 1);
   });
 
   if (!("IntersectionObserver" in window)) {
@@ -22,30 +31,6 @@
     });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
   teile.forEach(function (el) { beobachter.observe(el); });
-})();
-
-// Leistungen: die Gruppe unter dem Zeiger erklärt sich in der rechten Spalte
-(function () {
-  var tafel = document.querySelector(".tafel-text");
-  var gruppen = document.querySelectorAll(".gruppe");
-  if (!tafel || !gruppen.length) return;
-
-  function zeige(gruppe) {
-    gruppen.forEach(function (g) { g.classList.toggle("ist-aktiv", g === gruppe); });
-    var text = gruppe.querySelector(".gruppe-satz").textContent;
-    if (tafel.textContent === text) return;
-    tafel.classList.add("wechselt");
-    setTimeout(function () {
-      tafel.textContent = text;
-      tafel.classList.remove("wechselt");
-    }, 160);
-  }
-
-  gruppen.forEach(function (g) {
-    g.addEventListener("mouseenter", function () { zeige(g); });
-    g.addEventListener("focus", function () { zeige(g); });
-  });
-  gruppen[0].classList.add("ist-aktiv");
 })();
 
 // Kommen Sie zu mir? Entfernung ab Leimen (Luftlinie)

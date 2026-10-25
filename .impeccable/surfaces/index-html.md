@@ -7,20 +7,20 @@ related_targets: []
 
 # Startseite (index.html)
 
-Modus: Persuade. Onepager plus Impressum und Datenschutz. Neu gestaltet, nachdem der Inhaber die erste Fassung (Gipskarton-Platten, Punkte, Kästen, Werbetexte) abgelehnt hat. Aufgebaut mit dem Skill design-taste-frontend (Richtung „The name as a monument“, Hero „Name under a photograph“, Seed 1764860778).
+Modus: Persuade. Onepager plus Impressum und Datenschutz. Dritte Fassung: Der Inhaber hat „modern und hochwertig“ gewählt und Stockfotos freigegeben. Frühere Richtungen (Gipskarton-Motive; Name als Riesenschrift) sind ausdrücklich abgelehnt.
 
-Besucher: Privat- und Geschäftskunden im Umkreis von ca. 40 km um Leimen. Handlung: anrufen, WhatsApp, E-Mail oder Formular. Projektfotos folgen; bis dahin Zeichnungen (bilder/wand.svg, bilder/wandaufbau.svg) an ihrer Stelle. Texte kurz und im Ton des Inhabers.
+Besucher: Privat- und Geschäftskunden im Umkreis von ca. 40 km um Leimen. Handlung: anrufen (primär), WhatsApp, Formular. Unsplash-Beispielfotos in bilder/fotos/ bis eigene Fotos kommen.
 
 ## Direction contract
 
-THESIS: Der Familienname ist das Denkmal: „Kameri“ in Logorot über die ganze Breite, darüber das Bild der Arbeit. Abgelehnt wird die Handwerker-Vorlage mit Foto-Slider, Icon-Karten und Werbesätzen.
+THESIS: Der fertige Raum: helle, ruhige Seite mit großen Fotos fertiger Innenräume; der Besucher sieht das Ergebnis, nicht die Baustelle. Abgelehnt werden auffällige Konzeptideen, die der Inhaber nicht will.
 
-OWN-WORLD: Weißer Grund, Tinte #2e2e2e, Logorot #c2262b auf Name, Hauptknopf und einem ganzen Feld; helles Grau als Tonstufe; keine Linien, Schatten, Verläufe. Source Sans 3, fünf Größen, eckige Knöpfe.
+OWN-WORLD: Weiß, Hellgrau #f4f4f3, Tinte #1f1f1f, Logorot #c2262b nur für Handlungen; Source Sans 3 leicht (300) für große, 600 für kleine Überschriften; eckige Knöpfe; keine Linien als Trenner, Schatten nur auf schwebenden Leisten.
 
-STORY: Was macht die Firma (Trockenbau, Umbau, Böden, Renovierung), wie läuft es ab (bis zur Zusage 0,00 €), kommt sie zu mir (Ortszeilen und Ort-Check), wie erreiche ich sie.
+STORY: Was (Trockenbau und Innenausbau), kostenlos bis zur Zusage, wie es abläuft, für wen, wo, häufige Fragen, Kontakt.
 
-FIRST VIEWPORT: Weiße Leiste mit Logo und vier Links; Bild über die volle Breite; darunter links der Satz, rechts der rote Knopf „0152 36695793 anrufen“ und „oder per WhatsApp“; unten „Kameri“ über die ganze Breite. Am Handy: Bild, Name, Satz, Knopf.
+FIRST VIEWPORT: Kopf mit Logo links, fünf Links, Telefon-Knopf rechts. Links „Trockenbau in Leimen“, Satz, roter Knopf „0152 36695793 anrufen“, Rahmenknopf WhatsApp, drei Haken; rechts hohes Foto eines renovierten Flurs bis an den Rand.
 
-FORM: The name as a monument (design-taste-frontend), Hero neu gezogen auf „Name under a photograph“, weil der einsilbige Name nicht geteilt werden soll und keine Fotos vorliegen. seed: none (unavailable) für impeccable; Taste-Seed 1764860778.
+FORM: Vom Inhaber gewählt (Modern und hochwertig), kein gewürfelter Entwurf. seed: none (unavailable)
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

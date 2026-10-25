@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-25T19:27:11.759179+00:00",
+  "generatedAt": "2026-10-25T19:49:47.606207+00:00",
   "title": "Design System: Kameri – alles rund ums Haus",
   "extensions": {
     "colorMeta": {
@@ -11,7 +11,7 @@
           "#3d0b0d",
           "#5e1114",
           "#80171b",
-          "#a01e22",
+          "#a41f24",
           "#c2262b",
           "#d9575b",
           "#ea9396",
@@ -22,90 +22,91 @@
         "role": "neutral",
         "displayName": "Tinte",
         "tonalRamp": [
-          "#1a1a1a",
-          "#242424",
-          "#2e2e2e",
-          "#4a4a4a",
-          "#66625d",
-          "#8c8a87",
-          "#bdbbb8",
-          "#ececea"
+          "#141414",
+          "#1f1f1f",
+          "#2c2c2c",
+          "#3a3a3a",
+          "#676765",
+          "#8f8f8d",
+          "#c4c4c2",
+          "#ededeb"
         ]
       },
-      "feld": {
+      "flaeche": {
         "role": "neutral",
-        "displayName": "Feld",
+        "displayName": "Fläche",
         "tonalRamp": [
-          "#2a2c2c",
-          "#4b4e4e",
-          "#727676",
-          "#a2a6a6",
-          "#c9cccc",
-          "#dfe1e1",
-          "#eeefef",
+          "#2b2b2a",
+          "#4c4c4b",
+          "#737372",
+          "#a3a3a1",
+          "#cfcfcd",
+          "#e6e6e4",
+          "#f4f4f3",
           "#ffffff"
         ]
       }
     },
     "typographyMeta": {
-      "denkmal": {
-        "displayName": "Denkmal",
-        "purpose": "Nur „Kameri“ im Kopf und im Fuß, auf die Breite gesetzt."
+      "h1": {
+        "displayName": "H1",
+        "purpose": "Nur die Startüberschrift."
       },
-      "plakat": {
-        "displayName": "Plakat",
-        "purpose": "Ortszeilen im Einsatzgebiet."
+      "nummer": {
+        "displayName": "Telefonnummer",
+        "purpose": "Große Nummer im Kontaktbereich."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "schwebend",
+        "value": "0 1px 0 rgb(0 0 0 / 0.05), 0 10px 30px -18px rgb(0 0 0 / 0.35)",
+        "purpose": "Kopf nach dem Scrollen, Leiste am Handy."
+      }
+    ],
     "motion": [
       {
-        "name": "ease-expo",
-        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Einblenden der Abschnittsteile, Ankunft des Namens."
-      },
-      {
         "name": "ease-out",
-        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "Drücken und Hover."
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Einblenden, Drücken, Unterstreichung."
       },
       {
         "name": "ease-soft",
         "value": "cubic-bezier(0.33, 1, 0.68, 1)",
-        "purpose": "Bild im Kopf zoomt beim Laden langsam zurück."
+        "purpose": "Langsamer Zoom auf Fotos."
       }
     ],
     "breakpoints": [
       {
         "name": "handy",
-        "value": "640px"
+        "value": "720px"
       },
       {
         "name": "tablet",
         "value": "860px"
       },
       {
-        "name": "schmal",
-        "value": "1100px"
+        "name": "navi",
+        "value": "960px"
       }
     ]
   },
   "components": [
     {
-      "name": "Knopf",
+      "name": "Roter Knopf",
       "kind": "button",
-      "refersTo": "knopf",
-      "description": "Hauptaktion: Anrufen, Senden.",
-      "html": "<a class=\"ds-knopf\" href=\"#\">0152 36695793 anrufen</a>",
-      "css": ".ds-knopf{display:inline-flex;align-items:center;min-height:52px;padding:14px 24px;background:#c2262b;color:#fff;font:600 18px/1 'Source Sans 3',system-ui,sans-serif;text-decoration:none;transition:transform 140ms cubic-bezier(.22,1,.36,1),background-color 180ms ease}.ds-knopf:hover{background:#a01e22}.ds-knopf:active{transform:scale(.97)}.ds-knopf:focus-visible{outline:3px solid #c2262b;outline-offset:3px}"
+      "refersTo": "knopf-rot",
+      "description": "Hauptaktion: Anrufen, Anfrage senden.",
+      "html": "<a class=\"ds-knopf-rot\" href=\"#\">0152 36695793 anrufen</a>",
+      "css": ".ds-knopf-rot{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;background:#c2262b;color:#fff;font:600 17px/1 'Source Sans 3',system-ui,sans-serif;text-decoration:none;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 180ms ease}.ds-knopf-rot:hover{background:#a41f24}.ds-knopf-rot:active{transform:scale(.97)}.ds-knopf-rot:focus-visible{outline:2px solid #c2262b;outline-offset:3px}"
     },
     {
-      "name": "Heller Knopf",
+      "name": "Rahmenknopf",
       "kind": "button",
-      "refersTo": "knopf-hell",
-      "description": "Knopf auf dem roten Feld.",
-      "html": "<div style=\"background:#c2262b;padding:24px\"><button class=\"ds-knopf-hell\">Prüfen</button></div>",
-      "css": ".ds-knopf-hell{min-height:52px;padding:14px 24px;border:0;background:#fff;color:#c2262b;font:600 18px/1 'Source Sans 3',system-ui,sans-serif;cursor:pointer;transition:background-color 180ms ease,color 180ms ease}.ds-knopf-hell:hover{background:#2e2e2e;color:#f3f3f2}.ds-knopf-hell:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+      "refersTo": "knopf-rahmen",
+      "description": "Nebenaktion: WhatsApp.",
+      "html": "<a class=\"ds-knopf-rahmen\" href=\"#\">WhatsApp schreiben</a>",
+      "css": ".ds-knopf-rahmen{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border:1.5px solid #1f1f1f;color:#1f1f1f;font:600 17px/1 'Source Sans 3',system-ui,sans-serif;text-decoration:none;transition:background-color 180ms ease,color 180ms ease,transform 140ms cubic-bezier(.23,1,.32,1)}.ds-knopf-rahmen:hover{background:#1f1f1f;color:#fff}.ds-knopf-rahmen:active{transform:scale(.97)}"
     },
     {
       "name": "Eingabefeld",
@@ -113,63 +114,62 @@
       "refersTo": "eingabefeld",
       "description": "Formularfeld, eckig, Fokus in Tinte.",
       "html": "<label class=\"ds-feld\"><span>Name</span><input type=\"text\"></label>",
-      "css": ".ds-feld{display:flex;flex-direction:column;gap:6px;font:600 18px 'Source Sans 3',system-ui,sans-serif;color:#2e2e2e}.ds-feld input{min-height:52px;padding:12px 14px;border:2px solid #dfe1e1;border-radius:0;background:#fff;font:400 18px 'Source Sans 3',system-ui,sans-serif;color:#2e2e2e}.ds-feld input:hover{border-color:#b9b4ad}.ds-feld input:focus{outline:none;border-color:#2e2e2e}"
+      "css": ".ds-feld{display:flex;flex-direction:column;gap:6px;font:600 15px 'Source Sans 3',system-ui,sans-serif;color:#1f1f1f}.ds-feld input{min-height:52px;padding:12px 14px;border:1.5px solid #d6d6d3;border-radius:0;font:400 17px 'Source Sans 3',sans-serif;color:#1f1f1f}.ds-feld input:hover{border-color:#b3b3b0}.ds-feld input:focus{outline:none;border-color:#1f1f1f}"
     },
     {
       "name": "Navigation",
       "kind": "nav",
-      "description": "Vier Links mit roter Unterstreichung beim Hover.",
-      "html": "<nav class=\"ds-navi\"><a href=\"#\">Leistungen</a><a href=\"#\">Ablauf</a><a href=\"#\">Einsatzgebiet</a><a href=\"#\">Kontakt</a></nav>",
-      "css": ".ds-navi{display:flex;gap:28px;font:600 15px 'Source Sans 3',system-ui,sans-serif}.ds-navi a{color:#2e2e2e;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:.25em;transition:text-decoration-color 180ms ease}.ds-navi a:hover{text-decoration-color:#c2262b}.ds-navi a:focus-visible{outline:3px solid #c2262b;outline-offset:3px}"
+      "description": "Ankerlinks mit roter Unterstreichung, die von links einläuft.",
+      "html": "<nav class=\"ds-navi\"><a href=\"#\">Leistungen</a><a href=\"#\">Ablauf</a><a href=\"#\">Kontakt</a></nav>",
+      "css": ".ds-navi{display:flex;gap:32px;font:400 17px 'Source Sans 3',sans-serif}.ds-navi a{position:relative;padding:8px 0;color:#3a3a3a;text-decoration:none}.ds-navi a::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:2px;background:#c2262b;transform:scaleX(0);transform-origin:left;transition:transform 240ms cubic-bezier(.23,1,.32,1)}.ds-navi a:hover{color:#1f1f1f}.ds-navi a:hover::after{transform:scaleX(1)}"
     },
     {
-      "name": "Beleg",
-      "kind": "custom",
-      "description": "Ablauf als Quittung mit Zackenkante.",
-      "html": "<div class=\"ds-beleg-grund\"><div class=\"ds-beleg\"><b>Ihr Auftrag bei Kameri</b><p><span>Beratung</span><i></i><b>0,00 €</b></p><p class=\"ds-summe\"><span>Bis zu Ihrer Zusage</span><b>0,00 €</b></p></div></div>",
-      "css": ".ds-beleg-grund{background:#eeefef;padding:32px}.ds-beleg{max-width:420px;padding:28px 24px 48px;background:#fff;font:400 18px/1.5 'Source Sans 3',sans-serif;color:#2e2e2e;font-variant-numeric:tabular-nums;clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),95% 100%,90% calc(100% - 14px),85% 100%,80% calc(100% - 14px),75% 100%,70% calc(100% - 14px),65% 100%,60% calc(100% - 14px),55% 100%,50% calc(100% - 14px),45% 100%,40% calc(100% - 14px),35% 100%,30% calc(100% - 14px),25% 100%,20% calc(100% - 14px),15% 100%,10% calc(100% - 14px),5% 100%,0 calc(100% - 14px))}.ds-beleg p{display:flex;gap:8px;align-items:baseline;margin:16px 0 0}.ds-beleg i{flex:1;border-bottom:4px dotted #dfe1e1}.ds-summe{justify-content:space-between;min-height:48px;align-items:center!important;margin:24px -24px 0!important;padding:0 24px;background:#2e2e2e;color:#f3f3f2;font-weight:600}"
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Stichwort unter einer Leistung.",
+      "html": "<span class=\"ds-chip\">Trennwände</span>",
+      "css": ".ds-chip{display:inline-block;padding:5px 12px;background:#f4f4f3;color:#3a3a3a;font:400 15px 'Source Sans 3',sans-serif}"
     },
     {
-      "name": "Rundknopf",
-      "kind": "button",
-      "refersTo": "rundknopf",
-      "description": "Roter Kreis mit Pfeil am Ende einer großen Zeile.",
-      "html": "<p class=\"ds-zeile\">Hallo <a class=\"ds-rund\" href=\"#\" aria-label=\"Per WhatsApp schreiben\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a></p>",
-      "css": ".ds-zeile{display:flex;align-items:center;gap:24px;font:400 56px/1 'Source Sans 3',sans-serif;letter-spacing:-.03em;color:#2e2e2e;margin:0}.ds-rund{display:inline-grid;place-items:center;width:.9em;height:.9em;border-radius:50%;background:#c2262b;color:#fff;transition:background-color 180ms ease}.ds-rund:hover{background:#a01e22}"
+      "name": "Leistung",
+      "kind": "card",
+      "description": "Großes Foto, Titel, Text, Chips.",
+      "html": "<article class=\"ds-leistung\"><div class=\"ds-bild\"></div><h3>Trockenbau</h3><p>Neue Wände und Decken aus Metallständern und Gipskarton.</p></article>",
+      "css": ".ds-leistung{max-width:420px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3a3a3a}.ds-bild{aspect-ratio:4/3;background:#e6e6e4}.ds-leistung h3{margin:24px 0 10px;font-size:22px;font-weight:600;color:#1f1f1f}"
     }
   ],
   "narrative": {
-    "northStar": "Der Name als Denkmal",
-    "overview": "Der Familienname des Inhabers ist das Größte auf der Seite: „Kameri“ in Logorot, so breit wie der Bildschirm, direkt unter dem Bild. Alles danach ist bewusst klein und ruhig, damit der Kontrast hält. Der Name kehrt am Ende im dunklen Fuß in heller Schrift zurück. Die Texte sind kurz und reden wie ein Handwerker, nicht wie eine Werbeagentur.\n\nBilder zeigen die Arbeit selbst. Solange keine eigenen Fotos da sind, stehen flache Zeichnungen aus der Welt des Betriebs an ihrer Stelle (eine Ständerwand im Bau, ein Wandaufbau im Schnitt); sie werden 1:1 durch Projektfotos ersetzt.",
+    "northStar": "Der fertige Raum",
+    "overview": "Die Seite wirkt wie ein frisch renovierter Raum: viel Weiß, helles Holz in den Fotos, ruhige Linienführung. Die Fotos tragen die Seite, die Typografie bleibt leicht und zurückhaltend, das Logo steht normal groß im Kopf. Rot erscheint nur dort, wo der Besucher handeln soll: Anrufen, Senden, kleine Haken und Nummern.\n\nDer Inhaber hat diesen Stil gewählt („modern und hochwertig“) und zwei frühere, auffällige Richtungen abgelehnt (Gipskarton-Motive mit Punkten und Kästen; der Firmenname als riesige Schrift). Diese Seite bleibt bewusst vertraut und sauber.",
     "keyCharacteristics": [
-      "Ein Wort, ein Denkmal: „Kameri“ füllt die Breite zwischen den Rändern",
-      "Eine Schrift (Source Sans 3, wie im Logo), fünf Größen",
-      "Flächen statt Linien: Weiß, ein helles Grau, ein rotes Feld, ein dunkler Fuß",
-      "Der Ablauf als Beleg mit Zackenkante und „0,00 €“ bis zur Zusage",
-      "Orte als Plakatzeilen, dazu der Ort-Check als einziges Spielzeug"
+      "Geteilter Start: Text links, hohes Foto rechts bis an den Rand",
+      "Leistungen als 2×2-Raster mit großen Fotos, Text und kleinen Stichwort-Chips",
+      "Flächen in Hellgrau statt Linien, ein dunkler Kontaktbereich",
+      "Telefon überall erreichbar, am Handy als feste Leiste unten"
     ],
     "rules": [
       {
-        "name": "The One Red Rule",
-        "body": "Rot steht auf dem Namen, auf der einen Handlung und auf genau einem ganzen Feld. Nicht als Zierfarbe verteilen.",
+        "name": "The Red Means Act Rule",
+        "body": "Rot nur auf Handlungen und kleinen Orientierungszeichen. Keine roten Flächen, keine roten Überschriften.",
         "section": "colors"
       },
       {
-        "name": "The Two Lines Rule",
-        "body": "Keine Überschrift läuft über zwei Zeilen, auf keiner Breite. Keine Labels über Überschriften, keine Versalien, keine Nummern.",
+        "name": "The Light Headline Rule",
+        "body": "Große Überschriften in 300, kleine in 600. Keine Versalien-Labels über Überschriften.",
         "section": "typography"
       }
     ],
     "dos": [
-      "**Do** eigene Projektfotos an die Stelle der Zeichnungen setzen, groß und eckig.",
-      "**Do** kurze, konkrete Sätze schreiben, so wie der Inhaber redet.",
-      "**Do** Telefon und WhatsApp auf dem ersten Bildschirm halten."
+      "**Do** eigene Projektfotos an die Stelle der Beispielfotos setzen (gleiche Dateinamen in `bilder/fotos/`).",
+      "**Do** kurze, konkrete Sätze im Ton des Inhabers schreiben.",
+      "**Do** Telefon und WhatsApp in jeder Ansicht erreichbar halten."
     ],
     "donts": [
-      "**Don't** Werbesprech oder erfundene Versprechen (Jahre, Garantien, Bewertungen).",
-      "**Don't** Kästen mit Rahmen, gepunktete Ränder, Schatten, Verläufe, Linien als Trenner.",
-      "**Don't** Labels über Überschriften, Nummern 01/02/03, Versalien-Zeilen.",
-      "**Don't** Stockfotos, die wie eigene Projekte aussehen."
+      "**Don't** Gipskarton-Muster, gepunktete Kästen oder den Firmennamen als Riesenschrift.",
+      "**Don't** erfundene Versprechen (Jahre, Garantien, Bewertungen).",
+      "**Don't** Beispielfotos als eigene Projekte ausgeben.",
+      "**Don't** Verläufe, Glas-Effekte, Schatten auf ruhenden Elementen."
     ]
   }
 }
