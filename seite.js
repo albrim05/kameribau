@@ -1,5 +1,5 @@
 // Schlüssel von Web3Forms (web3forms.com). Solange er leer ist, öffnet das Formular das E-Mail-Programm.
-var WEB3FORMS_SCHLUESSEL = "";
+var WEB3FORMS_SCHLUESSEL = "bd5282de-8ff6-43e8-a5c2-c85ca2c1cf31";
 
 var TELEFON_LINK = '<a href="tel:+4915236695793">0152 36695793</a>';
 var HAKEN_SVG = '<svg aria-hidden="true"><use href="#i-haken"/></svg>';
