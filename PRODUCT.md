@@ -15,11 +15,11 @@ Statisches HTML/CSS (vom Nutzer gewählt). Hosting: noch offen.
 - **Privatkunden:** Eigentümer und Mieter, die eine Wohnung oder ein Haus umbauen, renovieren oder einen neuen Boden verlegen lassen wollen und einen verlässlichen Betrieb suchen.
 - **Geschäftskunden:** Firmen, Hausverwaltungen und Gewerbetreibende, die Trockenbau, Umbauten oder Renovierungen für Büro-, Laden- oder Gewerbeflächen beauftragen.
 
-Beide Gruppen wollen herausfinden, ob Kameribau ihr Vorhaben übernehmen kann, und dann Kontakt für eine Anfrage oder ein Angebot aufnehmen.
+Beide Gruppen wollen herausfinden, ob Kameri ihr Vorhaben übernehmen kann, und dann Kontakt für eine Anfrage oder ein Angebot aufnehmen.
 
 ## Product Purpose
 
-Website des Bauunternehmens Kameri – alles rund ums Haus. Sie stellt die Leistungen vor, zeigt echte Projekte und führt Interessenten zur Anfrage. Erfolg heißt: Besucher verstehen schnell, was Kameribau macht, und melden sich mit einem passenden Auftrag.
+Website des Bauunternehmens Kameri – alles rund ums Haus. Sie stellt die Leistungen vor, zeigt echte Projekte und führt Interessenten zur Anfrage. Erfolg heißt: Besucher verstehen schnell, was Kameri macht, und melden sich mit einem passenden Auftrag.
 
 ## Positioning
 
