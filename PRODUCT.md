@@ -23,7 +23,13 @@ Website des Bauunternehmens Kameri – alles rund ums Haus. Sie stellt die Leist
 
 ## Positioning
 
-Schwerpunkt Trockenbau, ergänzt um Umbauten, Bodenverlegung und Renovierungen – ein Innenausbau-Betrieb für Privat- und Geschäftskunden aus Leimen und Umgebung. Weitere Alleinstellungsmerkmale (z. B. Erfahrung, Familienbetrieb, Festpreise) sind **noch nicht bestätigt** und dürfen nicht erfunden werden.
+Schwerpunkt Trockenbau, ergänzt um Umbauten, Bodenverlegung und Renovierungen – ein Innenausbau-Betrieb für Privat- und Geschäftskunden aus Leimen und Umgebung. Der Inhaber hat die Formulierung der Stärken freigegeben, solange sie stimmen. Erlaubt sind nur Aussagen, die aus bestätigten Fakten folgen:
+- Spezialisierung auf Trockenbau, dazu Umbau, Boden und Renovierung – mehrere Gewerke aus einer Hand.
+- Regionaler Betrieb aus Leimen, kurze Wege im Rhein-Neckar-Raum.
+- Für Privat- und Geschäftskunden.
+- Direkter Kontakt per Telefon und E-Mail, Inhaber Besim Kameri.
+
+Nicht behaupten (unbestätigt): Jahre an Erfahrung, Familienbetrieb, Festpreise, kostenlose Besichtigung oder Angebote, Termingarantien, Meisterbetrieb, Mitarbeiterzahl.
 
 ## Capabilities and Constraints
 
@@ -47,8 +53,7 @@ Kontakt:
 - E-Mail: kameribau@hotmail.com
 
 Offen:
-- Alleinstellungsmerkmale
-- Hosting
+- Hosting (Inhaber entscheidet später; die Website muss als reine statische Dateien überall laufen)
 
 Sprache der Website: Deutsch.
 
