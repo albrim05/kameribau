@@ -19,11 +19,11 @@ Beide Gruppen wollen herausfinden, ob Kameribau ihr Vorhaben übernehmen kann, u
 
 ## Product Purpose
 
-Website des Bauunternehmens Kameribau. Sie stellt die Leistungen vor, zeigt echte Projekte und führt Interessenten zur Anfrage. Erfolg heißt: Besucher verstehen schnell, was Kameribau macht, und melden sich mit einem passenden Auftrag.
+Website des Bauunternehmens Kameri – alles rund ums Haus. Sie stellt die Leistungen vor, zeigt echte Projekte und führt Interessenten zur Anfrage. Erfolg heißt: Besucher verstehen schnell, was Kameribau macht, und melden sich mit einem passenden Auftrag.
 
 ## Positioning
 
-Schwerpunkt Trockenbau, ergänzt um Umbauten, Bodenverlegung und Renovierungen – ein Innenausbau-Betrieb für Privat- und Geschäftskunden. Weitere Alleinstellungsmerkmale (z. B. Erfahrung, Familienbetrieb, Festpreise) sind **noch nicht bestätigt** und dürfen nicht erfunden werden.
+Schwerpunkt Trockenbau, ergänzt um Umbauten, Bodenverlegung und Renovierungen – ein Innenausbau-Betrieb für Privat- und Geschäftskunden aus Leimen und Umgebung. Weitere Alleinstellungsmerkmale (z. B. Erfahrung, Familienbetrieb, Festpreise) sind **noch nicht bestätigt** und dürfen nicht erfunden werden.
 
 ## Capabilities and Constraints
 
@@ -33,16 +33,25 @@ Leistungen (bestätigt):
 - Bodenverlegung
 - Renovierungen
 
+Standort und Einsatzgebiet:
+- Firmensitz: 69181 Leimen (genaue Straße noch offen, nötig fürs Impressum)
+- Einsatzgebiet: Umkreis von etwa 40 km um Leimen; konkrete Orte noch zu bestätigen
+
+Kontakt:
+- Telefon: 0152 36695793 (Link: `tel:+4915236695793`)
+- E-Mail: kameribau@hotmail.com
+
 Offen:
-- Einsatzgebiet / Region
+- Genaue Adresse und Angaben für das Impressum (Inhaber, ggf. USt-IdNr.)
+- Liste der Orte im Einsatzgebiet
 - Alleinstellungsmerkmale
-- Kontaktweg (Telefon, E-Mail, Formular) und Hosting
+- Hosting
 
 Sprache der Website: Deutsch.
 
 ## Brand Commitments
 
-Firmenname: **Kameribau**. Ein bestehendes Logo ist vorhanden (Datei noch nicht im Repository).
+Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ ist der Name von Repository und E-Mail-Adresse, nicht der Markenname auf der Website. Ein bestehendes Logo ist vorhanden (Datei noch nicht im Repository).
 
 ## Evidence on Hand
 
