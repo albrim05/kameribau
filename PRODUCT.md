@@ -54,12 +54,12 @@ Sprache der Website: Deutsch.
 
 ## Brand Commitments
 
-Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ ist der Name von Repository und E-Mail-Adresse, nicht der Markenname auf der Website. Ein bestehendes Logo ist vorhanden (gehört nach `bilder/`).
+Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ ist der Name von Repository und E-Mail-Adresse, nicht der Markenname auf der Website. Logo (verbindlich): `bilder/400PngdpiLogo.png` – PNG 2667×1611, transparenter Hintergrund, mit viel Leerraum um das Motiv. Drei gestaffelte Hausdächer (rot mit Sprossenfenster, dunkelgrau, mittelgrau), darunter „Kameri“ in kräftigem Rot und „Alles rund ums Haus“ in Dunkelgrau. Farben im Logo: Rot ca. #C2262B, Dunkelgrau #333333, Mittelgrau #666666. Das Logo wird nicht verändert oder nachgezeichnet.
 
 ## Evidence on Hand
 
-- Logo: vorhanden, kommt nach `bilder/`.
-- Projektfotos: echte Fotos abgeschlossener Projekte vorhanden, kommen nach `bilder/projekte/`.
+- Logo: `bilder/400PngdpiLogo.png`.
+- Projektfotos: echte Fotos vorhanden, werden **später** in `bilder/projekte/` nachgereicht. Bis dahin muss die Website ohne Projektfotos vollständig und glaubwürdig wirken – keine Stockfotos als Ersatz für eigene Projekte, der Fotobereich lässt sich später ohne Umbau befüllen.
 - Kundenstimmen, Zahlen, Zertifikate, Auszeichnungen: **keine vorhanden** – nicht erfinden.
 
 ## Product Principles
