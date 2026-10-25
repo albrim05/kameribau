@@ -28,8 +28,9 @@ Schwerpunkt Trockenbau, ergänzt um Umbauten, Bodenverlegung und Renovierungen �
 - Regionaler Betrieb aus Leimen, kurze Wege im Rhein-Neckar-Raum.
 - Für Privat- und Geschäftskunden.
 - Direkter Kontakt per Telefon und E-Mail, Inhaber Besim Kameri.
+- Kostenlose Beratung und kostenloses (unverbindliches) Angebot – vom Inhaber bestätigt.
 
-Nicht behaupten (unbestätigt): Jahre an Erfahrung, Familienbetrieb, Festpreise, kostenlose Besichtigung oder Angebote, Termingarantien, Meisterbetrieb, Mitarbeiterzahl.
+Nicht behaupten (unbestätigt): Jahre an Erfahrung, Familienbetrieb, Festpreise, Termingarantien, Meisterbetrieb, Mitarbeiterzahl.
 
 ## Capabilities and Constraints
 

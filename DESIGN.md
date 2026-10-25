@@ -168,7 +168,7 @@ Eckig. Plattenflächen haben keine Rundung; Knöpfe und Eingabefelder 3px. Kreis
 Logo links, Ankerlinks mit roter Unterstreichung, die beim Überfahren von links einläuft; rechts WhatsApp und Anrufen. Der Kopf klebt oben mit leicht durchscheinendem Plattengrund.
 
 ### Stempelfeld
-Weißes Feld mit 3px rotem Rahmen und 1px Außenlinie im Abstand von 5px. Kopfzeile in Aufdruck-Schrift, darunter die Telefonnummer groß in Display-Schrift, dann Anrufen und WhatsApp nebeneinander.
+Weißes Feld mit 3px rotem Rahmen und 1px Außenlinie im Abstand von 5px. Kopfzeile in Aufdruck-Schrift, darunter die Telefonnummer groß in Display-Schrift, eine rote Hakenzeile „Beratung und Angebot kostenlos“, dann Anrufen und WhatsApp nebeneinander.
 
 ### Fuge
 Horizontale Linie zwischen Platten; wenn sie ins Bild kommt, läuft von links ein Spachtelstreifen darüber (1.3s, `cubic-bezier(0.16, 1, 0.3, 1)`). Ohne JavaScript oder bei reduzierter Bewegung ist sie sofort verspachtelt.
