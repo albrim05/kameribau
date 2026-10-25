@@ -1,189 +1,172 @@
 ---
 name: Kameri – alles rund ums Haus
-description: Die Website ist eine Wand aus Gipskartonplatten – Logorot, Weiß und Dunkelgrau auf Plattenflächen mit Fugen und Schraubpunkten.
+description: Der Name als Denkmal – „Kameri“ in Logorot über die ganze Breite, darüber das Bild, danach eine ruhige, kleine Seite.
 colors:
+  grund: "#ffffff"
+  tinte: "#2e2e2e"
+  leise: "#66625d"
   rot: "#c2262b"
   rot-tief: "#a01e22"
-  grau: "#333333"
-  grau-mittel: "#666666"
-  text-leise: "#555a57"
-  weiss: "#ffffff"
-  platte: "#f3f4f2"
-  platte-hell: "#fafbfa"
-  fuge: "#d5d8d5"
-  fuge-linie: "#c7cbc8"
-  schraube: "#a3a8a5"
-  spachtel: "#e7e9e6"
+  feld: "#eeefef"
+  feld-tief: "#dfe1e1"
+  dunkel: "#2e2e2e"
+  auf-dunkel: "#f3f3f2"
+  auf-dunkel-leise: "#b8b4ae"
+  auf-rot: "#ffffff"
+  auf-rot-leise: "#fbe1e2"
 typography:
-  display:
-    fontFamily: "Barlow Semi Condensed, Barlow, system-ui, sans-serif"
-    fontSize: "clamp(2.6rem, 6.4vw, 5.4rem)"
+  denkmal:
+    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontSize: "calc((100vw - 2 * var(--rand)) / 2.98)"
     fontWeight: 700
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
-  headline:
-    fontFamily: "Barlow Semi Condensed, Barlow, system-ui, sans-serif"
-    fontSize: "clamp(2rem, 4.2vw, 3.25rem)"
+    lineHeight: 0.78
+    letterSpacing: "-0.04em"
+  plakat:
+    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontSize: "clamp(3.25rem, 10vw, 9.5rem)"
     fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
-  title:
-    fontFamily: "Barlow Semi Condensed, Barlow, system-ui, sans-serif"
-    fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)"
-    fontWeight: 700
-    lineHeight: 1.15
-  body:
-    fontFamily: "Barlow, system-ui, sans-serif"
-    fontSize: "1.0625rem"
-    fontWeight: 400
-    lineHeight: 1.6
-  aufdruck:
-    fontFamily: "Barlow Semi Condensed, Barlow, system-ui, sans-serif"
-    fontSize: "0.78rem"
+    lineHeight: 1.02
+    letterSpacing: "-0.04em"
+  kopf:
+    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontSize: "clamp(2.25rem, 1.4rem + 3.6vw, 5rem)"
     fontWeight: 600
-    letterSpacing: "0.14em"
+    lineHeight: 0.95
+    letterSpacing: "-0.04em"
+  text:
+    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontSize: "clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem)"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: "-0.005em"
+  klein:
+    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontSize: "0.9375rem"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
-  knopf: "3px"
+  keine: "0px"
+  rund: "50%"
 spacing:
-  rand: "clamp(16px, 4vw, 48px)"
-  fuge: "22px"
-  raster: "40px"
-  abschnitt: "clamp(56px, 8vw, 104px)"
+  rand: "clamp(16px, 2.2vw, 32px)"
+  spalt: "clamp(12px, 1.6vw, 24px)"
+  abstand: "clamp(96px, 14vw, 200px)"
 components:
-  knopf-voll:
+  knopf:
     backgroundColor: "{colors.rot}"
-    textColor: "{colors.weiss}"
-    rounded: "{rounded.knopf}"
-    padding: "12px 22px"
-    height: "48px"
-  knopf-voll-hover:
+    textColor: "{colors.auf-rot}"
+    rounded: "{rounded.keine}"
+    padding: "14px 24px"
+    height: "52px"
+  knopf-hover:
     backgroundColor: "{colors.rot-tief}"
-    textColor: "{colors.weiss}"
-  knopf-rand:
-    backgroundColor: "{colors.weiss}"
+    textColor: "{colors.auf-rot}"
+  knopf-hell:
+    backgroundColor: "{colors.auf-rot}"
     textColor: "{colors.rot}"
-    rounded: "{rounded.knopf}"
-    padding: "12px 22px"
-    height: "48px"
-  knopf-rand-hover:
-    backgroundColor: "{colors.rot}"
-    textColor: "{colors.weiss}"
+    rounded: "{rounded.keine}"
+    padding: "14px 24px"
+    height: "52px"
   eingabefeld:
-    backgroundColor: "{colors.platte-hell}"
-    textColor: "{colors.grau}"
-    rounded: "{rounded.knopf}"
-    padding: "11px 13px"
-    height: "48px"
-  platte:
-    backgroundColor: "{colors.platte}"
-    textColor: "{colors.grau}"
-    padding: "clamp(56px, 8vw, 104px) clamp(28px, 5vw, 72px)"
+    backgroundColor: "{colors.grund}"
+    textColor: "{colors.tinte}"
+    rounded: "{rounded.keine}"
+    padding: "12px 14px"
+    height: "52px"
+  rundknopf:
+    backgroundColor: "{colors.rot}"
+    textColor: "{colors.auf-rot}"
+    rounded: "{rounded.rund}"
+    size: "0.9em"
 ---
 
 # Design System: Kameri – alles rund ums Haus
 
 ## Overview
 
-**Creative North Star: "Die Plattenwand"**
+**Creative North Star: "Der Name als Denkmal"**
 
-Die Website ist aus dem Material gebaut, das Kameri täglich verbaut: Jeder Abschnitt ist eine Gipskartonplatte mit Schraubpunkten an den Kanten, zwischen den Platten liegt eine Fuge, die beim Scrollen verspachtelt wird. Ganz oben und ganz unten läuft der rote Kantenaufdruck, wie ihn Hersteller auf ihre Platten drucken. Die Farben kommen ausschließlich aus dem Logo: Rot für Handlung und Betonung, Dunkelgrau für Text und eine dunkle Platte, Weiß und helles Plattengrau als Grund.
+Der Familienname des Inhabers ist das Größte auf der Seite: „Kameri“ in Logorot, so breit wie der Bildschirm, direkt unter dem Bild. Alles danach ist bewusst klein und ruhig, damit der Kontrast hält. Der Name kehrt am Ende im dunklen Fuß in heller Schrift zurück. Die Texte sind kurz und reden wie ein Handwerker, nicht wie eine Werbeagentur.
 
-Die Seite verkauft nichts mit Effekten. Sie zeigt in der ersten Ansicht, was gemacht wird, wo, und wie man anruft. Der Wiedererkennungswert liegt im Material, nicht in Dekoration.
+Bilder zeigen die Arbeit selbst. Solange keine eigenen Fotos da sind, stehen flache Zeichnungen aus der Welt des Betriebs an ihrer Stelle (eine Ständerwand im Bau, ein Wandaufbau im Schnitt); sie werden 1:1 durch Projektfotos ersetzt.
 
 **Key Characteristics:**
-- Abschnitte als Platten mit Schraubpunkt-Raster an allen vier Kanten
-- Fugen zwischen den Platten statt Abstandsflächen oder Trennlinien
-- Rotes Stempelfeld (doppelter Rahmen) als Handlungsblock
-- Kontaktbereich als vollflächig rote Platte, „Warum Kameri“ als dunkelgraue Platte
-- Schmale, kräftige Groteske für Überschriften, ruhige Groteske für Text
+- Ein Wort, ein Denkmal: „Kameri“ füllt die Breite zwischen den Rändern
+- Eine Schrift (Source Sans 3, wie im Logo), fünf Größen
+- Flächen statt Linien: Weiß, ein helles Grau, ein rotes Feld, ein dunkler Fuß
+- Der Ablauf als Beleg mit Zackenkante und „0,00 €“ bis zur Zusage
+- Orte als Plakatzeilen, dazu der Ort-Check als einziges Spielzeug
 
 ## Colors
 
-Palette aus dem Logo, keine weiteren Buntfarben.
+Palette aus dem Logo. Ein Grund, eine Tinte, ein Rot.
 
 ### Primary
-- **Logorot** (`#c2262b`): Handlungen (Anrufen, Senden), die Hauptleistung Trockenbau, Kantenaufdruck, Stempelfeld, Kontaktplatte. Hover: `#a01e22`.
+- **Logorot** (`#c2262b`): das Denkmal, der Hauptknopf, das Feld „Wo wir arbeiten“. Hover: `#a01e22`.
 
 ### Neutral
-- **Dunkelgrau** (`#333333`): Text, Überschriften, dunkle Platte, gewählte Optionen.
-- **Leises Grau** (`#555a57`): Fließtext neben Überschriften, Bildunterschriften.
-- **Weiß** (`#ffffff`): Stempelfeld, Hauptplatte Trockenbau, Formular.
-- **Platte** (`#f3f4f2`) und **Platte hell** (`#fafbfa`): Plattenflächen.
-- **Fuge** (`#d5d8d5`) und **Fugenlinie** (`#c7cbc8`): Seitenhintergrund und Fugen.
-- **Schraube** (`#a3a8a5`): Schraubpunkte; auf dunkler Platte `#5c5f5d`, auf roter Platte `#9b1b1f`.
+- **Tinte** (`#2e2e2e`): Text, Überschriften, Fuß-Grund.
+- **Leise** (`#66625d`): Aufzählungen in den Leistungen, Hinweise.
+- **Grund** (`#ffffff`) und **Feld** (`#eeefef`): Flächen; Abschnitte trennen sich durch Tonstufen.
 
 ### Named Rules
-**The Logo Palette Rule.** Nur Rot, Weiß und Grautöne. Rot trägt Handlung und Betonung; es wird nie als bloße Zierfläche verteilt, sondern besetzt ganze Platten (Kontakt) oder klare Handlungselemente.
+**The One Red Rule.** Rot steht auf dem Namen, auf der einen Handlung und auf genau einem ganzen Feld. Nicht als Zierfarbe verteilen.
 
 ## Typography
 
-**Display Font:** Barlow Semi Condensed 600/700 (selbst gehostet, `schriften/`)
-**Body Font:** Barlow 400/500/600 (selbst gehostet)
-
-Barlow hat die nüchterne Anmutung von Baustellen- und Normschrift und liegt nah an der Schrift im Logo. Schriften werden aus Datenschutzgründen nie von Google-Servern geladen.
+**Schrift:** Source Sans 3 (400/600/700), selbst gehostet in `schriften/`. Gewählt, weil das Logo dieselbe Familie nutzt; nie von Google-Servern laden.
 
 ### Hierarchy
-- **Display** (700, `clamp(2.6rem, 6.4vw, 5.4rem)`, 0.98): nur die Hauptüberschrift; das erste Wort darf rot sein.
-- **Headline** (700, `clamp(2rem, 4.2vw, 3.25rem)`, 1.05): Abschnittsüberschriften.
-- **Title** (700, `clamp(1.4rem, 2.2vw, 1.75rem)`, 1.15): Leistungen, Ablaufschritte.
-- **Body** (400, 1.0625rem, 1.6): Fließtext, max. ca. 36em breit.
-- **Aufdruck** (600, 0.78rem, Versalien, 0.14em Laufweite): nur Kantenaufdruck und Stempelkopf.
+- **Denkmal** (700, Breite ÷ 2,98, Zeilenhöhe 0,78, −0,04em): nur „Kameri“ im Kopf und im Fuß.
+- **Plakat** (700, `clamp(3.25rem, 10vw, 9.5rem)`): die Ortszeilen.
+- **Kopf** (600, `clamp(2.25rem, …, 5rem)`, −0,04em): Abschnittsüberschriften und Kontaktzeilen (dort 400).
+- **Text** (400, 17–19px, 1,5): alles Lesbare.
+- **Klein** (15px): Navigation, Bildunterschriften, Rechtliches.
 
 ### Named Rules
-**The No Eyebrow Rule.** Versalien-Labels stehen nie über Überschriften. Versalien gibt es nur im Kantenaufdruck, im Stempelkopf und in der Gewerke-Zeile.
+**The Two Lines Rule.** Keine Überschrift läuft über zwei Zeilen, auf keiner Breite. Keine Labels über Überschriften, keine Versalien, keine Nummern.
 
 ## Layout
 
-Inhaltsbreite 1240px, Seitenrand `clamp(16px, 4vw, 48px)`. Jede Platte hat großzügige Innenabstände (`clamp(56px, 8vw, 104px)` oben/unten). Zwischen Platten liegt eine 22px hohe Fuge. Abschnittsköpfe sind zweispaltig: Überschrift links, erklärender Satz rechts, unten bündig. Unter 980px werden alle Raster einspaltig, die Navigation weicht den Knöpfen WhatsApp und Anrufen; unter 720px zeigen diese nur noch ihr Symbol. Am Handy steht die Startplatte hochkant, wie eine echte Platte.
+12 Spalten, ein Paar gleicher Ränder (`clamp(16px, 2.2vw, 32px)`), große Abstände zwischen Abschnitten (`clamp(96px, 14vw, 200px)`). Jeder Abschnitt hat eine andere Komposition: Textspalten, Beleg neben haftender Überschrift, Plakatliste, Zeilenbänder, Formular. Auf dem Handy steht im Kopf erst das Bild, dann der Name, dann Satz und Knopf.
 
 ## Elevation & Depth
 
-Flach wie eine Wand. Tiefe gibt es nur dort, wo etwas auf der Platte aufliegt: das Stempelfeld und das Formular tragen einen weichen, nach unten versetzten Schatten.
-
-### Shadow Vocabulary
-- **Aufgelegt** (`0 18px 40px -24px rgb(51 51 51 / 0.45)`): Stempelfeld.
-- **Formular** (`0 24px 48px -28px rgb(60 8 10 / 0.7)`): weißes Formular auf roter Platte.
-- **Knopf-Hover** (`0 6px 16px -6px rgb(160 30 34 / 0.55)`): voller roter Knopf beim Überfahren.
+Keine Schatten, keine Linien. Tiefe entsteht nur durch Tonstufen zwischen Flächen.
 
 ## Shapes
 
-Eckig. Plattenflächen haben keine Rundung; Knöpfe und Eingabefelder 3px. Kreise nur für Schraubpunkte und Kartenpunkte.
+Eckig: Knöpfe, Felder und Bilder ohne Rundung. Einzige runde Form ist der Pfeilknopf in der Kontaktzeile „Hallo“.
 
 ## Components
 
 ### Buttons
-- **Voll** (rot, weiße Schrift, 48px hoch, 3px Ecken): Hauptaktion Anrufen / Senden. Hover dunkler, hebt sich 1px mit weichem Schatten.
-- **Rand** (weiß, roter Rand und Text): Nebenaktion WhatsApp / E-Mail. Hover füllt rot.
-- Auf der roten Kontaktplatte kehren sich die Farben um (weiß gefüllt bzw. weißer Rand); im Formular gilt wieder Rot.
-- Symbole: eigene Linien-SVGs (2px Strich, 24er Raster) für Telefon, Chat, Post.
-
-### Cards / Containers
-- **Platte**: Fläche mit Schraubpunkten an den Kanten (Hintergrund aus vier wiederholten radialen Verläufen, Raster 40px).
-- **Plattenraster** (Leistungen): Flächen mit 3px Fugenlinie dazwischen; die Hauptleistung ist die große weiße Platte über drei Reihen.
+- **Knopf**: rot, weiße Schrift, 52px hoch, eckig; drückt beim Klicken auf 97 %. Hover dunkler.
+- **Heller Knopf**: weiß mit roter Schrift, auf dem roten Feld.
+- **Rundknopf**: roter Kreis mit Pfeil (WhatsApp) am Ende der Zeile „Hallo“.
+- **Textlink**: unterstrichen mit halbtransparenter Linie, beim Hover voll.
 
 ### Inputs / Fields
-48px hoch, hellgraue Fläche, 1px grauer Rand, 3px Ecken. Fokus: roter Rand plus 3px roter Schein. Fehler: roter Rand, rosa Grund, Fehlertext darunter, der Problem und Lösung nennt.
+52px hoch, 2px Rand in Feldgrau, eckig; Fokus: Rand in Tinte. Fehler: roter Rand, Fehlertext darunter.
 
 ### Navigation
-Logo links, Ankerlinks mit roter Unterstreichung, die beim Überfahren von links einläuft; rechts WhatsApp und Anrufen. Der Kopf klebt oben mit leicht durchscheinendem Plattengrund.
+Weiße Leiste über dem Bild: Logo links, vier Links rechts. Unter 860px nur „Anrufen“.
 
-### Stempelfeld
-Weißes Feld mit 3px rotem Rahmen und 1px Außenlinie im Abstand von 5px. Kopfzeile in Aufdruck-Schrift, darunter die Telefonnummer groß in Display-Schrift, eine rote Hakenzeile „Beratung und Angebot kostenlos“, dann Anrufen und WhatsApp nebeneinander.
+### Beleg (Ablauf)
+Weißes Papier auf Feldgrau, unten Zackenkante (clip-path). Zeilen mit Punkt-Führung und Beträgen in Tabellenziffern, letzte Zeile als dunkler Balken „Bis zu Ihrer Zusage 0,00 €“.
 
-### Fuge
-Horizontale Linie zwischen Platten; wenn sie ins Bild kommt, läuft von links ein Spachtelstreifen darüber (1.3s, `cubic-bezier(0.16, 1, 0.3, 1)`). Ohne JavaScript oder bei reduzierter Bewegung ist sie sofort verspachtelt.
+### Ortszeilen und Ort-Check
+Orte in Plakatgröße links, Entfernung klein rechts; Hover färbt den Ort dunkel. Darunter ein Eingabefeld, das die Luftlinie ab Leimen nennt.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** jede neue Sektion als Platte mit Schraubpunkten bauen und durch eine Fuge abtrennen.
-- **Do** Anrufen und WhatsApp in jeder Ansicht erreichbar halten.
-- **Do** echte Projektfotos verwenden, sobald sie da sind, im Plattenraster mit 3px Fugen.
-- **Do** Schriften selbst hosten und keine externen Dienste ohne Datenschutzhinweis einbinden.
+- **Do** eigene Projektfotos an die Stelle der Zeichnungen setzen, groß und eckig.
+- **Do** kurze, konkrete Sätze schreiben, so wie der Inhaber redet.
+- **Do** Telefon und WhatsApp auf dem ersten Bildschirm halten.
 
 ### Don't:
-- **Don't** Stockfotos als Ersatz für eigene Projekte.
-- **Don't** Farben außerhalb der Logopalette, keine Verläufe, kein Glas-Effekt als Dekoration.
-- **Don't** Versalien-Labels über Überschriften oder Abschnittsnummern ohne Reihenfolge-Bedeutung.
-- **Don't** gleich große Icon-Karten als Seitenstruktur.
-- **Don't** unbelegte Werbeaussagen (Jahre, Festpreise, Garantien).
+- **Don't** Werbesprech oder erfundene Versprechen (Jahre, Garantien, Bewertungen).
+- **Don't** Kästen mit Rahmen, gepunktete Ränder, Schatten, Verläufe, Linien als Trenner.
+- **Don't** Labels über Überschriften, Nummern 01/02/03, Versalien-Zeilen.
+- **Don't** Stockfotos, die wie eigene Projekte aussehen.

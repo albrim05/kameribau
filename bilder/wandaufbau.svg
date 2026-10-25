@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t2">
+<title id="t2">Zeichnung: Schnitt durch eine Ständerwand von oben. Links und rechts je eine Gipskartonplatte mit 12,5 mm, dazwischen ein Metallständer CW 75 und Dämmung. Zusammen 100 mm.</title>
+<rect width="600" height="400" fill="#f3f2ef"/>
+<rect x="40" y="120" width="520" height="20.0" fill="#ffffff"/>
+<rect x="40" y="137.0" width="520" height="3" fill="#d4d3cf"/>
+<rect x="40" y="260.0" width="520" height="20.0" fill="#ffffff"/>
+<rect x="40" y="260.0" width="520" height="3" fill="#d4d3cf"/>
+<rect x="40" y="140.0" width="520" height="120.0" fill="#e2ddd2"/>
+<path d="M40 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M66 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M92 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M118 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M144 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M170 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M196 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M222 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M248 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M274 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M300 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M326 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M352 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M378 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M404 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M430 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M456 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M482 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M508 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<path d="M534 200.0 q 6.5 -22 13 0 t 13 0" fill="none" stroke="#cdc6b6" stroke-width="3"/>
+<rect x="130" y="140.0" width="60" height="5" fill="#7f868a"/>
+<rect x="130" y="255.0" width="60" height="5" fill="#7f868a"/>
+<rect x="130" y="140.0" width="5" height="120.0" fill="#7f868a"/>
+<rect x="185" y="140.0" width="5" height="18" fill="#7f868a"/>
+<rect x="185" y="242.0" width="5" height="18" fill="#7f868a"/>
+<rect x="410" y="140.0" width="60" height="5" fill="#7f868a"/>
+<rect x="410" y="255.0" width="60" height="5" fill="#7f868a"/>
+<rect x="410" y="140.0" width="5" height="120.0" fill="#7f868a"/>
+<rect x="465" y="140.0" width="5" height="18" fill="#7f868a"/>
+<rect x="465" y="242.0" width="5" height="18" fill="#7f868a"/>
+<rect x="158" y="114" width="4" height="34.0" fill="#333333"/>
+<rect x="158" y="252.0" width="4" height="34.0" fill="#333333"/>
+<rect x="438" y="114" width="4" height="34.0" fill="#333333"/>
+<rect x="438" y="252.0" width="4" height="34.0" fill="#333333"/>
+<rect x="575" y="120" width="2" height="20.0" fill="#c2262b"/>
+<rect x="568" y="120" width="16" height="2" fill="#c2262b"/>
+<rect x="575" y="140.0" width="2" height="120.0" fill="#c2262b"/>
+<rect x="568" y="140.0" width="16" height="2" fill="#c2262b"/>
+<rect x="575" y="260.0" width="2" height="20.0" fill="#c2262b"/>
+<rect x="568" y="260.0" width="16" height="2" fill="#c2262b"/>
+<rect x="568" y="278.0" width="16" height="2" fill="#c2262b"/>
+<g font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#333333" font-weight="600">
+<text x="40" y="96">12,5 mm Gipskarton</text>
+<text x="40" y="322.0">12,5 mm Gipskarton</text>
+<rect x="196" y="181" width="208" height="38" fill="#e2ddd2"/><text text-anchor="middle" x="300" y="208.0" fill="#5a5751">CW 75 mit Dämmung</text>
+</g>
+<text x="40" y="380" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#c2262b">= 100 mm Wand</text>
+</svg>

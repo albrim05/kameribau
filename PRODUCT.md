@@ -54,7 +54,7 @@ Kontakt:
 - E-Mail: kameribau@hotmail.com
 
 Offen:
-- Hosting (Inhaber entscheidet später; die Website muss als reine statische Dateien überall laufen)
+- Hosting: derzeit GitHub Pages (https://albrim05.github.io/kameribau/); eigene Domain offen. Die Website bleibt reine statische Dateien.
 
 Sprache der Website: Deutsch.
 
@@ -67,6 +67,10 @@ Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ is
 - Logo: `bilder/400PngdpiLogo.png`.
 - Projektfotos: echte Fotos vorhanden, werden **später** in `bilder/projekte/` nachgereicht. Bis dahin muss die Website ohne Projektfotos vollständig und glaubwürdig wirken – keine Stockfotos als Ersatz für eigene Projekte, der Fotobereich lässt sich später ohne Umbau befüllen.
 - Kundenstimmen, Zahlen, Zertifikate, Auszeichnungen: **keine vorhanden** – nicht erfinden.
+
+## Voice
+
+Kurze, konkrete Sätze im Ton des Inhabers. Kein Werbesprech, keine glatten KI-Formulierungen; der Inhaber hat solche Texte ausdrücklich abgelehnt.
 
 ## Product Principles
 
