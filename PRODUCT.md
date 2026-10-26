@@ -10,7 +10,7 @@ web
 
 Statisches HTML/CSS (vom Nutzer gewählt). Die Seiten werden mit `node _bauen/bauen.mjs` aus gemeinsamen Bausteinen erzeugt. Hosting: GitHub Pages.
 
-Seiten: Startseite, Trockenbau, Umbau, Böden, Renovierung, Impressum, Datenschutz. Eine Seite „Projekte“ folgt, sobald echte Fotos da sind.
+Seiten: Startseite, Trockenbau, Umbau & Renovierung, Böden, Gebäudereinigung, Impressum, Datenschutz. Eine Seite „Projekte“ folgt, sobald echte Fotos da sind.
 
 ## Users
 
@@ -25,7 +25,7 @@ Website des Bauunternehmens Kameri – alles rund ums Haus. Sie stellt die Leist
 
 ## Positioning
 
-Schwerpunkt Trockenbau, ergänzt um Umbauten, Bodenverlegung und Renovierungen – ein Innenausbau-Betrieb für Privat- und Geschäftskunden aus Leimen und Umgebung. Der Inhaber hat die Formulierung der Stärken freigegeben, solange sie stimmen. Erlaubt sind nur Aussagen, die aus bestätigten Fakten folgen:
+Schwerpunkt Trockenbau, dazu Umbau und Renovierung, Bodenverlegung und Gebäudereinigung – ein Innenausbau-Betrieb für Privat- und Geschäftskunden aus Leimen und Umgebung. Der Inhaber hat die Formulierung der Stärken freigegeben, solange sie stimmen. Erlaubt sind nur Aussagen, die aus bestätigten Fakten folgen:
 - Spezialisierung auf Trockenbau, dazu Umbau, Boden und Renovierung – mehrere Gewerke aus einer Hand.
 - Regionaler Betrieb aus Leimen, kurze Wege im Rhein-Neckar-Raum.
 - Für Privat- und Geschäftskunden.
@@ -36,11 +36,11 @@ Nicht behaupten (unbestätigt): Jahre an Erfahrung, Familienbetrieb, Festpreise,
 
 ## Capabilities and Constraints
 
-Leistungen (bestätigt):
-- Trockenbau (Hauptleistung)
-- Umbauten
-- Bodenverlegung
-- Renovierungen
+Leistungen (bestätigt), in dieser Reihenfolge:
+- Trockenbau (Hauptleistung, steht vorn, die übrigen werden aber nicht als Nebensache dargestellt)
+- Umbau & Renovierung (eine gemeinsame Seite)
+- Böden (Bodenverlegung)
+- Gebäudereinigung: Baureinigung, Büros und Praxen, Treppenhäuser, Fenster (vom Inhaber bestätigt)
 
 Standort und Einsatzgebiet:
 - Firmensitz: Julius-Becker-Straße 14, 69181 Leimen
@@ -72,11 +72,11 @@ Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ is
 
 ## Look
 
-Vom Inhaber gewählt: modern, hochwertig, „premium“. Aus drei Entwürfen: B (hell, fette Überschrift, Bildercollage mit runden Ecken, Pill-Knöpfe) als Grundlage plus dunkle Abschnitte aus A. Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift, die schlichte Fassung mit dünner Schrift (4/10), große randlose Fotoflächen wie bei haring.de. Die Collage-Fassung bekam 6/10; danach wurden Bühne mit Foto, Bildkacheln, Unterseiten und die rote Kontaktfläche eingeführt.
+Vom Inhaber gewählt: modern, hochwertig, „premium“. Aus drei Entwürfen: B (hell, fette Überschrift, Bildercollage mit runden Ecken, Pill-Knöpfe) als Grundlage plus dunkle Abschnitte aus A. Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift, die schlichte Fassung mit dünner Schrift (4/10), große randlose Fotoflächen wie bei haring.de. Die Collage-Fassung bekam 6/10. Danach kamen Unterseiten, Bildkacheln und die rote Kontaktfläche; die große Foto-Bühne und das Rückruf-Formular oben wurden wieder entfernt, die Collage blieb.
 
 ## Voice
 
-Kurze, konkrete Sätze im Ton des Inhabers. Kein Werbesprech, keine glatten KI-Formulierungen; der Inhaber hat solche Texte ausdrücklich abgelehnt.
+Kurze, konkrete Sätze im Ton des Inhabers. Kein Werbesprech, keine glatten KI-Formulierungen, keine langen Aufzählungen von Leistungen im Fließtext; der Inhaber hat solche Texte ausdrücklich abgelehnt. Keine Formulierung, die Trockenbau als einzige „richtige“ Leistung und den Rest als Beiwerk darstellt.
 
 ## Product Principles
 

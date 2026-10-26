@@ -94,7 +94,7 @@ var HAKEN_SVG = '<svg aria-hidden="true"><use href="#i-haken"/></svg>';
     });
     aktualisiere();
   });
-  document.querySelectorAll(".buehne-text .aktionen, .seitenkopf .aktionen, #kontakt").forEach(function (el) { beobachter.observe(el); });
+  document.querySelectorAll(".start .aktionen, .seitenkopf .aktionen, #kontakt").forEach(function (el) { beobachter.observe(el); });
 
   document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
     form.addEventListener("focusin", function () { tippt = true; aktualisiere(); });
@@ -246,9 +246,8 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
   el.textContent = new Date().getFullYear();
 });
 
-// Anfrage- und Rückrufformular: prüfen die Angaben und senden über Web3Forms (ohne Schlüssel: fertige E-Mail)
+// Anfrageformular: prüft die Angaben und senden über Web3Forms (ohne Schlüssel: fertige E-Mail)
 document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
-  var rueckruf = form.getAttribute("data-anfrage") === "rueckruf";
   var status = form.querySelector(".formular-status");
   var knopf = form.querySelector('button[type="submit"]');
   var knopfText = knopf.textContent;
@@ -274,17 +273,12 @@ document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
       var wert = input.value.trim();
       var text = "";
       if (input.name === "Kontakt") {
-        var nurTelefon = input.type === "tel";
         var istTel = wert.replace(/[^0-9]/g, "").length >= 6;
-        var istMail = !nurTelefon && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wert);
+        var istMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wert);
         if (!istTel && !istMail) {
-          if (nurTelefon) {
-            text = wert ? "Bitte prüfen Sie die Telefonnummer." : "Unter welcher Nummer erreichen wir Sie?";
-          } else {
-            text = wert
-              ? "Das sieht weder nach Telefonnummer noch nach E-Mail aus. Bitte prüfen Sie die Angabe."
-              : "Wie erreichen wir Sie? Bitte Telefonnummer oder E-Mail angeben.";
-          }
+          text = wert
+            ? "Das sieht weder nach Telefonnummer noch nach E-Mail aus. Bitte prüfen Sie die Angabe."
+            : "Wie erreichen wir Sie? Bitte Telefonnummer oder E-Mail angeben.";
         }
       } else if (!wert) {
         text = meldungen[input.name] || "Bitte ausfüllen.";
@@ -306,13 +300,13 @@ document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
       kontakt: wert("Kontakt", ""),
       ort: wert("Ort", "nicht angegeben"),
       leistung: wert("Leistung", "nicht angegeben"),
-      nachricht: wert("Nachricht", "Bitte um Rückruf."),
+      nachricht: wert("Nachricht", ""),
       falle: d.get("botcheck")
     };
   }
 
   function betreff(a) {
-    return (rueckruf ? "Bitte um Rückruf: " : "Anfrage über die Website: ") + a.leistung;
+    return "Anfrage über die Website: " + a.leistung;
   }
 
   function perMail(a) {
@@ -332,11 +326,8 @@ document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
     box.className = "formular-danke";
     box.setAttribute("role", "status");
     box.setAttribute("tabindex", "-1");
-    box.innerHTML = rueckruf
-      ? "<h3>" + HAKEN_SVG + "Danke, wir rufen Sie zurück.</h3>"
-        + "<p>Wenn es eilt, erreichen Sie uns direkt unter " + TELEFON_LINK + ".</p>"
-      : "<h3>" + HAKEN_SVG + "Danke, Ihre Anfrage ist angekommen.</h3>"
-        + "<p>Wir melden uns bei Ihnen. Wenn es eilt, erreichen Sie uns unter " + TELEFON_LINK + ".</p>";
+    box.innerHTML = "<h3>" + HAKEN_SVG + "Danke, Ihre Anfrage ist angekommen.</h3>"
+      + "<p>Wir melden uns bei Ihnen. Wenn es eilt, erreichen Sie uns unter " + TELEFON_LINK + ".</p>";
     form.replaceWith(box);
     box.focus();
   }
@@ -373,7 +364,6 @@ document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
         access_key: WEB3FORMS_SCHLUESSEL,
         subject: betreff(a),
         from_name: "Website Kameri",
-        Art: rueckruf ? "Rückruf" : "Anfrage",
         Name: a.name,
         Kontakt: a.kontakt,
         Ort: a.ort,

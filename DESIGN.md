@@ -108,23 +108,23 @@ Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercoll
 
 Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen, der Firmenname als riesige Schrift, die erste schlichte Fassung mit dünner Schrift (vom Inhaber mit 4/10 bewertet), große randlose Fotoflächen im Stil von haring.de.
 
-Vorbilder des Inhabers (Mischung, nicht kopieren): bomach.de (klare Gliederung, Leistungsseiten), haring.de (Markenfarbe als Fläche), ein Dribbble-Entwurf „USA Home Renovation“ (dunkle Bühne mit Formular, Bildkacheln). Die Fassung mit Collage wurde mit 6/10 bewertet.
+Vorbilder des Inhabers (Mischung, nicht kopieren): bomach.de (klare Gliederung, Leistungsseiten), haring.de (Markenfarbe als Fläche), ein Dribbble-Entwurf „USA Home Renovation“ (dunkle Bühne mit Formular, Bildkacheln). Die Fassung mit Collage wurde mit 6/10 bewertet. Danach probiert und abgelehnt: große Foto-Bühne oben und Rückruf-Formular auf der Startseite; die Collage kam zurück.
 
 **Key Characteristics:**
-- Mehrere Seiten: Startseite, je eine Seite für Trockenbau, Umbau, Böden und Renovierung, dazu Impressum und Datenschutz. Alle Seiten entstehen mit `node _bauen/bauen.mjs` aus gemeinsamen Bausteinen; HTML nicht direkt bearbeiten, sondern im Generator.
-- Startseite: Bühne als abgerundete, fast randlose Fläche mit Foto und Abdunklung, weiße zweizeilige Überschrift „Trockenbau aus Leimen“, Pill-Knöpfe und ein weißes Rückruf-Formular (Name, Telefon, Leistung). Am Handy entfällt das Rückruf-Formular, dort reichen Anrufen und WhatsApp.
+- Mehrere Seiten: Startseite, je eine Seite für Trockenbau, Umbau & Renovierung, Böden und Gebäudereinigung, dazu Impressum und Datenschutz. Alle Seiten entstehen mit `node _bauen/bauen.mjs` aus gemeinsamen Bausteinen; HTML nicht direkt bearbeiten, sondern im Generator.
+- Startseite: hell, zweizeilige Überschrift „Trockenbau aus Leimen“, kurzer Text, Pill-Knöpfe, Collage aus drei Fotos rechts. Keine große Foto-Bühne und kein Rückruf-Formular oben (beides vom Inhaber abgelehnt).
 - Drei Kennzahlen ohne Kasten: 0 €, 40 km, 1 Ansprechpartner
-- Leistungen als hohe Bildkacheln mit Abdunklung, Name und Pfeil-Kreis; jede führt zu ihrer Seite. Trockenbau trägt das rote Schild „Schwerpunkt“.
-- Leistungsseiten: Pfad, Überschrift „… in Leimen“, Foto rechts, weiße Flächen mit „Was dazugehört“, Ablauf, eigene Fragen, weitere Leistungen, Kontakt mit vorausgewählter Leistung.
+- Leistungen als vier gleich große Bildkacheln mit Abdunklung, Name und Pfeil-Kreis; jede führt zu ihrer Seite. Reihenfolge: Trockenbau, Umbau & Renovierung, Böden, Gebäudereinigung. Kein Schild „Schwerpunkt“ und kein Text, der die übrigen Leistungen kleiner macht.
+- Leistungsseiten: Pfad, kurze Überschrift (höchstens zwei Zeilen), Foto rechts, weiße Flächen „Was dazugehört“, Ablauf, eigene Fragen, weitere Leistungen, Kontakt mit vorausgewählter Leistung und passendem Beispieltext.
 - Ablauf dunkel mit großen roten Schrittnummern
 - Kontakt als rote, abgerundete Fläche: Logorot als große Markenfläche, weißes Formular darauf.
-- Kopf mit Leistungen in der weißen Pill-Navigation, aktuelle Seite dunkel hinterlegt; am Handy klappt ein Menü unter dem Kopf auf.
+- Kopf mit den Leistungen in der weißen Pill-Navigation, aktuelle Seite dunkel hinterlegt; unter 1240px klappt ein Menü unter dem Kopf auf.
 - Schwebende Pill-Leiste am Handy, die beim Runterscrollen weicht und beim Hochscrollen wiederkommt
 
 ## Colors
 
 ### Primary
-- **Logorot** (`#c2262b`): Hauptknöpfe, Schrittnummern, Schild „Schwerpunkt“, Leimen auf der Karte und die Kontaktfläche. Hover `#a51f24`.
+- **Logorot** (`#c2262b`): Hauptknöpfe, Schrittnummern, Leimen auf der Karte und die Kontaktfläche. Hover `#a51f24`.
 
 ### Neutral
 - **Grund** (`#f3f3f1`), **Weiß** für Flächen. Flächen setzen sich durch Tonstufe ab, nicht durch Rahmen; Linien nur an Formularfeldern.

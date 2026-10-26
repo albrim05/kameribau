@@ -4,7 +4,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 
-const V = 9; // bei Änderungen an stil.css oder seite.js hochzählen
+const V = 10; // bei Änderungen an stil.css oder seite.js hochzählen
 const TEL = "tel:+4915236695793";
 const TEL_TEXT = "0152 36695793";
 const WA = "https://wa.me/4915236695793";
@@ -16,7 +16,7 @@ const FOTOS = {
   "buero": [800, 534],
   "kueche-dunkel": [800, 874],
   "raum-eichenboden": [800, 1481],
-  "renovierung-farbe": [800, 559],
+  "reinigung-buero": [800, 533],
   "trockenbau-bogen": [800, 1200],
   "umbau-altbau": [800, 532],
   "wohnkueche": [800, 544],
@@ -62,33 +62,37 @@ const LEISTUNGEN = [
   },
   {
     datei: "umbau.html",
-    name: "Umbau",
-    kurz: "Räume teilen, Türen versetzen",
+    name: "Umbau & Renovierung",
+    auswahl: "Umbau / Renovierung",
+    kurz: "Räume teilen, Wohnungen herrichten",
+    beispiel: "Zum Beispiel: Mietwohnung, 3 Zimmer, nach dem Auszug herrichten",
     foto: "umbau-altbau",
     alt: "Altbauwohnung im Umbau mit geöffneter Wand und Stützen",
-    titel: "Umbau in Leimen, Heidelberg und Umgebung – Kameri",
-    beschreibung: "Räume teilen, Türen versetzen, Öffnungen schließen: Umbau aus Leimen für Wohnungen, Häuser, Büros und Praxen. Beratung und Angebot kostenlos.",
-    h1: "Umbau in Leimen",
-    lead: "Ein Zimmer teilen, eine Tür versetzen, eine Öffnung schließen. Wir passen den Grundriss an das an, was Sie heute brauchen.",
-    punkteTitel: "Was wir umbauen",
+    titel: "Umbau und Renovierung in Leimen, Heidelberg und Umgebung – Kameri",
+    beschreibung: "Räume teilen, Türen versetzen, Wohnungen nach dem Auszug herrichten: Umbau und Renovierung aus Leimen für Privatkunden, Firmen und Hausverwaltungen. Beratung und Angebot kostenlos.",
+    h1: "Umbau und Renovierung",
+    lead: "Ein Zimmer teilen, eine Tür versetzen, die Wohnung nach dem Auszug wieder herrichten. Wir passen Ihre Räume an das an, was Sie heute brauchen.",
+    punkteTitel: "Was wir umbauen und renovieren",
     punkte: [
       ["Räume teilen", "Aus einem Kinderzimmer werden zwei, das Büro bekommt einen Besprechungsraum. Die neue Wand bauen wir in Trockenbau."],
       ["Türen versetzen", "Die Tür soll woanders hin? Wir setzen die neue Öffnung und schließen die alte."],
       ["Öffnungen schließen", "Aus einer alten Tür oder einem Durchgang wird wieder Wand. Danach sieht man nicht mehr, dass dort etwas war."],
-      ["Nischen und Schächte", "Eine Nische fürs Regal, ein verkleideter Schacht, ein Abstellraum unter der Treppe."],
-      ["Büros und Praxen", "Wir passen Büro-, Praxis- und Ladenflächen an neue Mieter oder neue Abläufe an."],
-      ["Gleich mit erledigt", "Nach dem Umbau braucht es oft einen neuen Boden. Den verlegen wir gleich mit."]
+      ["Wohnung nach dem Auszug", "Für Vermieter und Hausverwaltungen: Wir richten die Wohnung für den nächsten Mieter her."],
+      ["Wände und Decken ausbessern", "Risse, Löcher und alte Dübelstellen werden geschlossen und gespachtelt."],
+      ["Büros und Praxen", "Wir passen Büro-, Praxis- und Ladenflächen an neue Mieter oder neue Abläufe an."]
     ],
     fragen: [
       ["Kann jede Wand weg?", "Nein. Tragende Wände dürfen nur nach Prüfung durch einen Statiker verändert werden. Bei der Besichtigung sehen wir uns die Wände an und sagen Ihnen, was möglich ist."],
-      ["Was kostet ein Umbau?", "Das hängt davon ab, was geändert werden soll. Deshalb sehen wir uns alles vor Ort an. Besichtigung und Angebot sind kostenlos."],
-      ["Bauen Sie auch Büros und Läden um?", "Ja. Wir arbeiten für Privatkunden und für Firmen, Praxen und Hausverwaltungen."]
+      ["Arbeiten Sie für Hausverwaltungen?", "Ja. Wir richten Mietwohnungen nach dem Auszug her und stimmen die Termine mit Ihnen ab."],
+      ["Lohnt sich ein Anruf auch für kleinere Arbeiten?", "Ja. Rufen Sie an und beschreiben Sie kurz, worum es geht. Dann sagen wir Ihnen, ob wir es übernehmen können."],
+      ["Was kostet ein Umbau oder eine Renovierung?", "Das hängt davon ab, was alles gemacht werden soll. Deshalb sehen wir uns die Räume vor Ort an. Besichtigung und Angebot sind kostenlos."]
     ]
   },
   {
     datei: "boeden.html",
     name: "Böden",
     kurz: "Laminat, Vinyl, Parkett",
+    beispiel: "Zum Beispiel: Wohnzimmer, ca. 30 m², neuer Vinylboden",
     foto: "boden-fischgraet",
     alt: "Wohnzimmer mit Parkett und hellen Wänden",
     titel: "Boden verlegen in Leimen, Heidelberg und Umgebung – Kameri",
@@ -111,28 +115,28 @@ const LEISTUNGEN = [
     ]
   },
   {
-    datei: "renovierung.html",
-    name: "Renovierung",
-    kurz: "Räume wieder bezugsfertig",
-    foto: "renovierung-farbe",
-    alt: "Farbroller streicht eine Wand hellblau",
-    titel: "Renovierung in Leimen, Heidelberg und Umgebung – Kameri",
-    beschreibung: "Renovierung von Wohnungen, Häusern und Büros in Leimen und Umgebung, auch für Vermieter und Hausverwaltungen. Beratung und Angebot kostenlos.",
-    h1: "Renovierung in Leimen",
-    lead: "Die Mietwohnung nach dem Auszug, das Büro vor dem Einzug, das Haus nach vielen Jahren. Wir machen die Räume wieder bezugsfertig.",
-    punkteTitel: "Was zur Renovierung gehört",
+    datei: "gebaeudereinigung.html",
+    name: "Gebäudereinigung",
+    kurz: "Baureinigung, Büros, Treppenhäuser",
+    beispiel: "Zum Beispiel: Treppenhaus, 4 Etagen, alle zwei Wochen",
+    foto: "reinigung-buero",
+    alt: "Reinigungskraft wischt am Abend den Boden einer Bürolobby",
+    titel: "Gebäudereinigung in Leimen, Heidelberg und Umgebung – Kameri",
+    beschreibung: "Baureinigung, Reinigung von Büros und Praxen, Treppenhäusern und Fenstern aus Leimen. Für Privatkunden, Firmen und Hausverwaltungen. Angebot kostenlos.",
+    h1: "Gebäudereinigung in Leimen",
+    lead: "Nach dem Umbau, im Büro, im Treppenhaus oder an den Fenstern: Wir machen sauber, einmal oder regelmäßig.",
+    punkteTitel: "Was wir reinigen",
+    schritt4: ["Wir legen los", "Den Termin legen wir gemeinsam fest. Gearbeitet wird nach Angebot."],
     punkte: [
-      ["Wohnung nach dem Auszug", "Für Vermieter und Hausverwaltungen: Wir richten die Wohnung für den nächsten Mieter her."],
-      ["Wände und Decken ausbessern", "Risse, Löcher und alte Dübelstellen werden geschlossen und gespachtelt."],
-      ["Neuer Boden", "Oft gehört ein neuer Boden dazu. Den verlegen wir gleich mit."],
-      ["Büro und Gewerbe", "Vor dem Einzug oder nach dem Auszug bringen wir Büro-, Praxis- und Ladenflächen in Ordnung."],
-      ["Kleine Umbauten", "Eine Wand dazu oder eine Öffnung weg? Das erledigen wir im selben Auftrag."],
-      ["Ein Ansprechpartner", "Sie sprechen vom ersten Anruf bis zur Übergabe mit derselben Person."]
+      ["Baureinigung", "Nach Umbau oder Renovierung entfernen wir Staub und Baureste, damit Sie einziehen können. Wenn wir selbst gebaut haben, machen wir gleich danach sauber."],
+      ["Büros und Praxen", "Regelmäßige Reinigung von Büro-, Praxis- und Ladenflächen. Die Zeiten stimmen wir mit Ihnen ab."],
+      ["Treppenhäuser", "Regelmäßige Reinigung von Treppenhäusern, zum Beispiel für Hausverwaltungen und Eigentümer."],
+      ["Fenster", "Fenster und Glasflächen, einzeln oder zusammen mit der übrigen Reinigung."]
     ],
     fragen: [
-      ["Lohnt sich ein Anruf auch für kleinere Arbeiten?", "Ja. Rufen Sie an und beschreiben Sie kurz, worum es geht. Dann sagen wir Ihnen, ob wir es übernehmen können."],
-      ["Arbeiten Sie für Hausverwaltungen?", "Ja. Wir richten Mietwohnungen nach dem Auszug her und stimmen die Termine mit Ihnen ab."],
-      ["Was kostet eine Renovierung?", "Das hängt davon ab, was alles gemacht werden soll. Deshalb sehen wir uns die Räume vor Ort an. Besichtigung und Angebot sind kostenlos."]
+      ["Reinigen Sie einmalig oder regelmäßig?", "Beides. Eine Baureinigung ist meist einmalig, Büros und Treppenhäuser reinigen wir regelmäßig."],
+      ["Machen Sie nach dem Umbau gleich sauber?", "Ja. Wenn wir bei Ihnen gebaut haben, übernehmen wir auf Wunsch auch die Baureinigung."],
+      ["Was kostet die Reinigung?", "Das hängt von Fläche, Art der Reinigung und Häufigkeit ab. Wir sehen uns alles an und machen Ihnen ein kostenloses Angebot."]
     ]
   }
 ];
@@ -231,7 +235,7 @@ function fuss() {
 }
 
 function leistungsAuswahl(id, vorauswahl = "", leer = "Bitte wählen") {
-  const optionen = ["Trockenbau", "Umbau", "Boden", "Renovierung", "Etwas anderes"]
+  const optionen = ["Trockenbau", "Umbau / Renovierung", "Boden", "Gebäudereinigung", "Etwas anderes"]
     .map((o) => `<option${o === vorauswahl ? " selected" : ""}>${o}</option>`)
     .join("\n                ");
   return `<select id="${id}" name="Leistung">
@@ -240,7 +244,7 @@ function leistungsAuswahl(id, vorauswahl = "", leer = "Bitte wählen") {
               </select>`;
 }
 
-function ablauf() {
+function ablauf(schritt4 = ["Wir bauen", "Den Termin legen wir gemeinsam fest. Gearbeitet wird nach Angebot."]) {
   return `
     <section class="dunkel" id="ablauf" aria-labelledby="ablauf-titel">
       <div class="innen ablauf-innen">
@@ -266,8 +270,8 @@ function ablauf() {
             <p>Schriftlich und kostenlos. Sie entscheiden in Ruhe.</p>
           </li>
           <li data-zeigen>
-            <h3>Wir bauen</h3>
-            <p>Den Termin legen wir gemeinsam fest. Gearbeitet wird nach Angebot.</p>
+            <h3>${schritt4[0]}</h3>
+            <p>${schritt4[1]}</p>
           </li>
         </ol>
       </div>
@@ -295,11 +299,10 @@ function fragenAbschnitt(fragen, { titel = "Häufige Fragen", oben = true } = {}
 `;
 }
 
-function kachel(l, { gross = false, sizes = "(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" } = {}) {
+function kachel(l, { sizes = "(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" } = {}) {
   return `
           <a class="kachel" href="${l.datei}" data-zeigen>
             ${foto(l.foto, l.alt, { sizes })}
-            ${gross ? '<span class="kachel-marke">Schwerpunkt</span>' : ""}
             <span class="kachel-pfeil">${icon("pfeil")}</span>
             <span class="kachel-text">
               <span class="kachel-name">${l.name}</span>
@@ -308,7 +311,7 @@ function kachel(l, { gross = false, sizes = "(max-width: 720px) 100vw, (max-widt
           </a>`;
 }
 
-function kontakt(vorauswahl = "") {
+function kontakt(vorauswahl = "", beispiel = "Zum Beispiel: Wohnzimmer teilen, mit Tür, ca. 4 m Wand") {
   return `
     <section class="kontakt" id="kontakt" aria-labelledby="kontakt-titel">
       <div class="kontakt-flaeche">
@@ -354,7 +357,7 @@ function kontakt(vorauswahl = "") {
             </div>
             <div class="feld">
               <label for="f-nachricht">Was soll gemacht werden?</label>
-              <textarea id="f-nachricht" name="Nachricht" required aria-describedby="f-nachricht-fehler" placeholder="Zum Beispiel: Wohnzimmer teilen, mit Tür, ca. 4 m Wand"></textarea>
+              <textarea id="f-nachricht" name="Nachricht" required aria-describedby="f-nachricht-fehler" placeholder="${beispiel}"></textarea>
               <span class="fehler" id="f-nachricht-fehler"></span>
             </div>
             <input class="falle" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -455,58 +458,36 @@ const JSONLD_FIRMA = `  <script type="application/ld+json">
       "addressCountry": "DE"
     },
     "areaServed": ["Leimen", "Heidelberg", "Mannheim", "Wiesloch", "Walldorf", "Schwetzingen", "Hockenheim", "Sinsheim", "Speyer"],
-    "knowsAbout": ["Trockenbau", "Umbau", "Bodenverlegung", "Renovierung"]
+    "knowsAbout": ["Trockenbau", "Umbau", "Renovierung", "Bodenverlegung", "Gebäudereinigung"]
   }
   </script>
 `;
 
 function startseite() {
-  const kacheln = LEISTUNGEN.map((l, i) => kachel(l, { gross: i === 0 })).join("");
+  const kacheln = LEISTUNGEN.map((l) => kachel(l)).join("");
   return kopf({
     titel: "Kameri – Trockenbau und Innenausbau in Leimen",
-    beschreibung: `Kameri aus Leimen: Trockenbau, Umbau, Böden und Renovierung für Privatkunden und Firmen im Umkreis von 40 km. Beratung und Angebot kostenlos. Tel. ${TEL_TEXT}.`,
+    beschreibung: `Kameri aus Leimen: Trockenbau, Umbau und Renovierung, Böden und Gebäudereinigung für Privatkunden und Firmen im Umkreis von 40 km. Beratung und Angebot kostenlos. Tel. ${TEL_TEXT}.`,
     start: true,
+    ogBild: "wohnkueche",
     jsonld: JSONLD_FIRMA
   }) + `
   <main id="inhalt">
-    <div class="buehne-rahmen">
-      <section class="buehne" aria-labelledby="titel">
-        <div class="buehne-bild">
-          ${foto("wohnraum", "Heller, großer Wohnraum mit Holzboden und langen Fenstern", { lazy: false, prio: true, sizes: "100vw" })}
+    <section class="start" aria-labelledby="titel">
+      <div class="start-text">
+        <h1 id="titel">Trockenbau aus Leimen</h1>
+        <p class="start-lead">Wir ziehen Wände und Decken ein, bauen Räume um und verlegen Böden. Rufen Sie an: Wir kommen vorbei, sehen uns alles an und machen Ihnen ein kostenloses Angebot.</p>
+        <div class="aktionen">
+          <a class="knopf knopf-rot" href="${TEL}">${icon("telefon")}${TEL_TEXT} anrufen</a>
+          <a class="knopf knopf-weiss" href="${WA}">${icon("chat")}WhatsApp schreiben</a>
         </div>
-        <div class="buehne-text">
-          <h1 id="titel">Trockenbau aus Leimen</h1>
-          <p class="buehne-lead">Wände, Decken, Umbauten, Böden und Renovierung für Privatkunden und Firmen. Beratung und Angebot sind kostenlos, und Sie sprechen direkt mit dem Inhaber.</p>
-          <div class="aktionen">
-            <a class="knopf knopf-rot" href="${TEL}">${icon("telefon")}${TEL_TEXT} anrufen</a>
-            <a class="knopf knopf-glas" href="${WA}">${icon("chat")}WhatsApp schreiben</a>
-          </div>
-        </div>
-
-        <form class="rueckruf" id="rueckruf" data-anfrage="rueckruf" action="mailto:${MAIL}" method="post" enctype="text/plain" novalidate>
-          <p class="rueckruf-titel"><b>Rückruf anfordern</b> Name und Nummer genügen, wir rufen Sie zurück.</p>
-          <div class="rueckruf-felder">
-            <div class="feld">
-              <label for="r-name">Name</label>
-              <input id="r-name" name="Name" type="text" autocomplete="name" required aria-describedby="r-name-fehler">
-              <span class="fehler" id="r-name-fehler"></span>
-            </div>
-            <div class="feld">
-              <label for="r-telefon">Telefonnummer</label>
-              <input id="r-telefon" name="Kontakt" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="r-telefon-fehler">
-              <span class="fehler" id="r-telefon-fehler"></span>
-            </div>
-            <div class="feld">
-              <label for="r-leistung">Worum geht es?</label>
-              ${leistungsAuswahl("r-leistung")}
-            </div>
-            <button class="knopf knopf-rot" type="submit">Rückruf anfordern</button>
-          </div>
-          <input class="falle" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <p class="formular-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
-    </div>
+      </div>
+      <div class="collage">
+        ${foto("wohnkueche", "Heller Wohnraum mit offener Küche und Holzboden", { lazy: false, prio: true, sizes: "(max-width: 860px) 60vw, 25vw", klasse: "collage-gross" })}
+        ${foto("trockenbau-bogen", "Weißer Raum mit gerundetem Wanddurchgang", { lazy: false, sizes: "(max-width: 860px) 40vw, 22vw" })}
+        ${foto("raum-eichenboden", "Frisch renovierter Flur mit Holzboden", { lazy: false, sizes: "(max-width: 860px) 40vw, 22vw" })}
+      </div>
+    </section>
 
     <section class="werte" aria-label="Auf einen Blick">
       <div class="wert"><b>0 €</b><span>für Beratung, Ausmessen und Angebot</span></div>
@@ -518,7 +499,7 @@ function startseite() {
       <div class="innen">
         <div class="abschnitt-kopf" data-zeigen>
           <h2 id="leistungen-titel">Leistungen</h2>
-          <p>Trockenbau ist unser Schwerpunkt. Umbau, Böden und Renovierung kommen aus derselben Hand.</p>
+          <p>Wir bauen, verlegen und machen am Ende sauber. Sie haben für alles einen Ansprechpartner.</p>
         </div>
         <div class="kacheln">${kacheln}
         </div>
@@ -532,7 +513,7 @@ function startseite() {
         </div>
         <div class="kunden">
           <article class="kunde" data-zeigen>
-            ${foto("wohnkueche", "Heller Wohnraum mit offener Küche und Holzboden", { sizes: "(max-width: 860px) 100vw, 50vw" })}
+            ${foto("wohnraum", "Großer, heller Wohnraum mit Sofa und Holzboden", { sizes: "(max-width: 860px) 100vw, 50vw" })}
             <div class="kunde-text">
               <h3>Privatkunden</h3>
               <p>Das Dachgeschoss ausbauen, ein Kinderzimmer teilen, ein neuer Boden im Wohnzimmer. Wir kommen zu Ihnen nach Hause und sagen Ihnen vorher, was es kostet.</p>
@@ -567,7 +548,7 @@ function leistungsseite(l) {
             <h3>${t}</h3>
             <p>${p}</p>
           </li>`).join("");
-  const auswahl = { "Böden": "Boden" }[l.name] || l.name;
+  const auswahl = l.auswahl || { "Böden": "Boden" }[l.name] || l.name;
   const jsonld = `  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -608,11 +589,11 @@ function leistungsseite(l) {
           <h2 id="punkte-titel">${l.punkteTitel}</h2>
           <p>Ihr Vorhaben ist nicht dabei? Fragen Sie einfach. Beratung und Angebot sind kostenlos.</p>
         </div>
-        <ul class="punkte">${punkte}
+        <ul class="punkte${l.punkte.length === 4 ? " punkte-zwei" : ""}">${punkte}
         </ul>
       </div>
     </section>
-` + ablauf() + fragenAbschnitt(l.fragen, { titel: `Fragen zu ${l.name === "Böden" ? "neuen Böden" : l.name === "Umbau" ? "Umbauten" : l.name}` }) + `
+` + ablauf(l.schritt4) + fragenAbschnitt(l.fragen, { titel: l.fragenTitel || "Häufige Fragen" }) + `
     <section class="abschnitt abschnitt-oben-frei" aria-labelledby="weitere-titel">
       <div class="innen">
         <div class="abschnitt-kopf" data-zeigen>
@@ -622,7 +603,7 @@ function leistungsseite(l) {
         </div>
       </div>
     </section>
-` + kontakt(auswahl) + `  </main>
+` + kontakt(auswahl, l.beispiel) + `  </main>
 ` + fuss();
 }
 
