@@ -1,33 +1,33 @@
 /* Kameri – alles rund ums Haus */
 
 @font-face {
-  font-family: "Geist";
-  src: url("schriften/geist-sans-latin-400-normal.woff2") format("woff2");
+  font-family: "Hanken Grotesk";
+  src: url("schriften/hanken-grotesk-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: "Geist";
-  src: url("schriften/geist-sans-latin-500-normal.woff2") format("woff2");
+  font-family: "Hanken Grotesk";
+  src: url("schriften/hanken-grotesk-latin-500-normal.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: "Geist";
-  src: url("schriften/geist-sans-latin-600-normal.woff2") format("woff2");
+  font-family: "Hanken Grotesk";
+  src: url("schriften/hanken-grotesk-latin-600-normal.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
 }
 
-/* Hell und modern mit dunklen Abschnitten: runde Formen, Pill-Knöpfe, Fotos als Collage */
+/* Hell und modern mit dunklen Abschnitten: Flächen statt Rahmen, runde Fotos, Pill-Knöpfe */
 :root {
-  --grund: #fafaf9;
+  --grund: #f3f3f1;
   --weiss: #ffffff;
-  --flaeche: #f4f4f2;
+  --flaeche: #ececea;
   --linie: #e7e5e4;
   --tinte: #18181b;
   --text: #3f3f46;
-  --leise: #71717a;
+  --leise: #66666e;
   --rot: #c2262b;
   --rot-tief: #a51f24;
   --feldrand: #8b8b93;
@@ -39,14 +39,14 @@
   --dunkel-text: #d4d4d8;
   --dunkel-leise: #a1a1aa;
 
-  --schrift: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --schrift: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --t-klein: 0.9375rem;
   --t-text: 1.0625rem;
-  --t-lead: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --t-lead: 1.25rem;
   --t-h3: 1.375rem;
   --t-h2: clamp(2.1rem, 1.4rem + 2.4vw, 3.5rem);
-  --t-h1: clamp(2.6rem, 1.5rem + 3.9vw, 5rem);
+  --t-h1: clamp(2.75rem, 1.5rem + 4.4vw, 5.5rem);
 
   --r-gross: 24px;
   --r: 18px;
@@ -223,7 +223,6 @@ summary {
 
 .knopf-weiss {
   background: var(--weiss);
-  border-color: var(--linie);
   color: var(--tinte);
 }
 
@@ -255,7 +254,6 @@ summary {
     background: var(--rot-tief);
   }
   .knopf-weiss:hover {
-    border-color: #c9c6c3;
     background: var(--flaeche);
   }
   .knopf-dunkel:hover {
@@ -323,7 +321,6 @@ summary {
   gap: 2px;
   margin-left: auto;
   padding: 5px;
-  border: 1px solid var(--linie);
   border-radius: 999px;
   background: var(--weiss);
 }
@@ -386,36 +383,12 @@ summary {
   padding: clamp(16px, 3vw, 40px) var(--rand) clamp(40px, 5vw, 64px);
 }
 
-.hinweis {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px 8px 12px;
-  border: 1px solid var(--linie);
-  border-radius: 999px;
-  background: var(--weiss);
-  color: var(--text);
-  font-size: var(--t-klein);
-}
-
-.punkt {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--rot);
-  box-shadow: 0 0 0 4px rgb(194 38 43 / 0.15); /* taste-skill-ignore: Ring um den Punkt, keine Tiefe */
-}
-
 .start h1 {
-  margin-top: 24px;
-}
-
-.start h1 span {
-  color: #84848c;
+  max-width: 9ch;
 }
 
 .start-lead {
-  max-width: 36ch;
+  max-width: 40ch;
   margin: 24px 0 36px;
   font-size: var(--t-lead);
   line-height: 1.55;
@@ -453,19 +426,17 @@ summary {
 }
 
 .wert {
-  padding: 26px 28px;
-  border: 1px solid var(--linie);
-  border-radius: var(--r);
-  background: var(--weiss);
+  min-width: 0;
+  padding: 4px 0;
 }
 
 .wert b {
   display: block;
   color: var(--tinte);
-  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+  font-size: clamp(1.5rem, 0.1rem + 3.4vw, 3.5rem);
   font-weight: 600;
   letter-spacing: -0.04em;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .wert span {
@@ -509,8 +480,10 @@ summary {
 .leistung {
   display: flex;
   flex-direction: column;
+}
+
+.leistung-gross {
   overflow: hidden;
-  border: 1px solid var(--linie);
   border-radius: var(--r-gross);
   background: var(--weiss);
 }
@@ -546,7 +519,12 @@ summary {
 .leistung-bild {
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: var(--r-gross);
   background: var(--flaeche);
+}
+
+.leistung-gross .leistung-bild {
+  border-radius: 0;
 }
 
 .leistung-bild img {
@@ -557,7 +535,7 @@ summary {
 }
 
 .leistung-text {
-  padding: 24px 26px 28px;
+  padding: 22px 4px 0;
 }
 
 .leistung p {
@@ -566,18 +544,17 @@ summary {
 }
 
 .leistung ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: 6px 32px;
   margin-top: 22px;
+  padding-left: 1.1em;
+  list-style: disc;
+  color: var(--text);
 }
 
-.leistung li {
-  padding: 6px 13px;
-  border: 1px solid var(--linie);
-  border-radius: 999px;
-  color: var(--text);
-  font-size: var(--t-klein);
+.leistung li::marker {
+  color: var(--rot);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -638,10 +615,9 @@ summary {
 
 .ablauf li {
   display: grid;
-  grid-template-columns: 48px 1fr;
-  column-gap: 20px;
+  grid-template-columns: 56px 1fr;
+  column-gap: 16px;
   padding: 26px 28px;
-  border: 1px solid var(--dunkel-linie);
   border-radius: var(--r);
   background: var(--dunkel-karte);
   counter-increment: schritt;
@@ -650,15 +626,11 @@ summary {
 .ablauf li::before {
   content: counter(schritt);
   grid-row: span 2;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--rot);
-  color: var(--weiss);
-  font-size: 1.125rem;
+  color: var(--rot);
+  font-size: var(--t-h2);
   font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
 }
 
@@ -681,7 +653,6 @@ summary {
 
 .kunde {
   overflow: hidden;
-  border: 1px solid var(--linie);
   border-radius: var(--r-gross);
   background: var(--weiss);
 }
@@ -710,7 +681,6 @@ summary {
   gap: clamp(32px, 5vw, 80px);
   align-items: center;
   padding: clamp(28px, 4vw, 56px);
-  border: 1px solid var(--linie);
   border-radius: var(--r-gross);
   background: var(--weiss);
 }
@@ -840,7 +810,6 @@ summary {
 
 .fragen details {
   padding-inline: clamp(20px, 2.4vw, 28px);
-  border: 1px solid var(--linie);
   border-radius: var(--r);
   background: var(--weiss);
 }
@@ -852,8 +821,8 @@ summary {
   gap: 24px;
   padding: 22px 0;
   color: var(--tinte);
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: var(--t-text);
+  font-weight: 600;
   line-height: 1.35;
   list-style: none;
   cursor: pointer;
@@ -900,7 +869,7 @@ summary {
   display: inline-block;
   margin: 18px 0 20px;
   color: var(--weiss);
-  font-size: clamp(2.4rem, 1.5rem + 3vw, 4rem);
+  font-size: var(--t-h2);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.04em;
@@ -961,7 +930,7 @@ summary {
 .formular h3,
 .formular-danke h3 {
   color: var(--tinte);
-  font-size: 1.5rem;
+  font-size: var(--t-h3);
 }
 
 .formular-danke h3 {
@@ -1153,7 +1122,6 @@ textarea:focus {
   }
   .js .start-text > :nth-child(2) { animation-delay: 70ms; }
   .js .start-text > :nth-child(3) { animation-delay: 140ms; }
-  .js .start-text > :nth-child(4) { animation-delay: 210ms; }
   .js .collage img {
     animation: bild-rein 900ms var(--ease-soft) both;
   }
@@ -1253,8 +1221,7 @@ textarea:focus {
   .kunden,
   .gebiet-karte,
   .fragen-innen,
-  .kontakt-innen,
-  .werte {
+  .kontakt-innen {
     grid-template-columns: 1fr;
   }
   .leistung-gross {
@@ -1312,15 +1279,16 @@ textarea:focus {
   }
   .ablauf li {
     padding: 22px;
-    column-gap: 16px;
+    column-gap: 12px;
     grid-template-columns: 40px 1fr;
   }
-  .ablauf li::before {
-    width: 40px;
-    height: 40px;
-  }
-  .orte {
+  .orte,
+  .werte,
+  .leistung ul {
     grid-template-columns: 1fr;
+  }
+  .werte {
+    gap: 20px;
   }
   .karte {
     display: none;
@@ -1350,7 +1318,6 @@ textarea:focus {
     padding: 6px;
     border-radius: 999px;
     background: var(--weiss);
-    border: 1px solid var(--linie);
     /* schwebende Leiste über dem Inhalt */
     box-shadow: 0 12px 32px -12px rgb(0 0 0 / 0.35); /* taste-skill-ignore */
     transition: transform 240ms var(--ease-out), visibility 0s linear 0s;

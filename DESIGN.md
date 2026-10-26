@@ -1,14 +1,14 @@
 ---
 name: Kameri – alles rund ums Haus
-description: Hell und modern mit dunklen Abschnitten – fette Geist-Überschriften, Bildercollage mit runden Ecken, Pill-Knöpfe, Rot für Handlungen.
+description: Hell und modern mit dunklen Abschnitten – fette Überschriften in Hanken Grotesk, Bildercollage mit runden Ecken, Flächen statt Rahmen, Pill-Knöpfe, Rot für Handlungen.
 colors:
-  grund: "#fafaf9"
+  grund: "#f3f3f1"
   weiss: "#ffffff"
-  flaeche: "#f4f4f2"
+  flaeche: "#ececea"
   linie: "#e7e5e4"
   tinte: "#18181b"
   text: "#3f3f46"
-  leise: "#71717a"
+  leise: "#66666e"
   akzent-grau: "#84848c"
   rot: "#c2262b"
   rot-tief: "#a51f24"
@@ -21,35 +21,35 @@ colors:
   dunkel-leise: "#a1a1aa"
 typography:
   h1:
-    fontFamily: "Geist, system-ui, sans-serif"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
     fontSize: "clamp(2.6rem, 1.5rem + 3.9vw, 5rem)"
     fontWeight: 600
     lineHeight: 1.02
     letterSpacing: "-0.04em"
   h2:
-    fontFamily: "Geist, system-ui, sans-serif"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
     fontSize: "clamp(2.1rem, 1.4rem + 2.4vw, 3.5rem)"
     fontWeight: 600
     lineHeight: 1.05
     letterSpacing: "-0.04em"
   h3:
-    fontFamily: "Geist, system-ui, sans-serif"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
     fontSize: "1.375rem"
     fontWeight: 600
     lineHeight: 1.25
     letterSpacing: "-0.02em"
   lead:
-    fontFamily: "Geist, system-ui, sans-serif"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
     fontSize: "clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem)"
     fontWeight: 400
     lineHeight: 1.55
   text:
-    fontFamily: "Geist, system-ui, sans-serif"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.6
   klein:
-    fontFamily: "Geist, system-ui, sans-serif"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
     fontSize: "0.9375rem"
     fontWeight: 400
     lineHeight: 1.6
@@ -104,15 +104,15 @@ components:
 
 **Creative North Star: "Hell, ruhig, hochwertig"**
 
-Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Die Seite steht auf warm-hellem Grund, trägt fette, eng gesetzte Überschriften in Geist, große Fotos mit runden Ecken und weiche Pill-Knöpfe. Zwei dunkle Abschnitte (Ablauf und Kontakt) geben Gewicht und wirken edel. Rot bleibt für Handlungen.
+Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Auf Wunsch des Inhabers an die Prüfregeln angepasst: keine Rahmen, kein Hinweis-Kästchen über der Überschrift, zweizeilige Überschrift, weniger verbreitete Schrift. Die Seite steht auf warm-hellem Grund, trägt fette, eng gesetzte Überschriften in Hanken Grotesk, große Fotos mit runden Ecken und weiche Pill-Knöpfe. Zwei dunkle Abschnitte (Ablauf und Kontakt) geben Gewicht und wirken edel. Rot bleibt für Handlungen.
 
 Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen, der Firmenname als riesige Schrift, die erste schlichte Fassung mit dünner Schrift (vom Inhaber mit 4/10 bewertet).
 
 **Key Characteristics:**
-- Start: Hinweis-Pill, große Überschrift mit grauem Zusatz, Pill-Knöpfe, Collage aus drei Fotos
-- Drei Kacheln: 0 €, 40 km, 1 Ansprechpartner
-- Leistungen als weiße Karten mit runden Ecken; Trockenbau als breite Karte oben
-- Dunkle Abschnitte mit dunklen Karten und roten Schrittnummern
+- Start: zweizeilige Überschrift „Trockenbau aus Leimen“, Pill-Knöpfe, Collage aus drei Fotos
+- Drei Kennzahlen ohne Kasten: 0 €, 40 km, 1 Ansprechpartner
+- Trockenbau als breite weiße Fläche oben, darunter drei Leistungen als Foto mit Text, ohne Kasten
+- Dunkle Abschnitte mit dunklen Flächen und großen roten Schrittnummern
 - Schwebende Pill-Leiste am Handy
 
 ## Colors
@@ -121,7 +121,7 @@ Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen,
 - **Logorot** (`#c2262b`): Hauptknöpfe, Schrittnummern, Punkt im Hinweis, Leimen auf der Karte. Hover `#a51f24`.
 
 ### Neutral
-- **Grund** (`#fafaf9`), **Weiß** für Karten, **Linie** (`#e7e5e4`) als 1px-Rand der Karten.
+- **Grund** (`#f3f3f1`), **Weiß** für Flächen. Flächen setzen sich durch Tonstufe ab, nicht durch Rahmen; Linien nur an Formularfeldern.
 - **Tinte** (`#18181b`), **Text** (`#3f3f46`), **Leise** (`#71717a`).
 - **Dunkel** (`#141416`) mit **dunklen Karten** (`#1e1e22`) für Ablauf und Kontakt.
 
@@ -130,10 +130,10 @@ Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen,
 
 ## Typography
 
-**Schrift:** Geist (400/500/600), selbst gehostet in `schriften/`.
+**Schrift:** Hanken Grotesk (400/500/600), selbst gehostet in `schriften/`.
 
 ### Hierarchy
-- **H1** (600, bis 80px, −0.04em), letzter Teil grau (`#84848c`).
+- **H1** (600, bis 88px, −0.04em), höchstens zwei Zeilen.
 - **H2** (600, bis 56px, −0.04em).
 - **H3** (600, 22px).
 - **Lead** 18–20px, **Text** 17px, **Klein** 15px.
@@ -144,7 +144,7 @@ Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand bis 144p
 
 ## Elevation & Depth
 
-Karten sind flach mit 1px-Rand. Schatten nur auf schwebenden Dingen: Kopf nach dem Scrollen (über ein Pseudo-Element), Handy-Leiste.
+Flächen sind flach und ohne Rand. Schatten nur auf schwebenden Dingen: Kopf nach dem Scrollen (über ein Pseudo-Element), Handy-Leiste.
 
 ## Shapes
 
@@ -159,13 +159,13 @@ Pill-Knöpfe, 54px hoch: Rot (Hauptaktion), Weiß mit Rand (WhatsApp), Dunkel (P
 Logo links (60px), Navigation als weiße Pill-Gruppe, dunkler Pill-Knopf mit Telefonnummer rechts.
 
 ### Karten
-Weiß, 1px Rand, 24px Ecken; Foto oben (4:3) oder links (Trockenbau-Karte), Text darunter. Stichworte als kleine Pills mit Rand.
+Trockenbau als weiße Fläche mit Foto links; die übrigen Leistungen als Foto mit 24px Ecken und Text darunter, ohne Kasten. Stichworte als Liste mit roten Punkten.
 
 ### Inputs / Fields
 52px, 1px Rand `#8b8b93`, 12px Ecken, Fokus in Tinte mit weichem Ring, Fehler rot. Formular sendet über Web3Forms.
 
 ### Fragen
-Weiße Karten, Plus im grauen Kreis, beim Öffnen rot und gedreht.
+Weiße Flächen ohne Rand, Plus im grauen Kreis, beim Öffnen rot und gedreht.
 
 ## Do's and Don'ts
 
