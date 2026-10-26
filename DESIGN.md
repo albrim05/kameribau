@@ -122,7 +122,7 @@ Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen,
 
 ### Neutral
 - **Grund** (`#f3f3f1`), **Weiß** für Flächen. Flächen setzen sich durch Tonstufe ab, nicht durch Rahmen; Linien nur an Formularfeldern.
-- **Tinte** (`#18181b`), **Text** (`#3f3f46`), **Leise** (`#71717a`).
+- **Tinte** (`#18181b`), **Text** (`#3f3f46`), **Leise** (`#66666e`).
 - **Dunkel** (`#141416`) mit **dunklen Karten** (`#1e1e22`) für Ablauf und Kontakt.
 
 ### Named Rules
