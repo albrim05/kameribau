@@ -70,7 +70,7 @@ Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ is
 
 ## Look
 
-Vom Inhaber gewählt: modern und hochwertig. Weißer Grund, große Fotos, ruhige Typografie, Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift.
+Vom Inhaber gewählt: modern, hochwertig, „premium“. Aus drei Entwürfen: B (hell, fette Überschrift, Bildercollage mit runden Ecken, Pill-Knöpfe) als Grundlage plus dunkle Abschnitte aus A. Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift, die schlichte Fassung mit dünner Schrift (4/10).
 
 ## Voice
 

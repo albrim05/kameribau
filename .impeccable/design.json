@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-25T19:49:47.606207+00:00",
+  "generatedAt": "2026-10-26T18:09:13.570841+00:00",
   "title": "Design System: Kameri – alles rund ums Haus",
   "extensions": {
     "colorMeta": {
@@ -22,14 +22,14 @@
         "role": "neutral",
         "displayName": "Tinte",
         "tonalRamp": [
-          "#141414",
-          "#1f1f1f",
-          "#2c2c2c",
-          "#3a3a3a",
-          "#676765",
-          "#8f8f8d",
-          "#c4c4c2",
-          "#ededeb"
+          "#09090b",
+          "#18181b",
+          "#27272a",
+          "#3f3f46",
+          "#71717a",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#f4f4f5"
         ]
       },
       "flaeche": {
@@ -140,36 +140,30 @@
     }
   ],
   "narrative": {
-    "northStar": "Der fertige Raum",
-    "overview": "Die Seite wirkt wie ein frisch renovierter Raum: viel Weiß, helles Holz in den Fotos, ruhige Linienführung. Die Fotos tragen die Seite, die Typografie bleibt leicht und zurückhaltend, das Logo steht normal groß im Kopf. Rot erscheint nur dort, wo der Besucher handeln soll: Anrufen, Senden, kleine Haken und Nummern.\n\nDer Inhaber hat diesen Stil gewählt („modern und hochwertig“) und zwei frühere, auffällige Richtungen abgelehnt (Gipskarton-Motive mit Punkten und Kästen; der Firmenname als riesige Schrift). Diese Seite bleibt bewusst vertraut und sauber.",
+    "northStar": "Hell, ruhig, hochwertig",
+    "overview": "Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Fette Geist-Überschriften, Fotos mit runden Ecken, Pill-Knöpfe, zwei dunkle Abschnitte, Rot für Handlungen.",
     "keyCharacteristics": [
-      "Geteilter Start: Text links, hohes Foto rechts bis an den Rand",
-      "Leistungen als 2×2-Raster mit großen Fotos, Text und kleinen Stichwort-Chips",
-      "Flächen in Hellgrau statt Linien, ein dunkler Kontaktbereich",
-      "Telefon überall erreichbar, am Handy als feste Leiste unten"
+      "Start: Hinweis-Pill, große Überschrift mit grauem Zusatz, Pill-Knöpfe, Collage aus drei Fotos",
+      "Drei Kacheln: 0 €, 40 km, 1 Ansprechpartner",
+      "Leistungen als weiße Karten; Trockenbau als breite Karte oben",
+      "Dunkle Abschnitte mit dunklen Karten und roten Schrittnummern",
+      "Schwebende Pill-Leiste am Handy"
     ],
     "rules": [
       {
         "name": "The Red Means Act Rule",
-        "body": "Rot nur auf Handlungen und kleinen Orientierungszeichen. Keine roten Flächen, keine roten Überschriften.",
+        "body": "Rot nur auf Handlungen und kleinen Orientierungszeichen.",
         "section": "colors"
-      },
-      {
-        "name": "The Light Headline Rule",
-        "body": "Große Überschriften in 300, kleine in 600. Keine Versalien-Labels über Überschriften.",
-        "section": "typography"
       }
     ],
     "dos": [
-      "**Do** eigene Projektfotos an die Stelle der Beispielfotos setzen (gleiche Dateinamen in `bilder/fotos/`).",
-      "**Do** kurze, konkrete Sätze im Ton des Inhabers schreiben.",
-      "**Do** Telefon und WhatsApp in jeder Ansicht erreichbar halten."
+      "**Do** eigene Projektfotos in die Collage und die Karten setzen (gleiche Dateinamen in `bilder/fotos/`).",
+      "**Do** kurze, konkrete Sätze im Ton des Inhabers."
     ],
     "donts": [
-      "**Don't** Gipskarton-Muster, gepunktete Kästen oder den Firmennamen als Riesenschrift.",
-      "**Don't** erfundene Versprechen (Jahre, Garantien, Bewertungen).",
-      "**Don't** Beispielfotos als eigene Projekte ausgeben.",
-      "**Don't** Verläufe, Glas-Effekte, Schatten auf ruhenden Elementen."
+      "**Don't** Gipskarton-Muster, Riesenschrift-Namen, dünne Schrift-Optik der ersten Fassung.",
+      "**Don't** erfundene Versprechen.",
+      "**Don't** Beispielfotos als eigene Projekte ausgeben."
     ]
   }
 }

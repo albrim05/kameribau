@@ -1,189 +1,179 @@
 ---
 name: Kameri – alles rund ums Haus
-description: Modern und hochwertig – weißer Grund, große Fotos, leichte Überschriften, Rot nur für Handlungen.
+description: Hell und modern mit dunklen Abschnitten – fette Geist-Überschriften, Bildercollage mit runden Ecken, Pill-Knöpfe, Rot für Handlungen.
 colors:
+  grund: "#fafaf9"
   weiss: "#ffffff"
-  flaeche: "#f4f4f3"
-  flaeche-tief: "#e6e6e4"
-  linie: "#d6d6d3"
-  feldrand: "#8c8c89"
-  tinte: "#1f1f1f"
-  text: "#3a3a3a"
-  leise: "#676765"
-  platzhalter: "#6f6f6d"
+  flaeche: "#f4f4f2"
+  linie: "#e7e5e4"
+  tinte: "#18181b"
+  text: "#3f3f46"
+  leise: "#71717a"
+  akzent-grau: "#84848c"
   rot: "#c2262b"
-  rot-tief: "#a41f24"
-  dunkel: "#1f1f1f"
-  dunkel-text: "#d9d9d6"
-  dunkel-leise: "#a7a7a4"
+  rot-tief: "#a51f24"
+  feldrand: "#8b8b93"
+  platzhalter: "#6b6b73"
+  dunkel: "#141416"
+  dunkel-karte: "#1e1e22"
+  dunkel-linie: "#2f2f35"
+  dunkel-text: "#d4d4d8"
+  dunkel-leise: "#a1a1aa"
 typography:
   h1:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
-    fontSize: "clamp(2.5rem, 1.5rem + 3vw, 4.25rem)"
-    fontWeight: 300
-    lineHeight: 1.04
-    letterSpacing: "-0.025em"
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 1.5rem + 3.9vw, 5rem)"
+    fontWeight: 600
+    lineHeight: 1.02
+    letterSpacing: "-0.04em"
   h2:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
-    fontSize: "clamp(2rem, 1.4rem + 2.2vw, 3.25rem)"
-    fontWeight: 300
-    lineHeight: 1.08
-    letterSpacing: "-0.025em"
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "clamp(2.1rem, 1.4rem + 2.4vw, 3.5rem)"
+    fontWeight: 600
+    lineHeight: 1.05
+    letterSpacing: "-0.04em"
   h3:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontFamily: "Geist, system-ui, sans-serif"
     fontSize: "1.375rem"
     fontWeight: 600
     lineHeight: 1.25
-    letterSpacing: "-0.01em"
+    letterSpacing: "-0.02em"
   lead:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
-    fontSize: "clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem)"
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem)"
     fontWeight: 400
     lineHeight: 1.55
   text:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontFamily: "Geist, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.6
   klein:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
+    fontFamily: "Geist, system-ui, sans-serif"
     fontSize: "0.9375rem"
     fontWeight: 400
     lineHeight: 1.6
-  nummer:
-    fontFamily: "Source Sans 3, Source Sans Pro, system-ui, sans-serif"
-    fontSize: "clamp(2.4rem, 1.6rem + 2.6vw, 3.75rem)"
-    fontWeight: 300
-    lineHeight: 1.05
-    letterSpacing: "-0.02em"
 rounded:
-  keine: "0px"
+  klein: "12px"
+  mittel: "18px"
+  gross: "24px"
+  pill: "999px"
 spacing:
   rand: "clamp(20px, 4vw, 56px)"
   breite: "1320px"
-  abstand: "clamp(80px, 10vw, 140px)"
-  kopf: "84px"
+  abstand: "clamp(88px, 10vw, 144px)"
+  kopf: "88px"
 components:
   knopf-rot:
     backgroundColor: "{colors.rot}"
     textColor: "{colors.weiss}"
-    rounded: "{rounded.keine}"
+    rounded: "{rounded.pill}"
     padding: "0 26px"
-    height: "52px"
+    height: "54px"
   knopf-rot-hover:
     backgroundColor: "{colors.rot-tief}"
     textColor: "{colors.weiss}"
-  knopf-rahmen:
-    backgroundColor: "transparent"
+  knopf-weiss:
+    backgroundColor: "{colors.weiss}"
     textColor: "{colors.tinte}"
-    rounded: "{rounded.keine}"
+    rounded: "{rounded.pill}"
     padding: "0 26px"
-    height: "52px"
-  knopf-rahmen-hover:
-    backgroundColor: "{colors.tinte}"
-    textColor: "{colors.weiss}"
+    height: "54px"
   knopf-dunkel:
     backgroundColor: "{colors.tinte}"
     textColor: "{colors.weiss}"
-    rounded: "{rounded.keine}"
+    rounded: "{rounded.pill}"
     padding: "0 26px"
-    height: "52px"
+    height: "54px"
+  karte:
+    backgroundColor: "{colors.weiss}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.gross}"
+    padding: "26px 28px"
   eingabefeld:
     backgroundColor: "{colors.weiss}"
     textColor: "{colors.tinte}"
-    rounded: "{rounded.keine}"
-    padding: "12px 14px"
+    rounded: "{rounded.klein}"
+    padding: "12px 16px"
     height: "52px"
-  kopf-telefon:
-    backgroundColor: "{colors.rot}"
-    textColor: "{colors.weiss}"
-    rounded: "{rounded.keine}"
-    padding: "0 18px"
-    height: "48px"
 ---
 
 # Design System: Kameri – alles rund ums Haus
 
 ## Overview
 
-**Creative North Star: "Der fertige Raum"**
+**Creative North Star: "Hell, ruhig, hochwertig"**
 
-Die Seite wirkt wie ein frisch renovierter Raum: viel Weiß, helles Holz in den Fotos, ruhige Linienführung. Die Fotos tragen die Seite, die Typografie bleibt leicht und zurückhaltend, das Logo steht normal groß im Kopf. Rot erscheint nur dort, wo der Besucher handeln soll: Anrufen, Senden, kleine Haken und Nummern.
+Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Die Seite steht auf warm-hellem Grund, trägt fette, eng gesetzte Überschriften in Geist, große Fotos mit runden Ecken und weiche Pill-Knöpfe. Zwei dunkle Abschnitte (Ablauf und Kontakt) geben Gewicht und wirken edel. Rot bleibt für Handlungen.
 
-Der Inhaber hat diesen Stil gewählt („modern und hochwertig“) und zwei frühere, auffällige Richtungen abgelehnt (Gipskarton-Motive mit Punkten und Kästen; der Firmenname als riesige Schrift). Diese Seite bleibt bewusst vertraut und sauber.
+Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen, der Firmenname als riesige Schrift, die erste schlichte Fassung mit dünner Schrift (vom Inhaber mit 4/10 bewertet).
 
 **Key Characteristics:**
-- Geteilter Start: Text links, hohes Foto rechts bis an den Rand
-- Leistungen als 2×2-Raster mit großen Fotos, Text und einer kurzen Stichwortliste
-- Flächen in Hellgrau statt Linien, ein dunkler Kontaktbereich
-- Telefon überall erreichbar, am Handy als feste Leiste unten
+- Start: Hinweis-Pill, große Überschrift mit grauem Zusatz, Pill-Knöpfe, Collage aus drei Fotos
+- Drei Kacheln: 0 €, 40 km, 1 Ansprechpartner
+- Leistungen als weiße Karten mit runden Ecken; Trockenbau als breite Karte oben
+- Dunkle Abschnitte mit dunklen Karten und roten Schrittnummern
+- Schwebende Pill-Leiste am Handy
 
 ## Colors
 
 ### Primary
-- **Logorot** (`#c2262b`): Hauptknöpfe, Haken, Schrittnummern, Karte (Leimen). Hover `#a41f24`.
+- **Logorot** (`#c2262b`): Hauptknöpfe, Schrittnummern, Punkt im Hinweis, Leimen auf der Karte. Hover `#a51f24`.
 
 ### Neutral
-- **Tinte** (`#1f1f1f`): Überschriften, dunkle Knöpfe, Kontaktbereich.
-- **Text** (`#3a3a3a`) und **Leise** (`#676765`): Fließtext und Nebeninfos.
-- **Fläche** (`#f4f4f3`): Bänder, Chips, Fragen-Felder; **Weiß** als Grund.
+- **Grund** (`#fafaf9`), **Weiß** für Karten, **Linie** (`#e7e5e4`) als 1px-Rand der Karten.
+- **Tinte** (`#18181b`), **Text** (`#3f3f46`), **Leise** (`#71717a`).
+- **Dunkel** (`#141416`) mit **dunklen Karten** (`#1e1e22`) für Ablauf und Kontakt.
 
 ### Named Rules
-**The Red Means Act Rule.** Rot nur auf Handlungen und kleinen Orientierungszeichen. Keine roten Flächen, keine roten Überschriften.
+**The Red Means Act Rule.** Rot nur auf Handlungen und kleinen Orientierungszeichen.
 
 ## Typography
 
-**Schrift:** Source Sans 3 (300/400/600/700), selbst gehostet in `schriften/`, dieselbe Familie wie im Logo.
+**Schrift:** Geist (400/500/600), selbst gehostet in `schriften/`.
 
 ### Hierarchy
-- **H1** (300, `clamp(2.5rem, …, 4.25rem)`): nur „Trockenbau in Leimen“.
-- **H2** (300, `clamp(2rem, …, 3.25rem)`): Abschnittsüberschriften, höchstens zwei Zeilen.
-- **H3** (600, 1.375rem): Leistungen, Schritte, Gruppen.
-- **Lead** (400, 18–21px): einleitende Sätze.
-- **Text** (400, 17px, 1.6) und **Klein** (15px).
-
-### Named Rules
-**The Light Headline Rule.** Große Überschriften in 300, kleine in 600. Keine Versalien-Labels über Überschriften.
+- **H1** (600, bis 80px, −0.04em), letzter Teil grau (`#84848c`).
+- **H2** (600, bis 56px, −0.04em).
+- **H3** (600, 22px).
+- **Lead** 18–20px, **Text** 17px, **Klein** 15px.
 
 ## Layout
 
-Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand `clamp(80px, 10vw, 140px)`. Kopf klebt oben (84px, Handy 68px). Ab 860px stapeln sich alle Zweispalter; am Handy kommt erst der Text, dann das Foto, die Karte entfällt (die Ortsliste reicht), und eine feste Leiste unten bietet Anrufen und WhatsApp. Sie weicht, solange die Start-Knöpfe oder der Kontaktbereich sichtbar sind oder im Formular getippt wird.
+Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand bis 144px. Karten liegen 14px auseinander. Unter 860px stapeln sich alle Raster; am Handy entfällt die Karte im Einsatzgebiet, und eine schwebende Pill-Leiste bietet Anrufen und WhatsApp. Sie weicht, wenn die Start-Knöpfe oder der Kontaktbereich sichtbar sind oder im Formular getippt wird.
 
 ## Elevation & Depth
 
-Flach. Schatten nur auf Dingen, die wirklich schweben: der Kopf nach dem Scrollen und die Leiste am Handy.
+Karten sind flach mit 1px-Rand. Schatten nur auf schwebenden Dingen: Kopf nach dem Scrollen (über ein Pseudo-Element), Handy-Leiste.
 
 ## Shapes
 
-Eckig: Knöpfe, Felder, Fotos und Chips ohne Rundung.
+Runde Ecken: Karten und Fotos 24px (Handy 20px), Fragen und Kacheln 18px, Felder 12px, Knöpfe und Hinweise als Pill.
 
 ## Components
 
 ### Buttons
-- **Rot**: Hauptaktion (Anrufen, Anfrage senden). **Rahmen**: Nebenaktion (WhatsApp). **Dunkel**: Formular-Knopf auf heller Fläche. **Hell**: Rahmenknopf auf dunklem Grund.
-- Drücken: `scale(0.97)` in 140ms; Hover nur bei Maus.
-
-### Stichwortliste
-Unter jeder Leistung eine zweispaltige Liste mit roten Quadrat-Markern in Leise-Grau. Keine Kästchen, damit nichts wie ein Knopf aussieht.
-
-### Inputs / Fields
-52px, 1.5px Rand in Feldrand-Grau (#8c8c89, ausreichend Kontrast), Fokus in Tinte, Fehler in Rot (auch im Fokus) mit Text darunter, Schrift 17px (kein Zoom auf iOS). Das Anfrageformular sendet über Web3Forms, sobald ein Schlüssel in `seite.js` steht; bis dahin öffnet es das E-Mail-Programm.
+Pill-Knöpfe, 54px hoch: Rot (Hauptaktion), Weiß mit Rand (WhatsApp), Dunkel (Prüfen), Glas auf dunklem Grund. Drücken `scale(0.97)` in 140ms.
 
 ### Navigation
-Logo links (64px hoch, Handy 50px), fünf Ankerlinks mit roter Unterstreichung beim Hover, roter Telefon-Knopf rechts. Unter 960px nur Logo und Telefon.
+Logo links (60px), Navigation als weiße Pill-Gruppe, dunkler Pill-Knopf mit Telefonnummer rechts.
+
+### Karten
+Weiß, 1px Rand, 24px Ecken; Foto oben (4:3) oder links (Trockenbau-Karte), Text darunter. Stichworte als kleine Pills mit Rand.
+
+### Inputs / Fields
+52px, 1px Rand `#8b8b93`, 12px Ecken, Fokus in Tinte mit weichem Ring, Fehler rot. Formular sendet über Web3Forms.
 
 ### Fragen
-`details`-Felder auf Hellgrau mit Plus, das sich beim Öffnen zum Kreuz dreht.
+Weiße Karten, Plus im grauen Kreis, beim Öffnen rot und gedreht.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** eigene Projektfotos an die Stelle der Beispielfotos setzen (gleiche Dateinamen in `bilder/fotos/`).
-- **Do** kurze, konkrete Sätze im Ton des Inhabers schreiben.
-- **Do** Telefon und WhatsApp in jeder Ansicht erreichbar halten.
+- **Do** eigene Projektfotos in die Collage und die Karten setzen (gleiche Dateinamen in `bilder/fotos/`).
+- **Do** kurze, konkrete Sätze im Ton des Inhabers.
 
 ### Don't:
-- **Don't** Gipskarton-Muster, gepunktete Kästen oder den Firmennamen als Riesenschrift.
-- **Don't** erfundene Versprechen (Jahre, Garantien, Bewertungen).
+- **Don't** Gipskarton-Muster, Riesenschrift-Namen, dünne Schrift-Optik der ersten Fassung.
+- **Don't** erfundene Versprechen.
 - **Don't** Beispielfotos als eigene Projekte ausgeben.
-- **Don't** Verläufe, Glas-Effekte, Schatten auf ruhenden Elementen.
