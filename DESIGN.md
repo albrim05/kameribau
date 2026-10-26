@@ -1,6 +1,6 @@
 ---
 name: Kameri – alles rund ums Haus
-description: Hell und modern mit dunklen Abschnitten – fette Überschriften in Hanken Grotesk, Bildercollage mit runden Ecken, Flächen statt Rahmen, Pill-Knöpfe, Rot für Handlungen.
+description: Hell und modern mit dunklen Abschnitten – fette Überschriften in Hanken Grotesk, Bildercollage mit runden Ecken, Flächen statt Rahmen, eckige Knöpfe, Rot für Handlungen.
 colors:
   grund: "#f3f3f1"
   weiss: "#ffffff"
@@ -57,7 +57,7 @@ rounded:
   klein: "12px"
   mittel: "18px"
   gross: "24px"
-  pill: "999px"
+  knopf: "4px"
 spacing:
   rand: "clamp(20px, 4vw, 56px)"
   breite: "1320px"
@@ -67,7 +67,7 @@ components:
   knopf-rot:
     backgroundColor: "{colors.rot}"
     textColor: "{colors.weiss}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.knopf}"
     padding: "0 26px"
     height: "54px"
   knopf-rot-hover:
@@ -76,13 +76,13 @@ components:
   knopf-weiss:
     backgroundColor: "{colors.weiss}"
     textColor: "{colors.tinte}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.knopf}"
     padding: "0 26px"
     height: "54px"
   knopf-dunkel:
     backgroundColor: "{colors.tinte}"
     textColor: "{colors.weiss}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.knopf}"
     padding: "0 26px"
     height: "54px"
   karte:
@@ -93,7 +93,7 @@ components:
   eingabefeld:
     backgroundColor: "{colors.weiss}"
     textColor: "{colors.tinte}"
-    rounded: "{rounded.klein}"
+    rounded: "{rounded.knopf}"
     padding: "12px 16px"
     height: "52px"
 ---
@@ -104,7 +104,7 @@ components:
 
 **Creative North Star: "Hell, ruhig, hochwertig"**
 
-Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Auf Wunsch des Inhabers an die Prüfregeln angepasst: keine Rahmen, kein Hinweis-Kästchen über der Überschrift, zweizeilige Überschrift, weniger verbreitete Schrift. Die Seite steht auf warm-hellem Grund, trägt fette, eng gesetzte Überschriften in Hanken Grotesk, große Fotos mit runden Ecken und weiche Pill-Knöpfe. Zwei dunkle Abschnitte (Ablauf und Kontakt) geben Gewicht und wirken edel. Rot bleibt für Handlungen.
+Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Auf Wunsch des Inhabers an die Prüfregeln angepasst: keine Rahmen, kein Hinweis-Kästchen über der Überschrift, zweizeilige Überschrift, weniger verbreitete Schrift. Die Seite steht auf warm-hellem Grund, trägt fette, eng gesetzte Überschriften in Hanken Grotesk, große Fotos mit runden Ecken und eckige Knöpfe (4px). Zwei dunkle Abschnitte (Ablauf und Kontakt) geben Gewicht und wirken edel. Rot bleibt für Handlungen.
 
 Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen, der Firmenname als riesige Schrift, die erste schlichte Fassung mit dünner Schrift (vom Inhaber mit 4/10 bewertet), große randlose Fotoflächen im Stil von haring.de.
 
@@ -112,14 +112,14 @@ Vorbilder des Inhabers (Mischung, nicht kopieren): bomach.de (klare Gliederung, 
 
 **Key Characteristics:**
 - Mehrere Seiten: Startseite, je eine Seite für Trockenbau, Umbau & Renovierung, Böden und Gebäudereinigung, dazu Impressum und Datenschutz. Alle Seiten entstehen mit `node _bauen/bauen.mjs` aus gemeinsamen Bausteinen; HTML nicht direkt bearbeiten, sondern im Generator.
-- Startseite: hell, zweizeilige Überschrift „Trockenbau aus Leimen“, kurzer Text, Pill-Knöpfe, Collage aus drei Fotos rechts. Keine große Foto-Bühne und kein Rückruf-Formular oben (beides vom Inhaber abgelehnt).
+- Startseite: hell, zweizeilige Überschrift „Trockenbau aus Leimen“, kurzer Text, eckige Knöpfe, Collage aus drei Fotos rechts. Keine große Foto-Bühne und kein Rückruf-Formular oben (beides vom Inhaber abgelehnt).
 - Drei Kennzahlen ohne Kasten: 0 €, 40 km, 1 Ansprechpartner
 - Leistungen als vier gleich große Bildkacheln mit Abdunklung, Name und Pfeil-Kreis; jede führt zu ihrer Seite. Reihenfolge: Trockenbau, Umbau & Renovierung, Böden, Gebäudereinigung. Kein Schild „Schwerpunkt“ und kein Text, der die übrigen Leistungen kleiner macht.
 - Leistungsseiten: Pfad, kurze Überschrift (höchstens zwei Zeilen), Foto rechts, weiße Flächen „Was dazugehört“, Ablauf, eigene Fragen, weitere Leistungen, Kontakt mit vorausgewählter Leistung und passendem Beispieltext.
 - Ablauf dunkel mit großen roten Schrittnummern
 - Kontakt als rote, abgerundete Fläche: Logorot als große Markenfläche, weißes Formular darauf.
-- Kopf mit den Leistungen in der weißen Pill-Navigation, aktuelle Seite dunkel hinterlegt; unter 1240px klappt ein Menü unter dem Kopf auf.
-- Schwebende Pill-Leiste am Handy, die beim Runterscrollen weicht und beim Hochscrollen wiederkommt
+- Kopf: Logo, einfache Textlinks ohne Hintergrund (aktuelle Seite mit rotem Strich darunter), dunkler eckiger Telefon-Knopf; unter 1240px klappt ein Menü unter dem Kopf auf.
+- Schwebende Leiste mit zwei eckigen Knöpfen am Handy, die beim Runterscrollen weicht und beim Hochscrollen wiederkommt
 
 ## Colors
 
@@ -146,7 +146,7 @@ Vorbilder des Inhabers (Mischung, nicht kopieren): bomach.de (klare Gliederung, 
 
 ## Layout
 
-Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand bis 144px. Karten liegen 14px auseinander. Unter 860px stapeln sich alle Raster; am Handy entfällt die Karte im Einsatzgebiet, und eine schwebende Pill-Leiste bietet Anrufen und WhatsApp. Sie weicht, wenn die Start-Knöpfe oder der Kontaktbereich sichtbar sind oder im Formular getippt wird.
+Inhalt max. 1320px, Ränder `clamp(20px, 4vw, 56px)`, Abschnittsabstand bis 144px. Karten liegen 14px auseinander. Unter 860px stapeln sich alle Raster; am Handy entfällt die Karte im Einsatzgebiet, und eine schwebende Leiste mit zwei eckigen Knöpfen bietet Anrufen und WhatsApp. Sie weicht, wenn die Start-Knöpfe oder der Kontaktbereich sichtbar sind oder im Formular getippt wird.
 
 ## Elevation & Depth
 
@@ -154,21 +154,21 @@ Flächen sind flach und ohne Rand. Schatten nur auf schwebenden Dingen: Kopf nac
 
 ## Shapes
 
-Runde Ecken: Karten und Fotos 24px (Handy 20px), Fragen und Kacheln 18px, Felder 12px, Knöpfe und Hinweise als Pill.
+Runde Ecken nur an Flächen: Karten und Fotos 24px (Handy 20px), Fragen und Punkte 18px. Knöpfe, Eingabefelder, Pfeil- und Plus-Kästchen eckig mit 4px (`--r-knopf`). Vom Inhaber so gewählt; nicht zurück zu Pill-Knöpfen und nicht zum weichen Mittelweg (9–16px).
 
 ## Components
 
 ### Buttons
-Pill-Knöpfe, 54px hoch: Rot (Hauptaktion), Weiß mit Rand (WhatsApp), Dunkel (Prüfen), Glas auf dunklem Grund. Drücken `scale(0.97)` in 140ms.
+Eckige Knöpfe (4px), 54px hoch: Rot (Hauptaktion), Weiß (WhatsApp, Anfrage), Dunkel (Prüfen), Glas auf roter oder dunkler Fläche. Drücken `scale(0.97)` in 140ms.
 
 ### Navigation
-Logo links (60px), Navigation als weiße Pill-Gruppe, dunkler Pill-Knopf mit Telefonnummer rechts.
+Logo links (60px), Navigation als einfache Textlinks ohne Hintergrund, aktuelle Seite mit rotem Unterstrich, dunkler eckiger Knopf mit Telefonnummer rechts.
 
 ### Karten
 Trockenbau als weiße Fläche mit Foto links; die übrigen Leistungen als Foto mit 24px Ecken und Text darunter, ohne Kasten. Stichworte als Liste mit roten Punkten.
 
 ### Inputs / Fields
-52px, 1px Rand `#8b8b93`, 12px Ecken, Fokus in Tinte mit weichem Ring, Fehler rot. Formular sendet über Web3Forms.
+52px, 1px Rand `#8b8b93`, 4px Ecken, Fokus in Tinte mit weichem Ring, Fehler rot. Formular sendet über Web3Forms.
 
 ### Fragen
 Weiße Flächen ohne Rand, Plus im grauen Kreis, beim Öffnen rot und gedreht.

@@ -4,7 +4,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 
-const V = 10; // bei Änderungen an stil.css oder seite.js hochzählen
+const V = 11; // bei Änderungen an stil.css oder seite.js hochzählen
 const TEL = "tel:+4915236695793";
 const TEL_TEXT = "0152 36695793";
 const WA = "https://wa.me/4915236695793";
