@@ -168,9 +168,17 @@ var HAKEN_SVG = '<svg aria-hidden="true"><use href="#i-haken"/></svg>';
   }
 
   var antwort = document.getElementById("ort-antwort");
+  var ruhig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   function zeige(art, html) {
     antwort.className = "ortcheck-antwort" + (art ? " " + art : "");
     antwort.innerHTML = html;
+    if (antwort.animate) {
+      antwort.animate(
+        ruhig ? [{ opacity: 0 }, { opacity: 1 }]
+              : [{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }],
+        { duration: 200, easing: "cubic-bezier(0.23, 1, 0.32, 1)" }
+      );
+    }
   }
 
   form.addEventListener("submit", function (ev) {
