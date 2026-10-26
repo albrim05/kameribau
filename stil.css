@@ -53,6 +53,8 @@
   --r-klein: 12px;
 
   --rand: clamp(20px, 4vw, 56px);
+  --rand-klein: clamp(10px, 1.4vw, 20px);
+  --r-buehne: 32px;
   --breite: 1320px;
   --abstand: clamp(88px, 10vw, 144px);
   --kopf-hoehe: 88px;
@@ -194,7 +196,7 @@ summary {
   gap: 10px;
   min-height: 54px;
   padding: 0 26px;
-  border: 1px solid transparent;
+  border: 1px solid transparent; /* taste-skill-ignore: nur der Glas-Knopf zeigt den Rand */
   border-radius: 999px;
   font: 600 1rem / 1 var(--schrift);
   letter-spacing: -0.01em;
@@ -361,6 +363,46 @@ summary {
   transform: scale(0.97);
 }
 
+.navi a[aria-current="page"] {
+  background: var(--tinte);
+  color: var(--weiss);
+}
+
+/* Menü-Knopf nur am Handy und nur mit Skript */
+.menue-knopf {
+  display: none;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--weiss);
+  color: var(--tinte);
+  cursor: pointer;
+  transition: transform 140ms var(--ease-out);
+}
+
+.menue-knopf span {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 200ms var(--ease-out);
+}
+
+.menue-knopf span:first-child { transform: translateY(-4px); }
+.menue-knopf span:last-child { transform: translateY(4px); }
+.kopf.offen .menue-knopf span:first-child { transform: rotate(45deg); }
+.kopf.offen .menue-knopf span:last-child { transform: rotate(-45deg); }
+
+.menue-knopf:active {
+  transform: scale(0.95);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .navi a:hover {
     background: var(--flaeche);
@@ -371,49 +413,127 @@ summary {
   }
 }
 
-/* ---------- Start ---------- */
+/* ---------- Bühne (Startseite) ---------- */
 
-.start {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(28px, 4vw, 64px);
-  align-items: center;
-  max-width: calc(var(--breite) + 2 * var(--rand));
+.buehne-rahmen {
+  max-width: 1640px;
   margin-inline: auto;
-  padding: clamp(16px, 3vw, 40px) var(--rand) clamp(40px, 5vw, 64px);
+  padding: 4px var(--rand-klein) 0;
 }
 
-.start h1 {
+.buehne {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(640px, calc(100svh - var(--kopf-hoehe) - 8px), 860px);
+  padding: clamp(28px, 4.5vw, 72px);
+  overflow: hidden;
+  border-radius: var(--r-buehne);
+  background: var(--dunkel);
+  color: rgb(255 255 255 / 0.86);
+}
+
+.buehne-bild {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.buehne-bild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Verlauf, damit die weiße Schrift auf dem Foto lesbar bleibt */
+.buehne-bild::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgb(12 12 14 / 0.88) 0%, rgb(12 12 14 / 0.5) 42%, rgb(12 12 14 / 0.12) 75%), /* taste-skill-ignore: Abdunklung über dem Foto */
+    linear-gradient(to right, rgb(12 12 14 / 0.55) 0%, rgb(12 12 14 / 0) 70%); /* taste-skill-ignore */
+}
+
+.buehne h1 {
   max-width: 9ch;
+  color: var(--weiss);
 }
 
-.start-lead {
-  max-width: 40ch;
-  margin: 24px 0 36px;
+.buehne-lead {
+  max-width: 44ch;
+  margin: 22px 0 32px;
   font-size: var(--t-lead);
   line-height: 1.55;
 }
 
-.collage {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  height: min(calc(100svh - var(--kopf-hoehe) - 72px), 640px);
-  min-height: 460px;
+.buehne ::selection {
+  background: var(--weiss);
+  color: var(--tinte);
 }
 
-.collage img {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  object-fit: cover;
+.buehne > .buehne-text :focus-visible {
+  outline-color: var(--weiss);
+}
+
+/* Rückruf direkt auf der Bühne */
+.rueckruf,
+.buehne .formular-danke {
+  max-width: 1040px;
+  margin-top: clamp(36px, 4.5vw, 64px);
+}
+
+.rueckruf {
+  padding: 20px 20px 22px;
   border-radius: var(--r-gross);
-  background: var(--flaeche);
+  background: var(--weiss);
+  color: var(--text);
 }
 
-.collage-gross {
-  grid-row: span 2;
+.rueckruf ::selection {
+  background: var(--rot);
+  color: var(--weiss);
+}
+
+.rueckruf-titel {
+  margin-bottom: 14px;
+  color: var(--leise);
+  font-size: var(--t-klein);
+}
+
+.rueckruf-titel b {
+  margin-right: 6px;
+  color: var(--tinte);
+  font-weight: 600;
+}
+
+.rueckruf-felder {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 12px;
+  align-items: start;
+}
+
+/* Knopf auf Höhe der Felder (Beschriftung 24px + 6px Abstand) */
+.rueckruf-felder > .knopf {
+  margin-top: 30px;
+}
+
+.rueckruf .formular-status {
+  margin-top: 12px;
+  color: var(--tinte);
+  font-weight: 500;
+}
+
+.rueckruf .formular-status.fehlgeschlagen {
+  color: var(--rot-tief);
+}
+
+.rueckruf[aria-busy="true"] button[type="submit"] {
+  opacity: 0.7;
+  cursor: progress;
 }
 
 .werte {
@@ -422,7 +542,7 @@ summary {
   gap: 14px;
   max-width: calc(var(--breite) + 2 * var(--rand));
   margin-inline: auto;
-  padding: 0 var(--rand);
+  padding: clamp(48px, 6vw, 80px) var(--rand) 0;
 }
 
 .wert {
@@ -433,7 +553,7 @@ summary {
 .wert b {
   display: block;
   color: var(--tinte);
-  font-size: clamp(1.5rem, 0.1rem + 3.4vw, 3.5rem);
+  font-size: clamp(1.5rem, 0.6rem + 2.6vw, 3.5rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.05;
@@ -444,6 +564,65 @@ summary {
   margin-top: 6px;
   color: var(--leise);
   font-size: var(--t-klein);
+}
+
+/* ---------- Seitenkopf (Leistungsseiten) ---------- */
+
+.seitenkopf {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+  max-width: calc(var(--breite) + 2 * var(--rand));
+  margin-inline: auto;
+  padding: clamp(24px, 4vw, 56px) var(--rand) var(--abstand);
+}
+
+.pfad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-bottom: clamp(24px, 3vw, 40px);
+  color: var(--leise);
+  font-size: var(--t-klein);
+}
+
+.pfad a {
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.pfad [aria-current] {
+  color: var(--tinte);
+  font-weight: 500;
+}
+
+.seitenkopf h1 {
+  max-width: 13ch;
+  font-size: clamp(2.6rem, 1.6rem + 3.4vw, 4.75rem);
+}
+
+.seitenkopf-lead {
+  max-width: 44ch;
+  margin: 24px 0 36px;
+  font-size: var(--t-lead);
+  line-height: 1.55;
+}
+
+.seitenkopf-bild img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  max-height: 680px;
+  object-fit: cover;
+  border-radius: var(--r-gross);
+  background: var(--flaeche);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pfad a:hover {
+    color: var(--tinte);
+  }
 }
 
 /* ---------- Abschnitte ---------- */
@@ -469,98 +648,134 @@ summary {
   font-size: var(--t-lead);
 }
 
-/* Leistungen: Trockenbau groß, die anderen drei daneben */
-.leistungen {
+/* Leistungen als hohe Bildkacheln, jede führt zu ihrer Seite */
+.kacheln {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
-.leistung {
-  display: flex;
-  flex-direction: column;
+.kacheln-drei {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.leistung-gross {
+.kachel {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: var(--r-gross);
-  background: var(--weiss);
+  background: var(--dunkel);
+  color: var(--weiss);
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 140ms var(--ease-out);
 }
 
-.leistung-gross {
-  grid-column: 1 / -1;
-  flex-direction: row;
+.kacheln-drei .kachel {
+  aspect-ratio: 4 / 3;
 }
 
-.leistung-gross .leistung-bild {
-  position: relative;
-  flex: 1 1 50%;
-  aspect-ratio: auto;
-  min-height: 440px;
-}
-
-.leistung-gross .leistung-bild img {
+.kachel img {
   position: absolute;
   inset: 0;
-}
-
-.leistung-gross .leistung-text {
-  flex: 1 1 50%;
-  align-self: center;
-  padding: clamp(28px, 3.5vw, 48px);
-}
-
-.leistung-gross h3 {
-  font-size: clamp(1.75rem, 1.3rem + 1.2vw, 2.4rem);
-  letter-spacing: -0.035em;
-}
-
-.leistung-bild {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: var(--r-gross);
-  background: var(--flaeche);
-}
-
-.leistung-gross .leistung-bild {
-  border-radius: 0;
-}
-
-.leistung-bild img {
+  z-index: -2;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 500ms var(--ease-soft);
 }
 
-.leistung-text {
-  padding: 22px 4px 0;
+.kachel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgb(12 12 14 / 0.82) 0%, rgb(12 12 14 / 0.25) 45%, rgb(12 12 14 / 0) 70%); /* taste-skill-ignore: Abdunklung über dem Foto */
 }
 
-.leistung p {
-  max-width: 48ch;
-  margin-top: 10px;
+.kachel:active {
+  transform: scale(0.985);
 }
 
-.leistung ul {
+.kachel-marke {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--rot);
+  font-size: var(--t-klein);
+  font-weight: 600;
+}
+
+.kachel-pfeil {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, max-content));
-  gap: 6px 32px;
-  margin-top: 22px;
-  padding-left: 1.1em;
-  list-style: disc;
-  color: var(--text);
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--weiss);
+  color: var(--tinte);
+  transition: transform 220ms var(--ease-out);
 }
 
-.leistung li::marker {
-  color: var(--rot);
+.kachel-pfeil svg {
+  width: 20px;
+  height: 20px;
+}
+
+.kachel-text {
+  position: absolute;
+  left: clamp(20px, 2vw, 28px);
+  right: clamp(20px, 2vw, 28px);
+  bottom: clamp(20px, 2vw, 26px);
+}
+
+.kachel-name {
+  display: block;
+  font-size: clamp(1.5rem, 1.2rem + 0.6vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.kachel-kurz {
+  display: block;
+  margin-top: 4px;
+  color: rgb(255 255 255 / 0.82);
+  font-size: var(--t-klein);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .leistung:hover .leistung-bild img {
-    transform: scale(1.03);
+  .kachel:hover img {
+    transform: scale(1.04);
   }
+  .kachel:hover .kachel-pfeil {
+    transform: rotate(45deg);
+  }
+}
+
+/* Was zu einer Leistung gehört */
+.punkte {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.punkte li {
+  padding: clamp(24px, 2.6vw, 32px);
+  border-radius: var(--r);
+  background: var(--weiss);
+}
+
+.punkte p {
+  margin-top: 8px;
 }
 
 /* ---------- Dunkle Abschnitte ---------- */
@@ -856,7 +1071,33 @@ summary {
   padding-bottom: 24px;
 }
 
-/* ---------- Kontakt ---------- */
+/* ---------- Kontakt (rote Fläche) ---------- */
+
+.kontakt {
+  padding: 0 var(--rand-klein);
+}
+
+.kontakt-flaeche {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-block: clamp(56px, 7vw, 112px);
+  border-radius: var(--r-buehne);
+  background: var(--rot);
+  color: rgb(255 255 255 / 0.9);
+}
+
+.kontakt h2 {
+  color: var(--weiss);
+}
+
+.kontakt-text ::selection {
+  background: var(--weiss);
+  color: var(--rot-tief);
+}
+
+.kontakt-text :focus-visible {
+  outline-color: var(--weiss);
+}
 
 .kontakt-innen {
   display: grid;
@@ -886,23 +1127,31 @@ summary {
   margin-top: 28px;
 }
 
+.kontakt .knopf-glas {
+  background: rgb(255 255 255 / 0.12);
+  border-color: rgb(255 255 255 / 0.4);
+}
+
 .kontakt address {
   margin-top: 40px;
-  color: var(--dunkel-leise);
+  color: rgb(255 255 255 / 0.85);
   font-style: normal;
   line-height: 1.7;
 }
 
-.kontakt .textlink {
+.kontakt-text .textlink {
   color: var(--weiss);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .kontakt-nummer:hover {
-    color: #f1f1f2;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.15em;
+  }
+  .kontakt .knopf-glas:hover {
+    background: rgb(255 255 255 / 0.2);
+    border-color: rgb(255 255 255 / 0.7);
   }
 }
 
@@ -1061,7 +1310,7 @@ textarea:focus {
 /* ---------- Fuß ---------- */
 
 .fuss {
-  padding-block: 56px 32px;
+  padding-block: clamp(56px, 6vw, 88px) 32px;
   color: var(--leise);
   font-size: var(--t-klein);
 }
@@ -1076,6 +1325,7 @@ textarea:focus {
 .fuss-logo {
   width: 120px;
   height: auto;
+  margin-bottom: 14px;
 }
 
 .fuss-titel {
@@ -1105,6 +1355,7 @@ textarea:focus {
 
 .fuss-recht {
   grid-column: 1 / -1;
+  max-width: 70ch;
   margin-top: 24px;
 }
 
@@ -1117,16 +1368,22 @@ textarea:focus {
 /* ---------- Bewegung ---------- */
 
 @media (prefers-reduced-motion: no-preference) {
-  .js .start-text > * {
+  .js .buehne-text > *,
+  .js .seitenkopf-text > * {
     animation: rein 700ms var(--ease-out) both;
   }
-  .js .start-text > :nth-child(2) { animation-delay: 70ms; }
-  .js .start-text > :nth-child(3) { animation-delay: 140ms; }
-  .js .collage img {
-    animation: bild-rein 900ms var(--ease-soft) both;
+  .js .buehne-text > :nth-child(2),
+  .js .seitenkopf-text > :nth-child(2) { animation-delay: 70ms; }
+  .js .buehne-text > :nth-child(3),
+  .js .seitenkopf-text > :nth-child(3) { animation-delay: 140ms; }
+  .js .seitenkopf-text > :nth-child(4) { animation-delay: 210ms; }
+  .js .rueckruf {
+    animation: rein 700ms var(--ease-out) 220ms both;
   }
-  .js .collage img:nth-child(2) { animation-delay: 80ms; }
-  .js .collage img:nth-child(3) { animation-delay: 160ms; }
+  .js .buehne-bild img,
+  .js .seitenkopf-bild img {
+    animation: bild-rein 1100ms var(--ease-soft) both;
+  }
 
   .bewegung [data-zeigen] {
     opacity: 0;
@@ -1168,13 +1425,17 @@ textarea:focus {
 }
 
 @keyframes bild-rein {
-  from { transform: scale(0.97); }
+  from { transform: scale(1.04); }
   to { transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .js .navi,
+  .js .kopf.offen .navi {
+    transform: none;
   }
   .bewegung [data-zeigen] {
     opacity: 0;
@@ -1187,57 +1448,98 @@ textarea:focus {
 
 /* ---------- Kleinere Bildschirme ---------- */
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .navi a {
     padding-inline: 12px;
   }
-  .leistungen {
+  .kacheln {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .leistung:last-child {
+  .kachel {
+    aspect-ratio: 4 / 3;
+  }
+  .rueckruf-felder {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .rueckruf-felder > .knopf {
     grid-column: 1 / -1;
+    margin-top: 4px;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1040px) {
+  .kopf-innen {
+    position: relative;
+    gap: 10px;
+  }
   .navi {
     display: none;
   }
   .kopf-telefon {
     margin-left: auto;
   }
+  .js .menue-knopf {
+    display: inline-block;
+  }
+  /* Menü klappt unter dem Kopf auf */
+  .js .navi {
+    position: absolute;
+    top: calc(100% - 6px);
+    left: var(--rand);
+    right: var(--rand);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    padding: 8px;
+    border-radius: var(--r-gross);
+    box-shadow: 0 24px 48px -20px rgb(0 0 0 / 0.35); /* taste-skill-ignore: schwebendes Menü */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px) scale(0.98);
+    transform-origin: top right;
+    transition: opacity 160ms ease, transform 200ms var(--ease-out), visibility 0s linear 200ms;
+  }
+  .js .kopf.offen .navi {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 160ms ease, transform 200ms var(--ease-out), visibility 0s linear 0s;
+  }
+  .js .navi a {
+    padding: 14px 18px;
+    border-radius: var(--r-klein);
+    font-size: 1.125rem;
+  }
+  .punkte {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
-  .start {
-    grid-template-columns: 1fr;
-  }
-  .collage {
-    height: 420px;
-    min-height: 0;
-  }
   .abschnitt-kopf,
   .ablauf-innen,
   .kunden,
   .gebiet-karte,
   .fragen-innen,
-  .kontakt-innen {
+  .kontakt-innen,
+  .seitenkopf {
     grid-template-columns: 1fr;
   }
-  .leistung-gross {
-    flex-direction: column;
-  }
-  .leistung-gross .leistung-bild {
-    min-height: 0;
+  .seitenkopf-bild img {
     aspect-ratio: 4 / 3;
   }
-  .leistung-gross .leistung-bild img {
-    position: static;
+  .kacheln-drei {
+    grid-template-columns: 1fr 1fr;
+  }
+  .kacheln-drei .kachel:last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
   }
   .fuss-innen {
     grid-template-columns: 1fr 1fr;
   }
-  .fuss-logo {
+  .fuss-marke {
     grid-column: 1 / -1;
   }
 }
@@ -1246,6 +1548,7 @@ textarea:focus {
   :root {
     --kopf-hoehe: 72px;
     --r-gross: 20px;
+    --r-buehne: 24px;
   }
   .marke img {
     height: 50px;
@@ -1263,19 +1566,26 @@ textarea:focus {
     clip: rect(0 0 0 0);
     white-space: nowrap;
   }
-  .start .aktionen .knopf {
+  /* Am Handy reichen Anrufen und WhatsApp oben, das Formular steht unten bei Kontakt */
+  .buehne {
+    min-height: min(600px, calc(100svh - var(--kopf-hoehe) - 16px));
+    padding: 24px 20px 24px;
+  }
+  .rueckruf {
+    display: none;
+  }
+  .buehne-text .aktionen .knopf,
+  .seitenkopf .aktionen .knopf {
     width: 100%;
   }
-  .collage {
-    height: 340px;
-    gap: 10px;
-  }
-  .leistungen {
+  .kacheln,
+  .kacheln-drei,
+  .punkte {
     grid-template-columns: 1fr;
   }
-  .leistung-gross,
-  .leistung:last-child {
+  .kacheln-drei .kachel:last-child {
     grid-column: auto;
+    aspect-ratio: 4 / 3;
   }
   .ablauf li {
     padding: 22px;
@@ -1283,8 +1593,7 @@ textarea:focus {
     grid-template-columns: 40px 1fr;
   }
   .orte,
-  .werte,
-  .leistung ul {
+  .werte {
     grid-template-columns: 1fr;
   }
   .werte {
@@ -1298,6 +1607,9 @@ textarea:focus {
   }
   .kontakt .aktionen .knopf {
     flex: 1 1 auto;
+  }
+  .kontakt-nummer {
+    font-size: 2.25rem;
   }
   .fuss-links a {
     padding-block: 11px;
@@ -1342,7 +1654,8 @@ textarea:focus {
     width: 19px;
     height: 19px;
   }
-  .leiste.weg {
+  .leiste.weg,
+  .leiste.unten {
     transform: translateY(calc(100% + 24px));
     visibility: hidden;
     transition: transform 200ms var(--ease-out), visibility 0s linear 200ms;
@@ -1359,11 +1672,13 @@ textarea:focus {
 
 @media (max-width: 720px) and (prefers-reduced-motion: reduce) {
   .leiste,
-  .leiste.weg {
+  .leiste.weg,
+  .leiste.unten {
     transform: none;
     transition: opacity 150ms ease, visibility 0s linear 0s;
   }
-  .leiste.weg {
+  .leiste.weg,
+  .leiste.unten {
     opacity: 0;
     transition: opacity 150ms ease, visibility 0s linear 150ms;
   }
@@ -1411,6 +1726,8 @@ textarea:focus {
   .kopf,
   .leiste,
   .ortcheck,
+  .rueckruf,
+  .menue-knopf,
   .formular {
     display: none;
   }

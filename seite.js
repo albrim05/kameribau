@@ -13,6 +13,35 @@ var HAKEN_SVG = '<svg aria-hidden="true"><use href="#i-haken"/></svg>';
   pruefe();
 })();
 
+// Menü am Handy: auf- und zuklappen, schließt bei Klick daneben oder mit Esc
+(function () {
+  var kopf = document.querySelector(".kopf");
+  var knopf = document.querySelector(".menue-knopf");
+  var navi = document.getElementById("navi");
+  if (!kopf || !knopf || !navi) return;
+
+  function setze(offen) {
+    kopf.classList.toggle("offen", offen);
+    knopf.setAttribute("aria-expanded", offen ? "true" : "false");
+    knopf.setAttribute("aria-label", offen ? "Menü schließen" : "Menü öffnen");
+  }
+  knopf.addEventListener("click", function () {
+    setze(!kopf.classList.contains("offen"));
+  });
+  navi.addEventListener("click", function (ev) {
+    if (ev.target.closest("a")) setze(false);
+  });
+  document.addEventListener("click", function (ev) {
+    if (kopf.classList.contains("offen") && !kopf.contains(ev.target)) setze(false);
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape" && kopf.classList.contains("offen")) {
+      setze(false);
+      knopf.focus();
+    }
+  });
+})();
+
 // Abschnitte einblenden, sobald sie ins Bild kommen (einmal, Teile nacheinander).
 // Versteckt wird erst hier, damit ohne Skript alles sichtbar bleibt.
 (function () {
@@ -50,19 +79,27 @@ var HAKEN_SVG = '<svg aria-hidden="true"><use href="#i-haken"/></svg>';
     leiste.classList.toggle("weg", tippt || sichtbar.size > 0);
   }
 
+  // Beim Lesen nach unten weicht die Leiste, beim Zurückscrollen kommt sie wieder
+  var zuletzt = window.scrollY;
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY;
+    if (Math.abs(y - zuletzt) < 12) return;
+    leiste.classList.toggle("unten", y > zuletzt && y > 200);
+    zuletzt = y;
+  }, { passive: true });
+
   var beobachter = new IntersectionObserver(function (eintraege) {
     eintraege.forEach(function (e) {
       if (e.isIntersecting) sichtbar.add(e.target); else sichtbar.delete(e.target);
     });
     aktualisiere();
   });
-  document.querySelectorAll(".start .aktionen, #kontakt").forEach(function (el) { beobachter.observe(el); });
+  document.querySelectorAll(".buehne-text .aktionen, .seitenkopf .aktionen, #kontakt").forEach(function (el) { beobachter.observe(el); });
 
-  var form = document.getElementById("anfrage");
-  if (form) {
+  document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
     form.addEventListener("focusin", function () { tippt = true; aktualisiere(); });
     form.addEventListener("focusout", function () { tippt = false; aktualisiere(); });
-  }
+  });
 })();
 
 // Kommen Sie zu mir? Entfernung ab Leimen (Luftlinie), auch nach Postleitzahl
@@ -209,69 +246,73 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
   el.textContent = new Date().getFullYear();
 });
 
-// Anfrageformular: prüft die Angaben und sendet über Web3Forms (ohne Schlüssel: fertige E-Mail)
-(function () {
-  var form = document.getElementById("anfrage");
-  if (!form) return;
-
-  var feld = function (id) { return document.getElementById(id); };
+// Anfrage- und Rückrufformular: prüfen die Angaben und senden über Web3Forms (ohne Schlüssel: fertige E-Mail)
+document.querySelectorAll("form[data-anfrage]").forEach(function (form) {
+  var rueckruf = form.getAttribute("data-anfrage") === "rueckruf";
   var status = form.querySelector(".formular-status");
   var knopf = form.querySelector('button[type="submit"]');
+  var knopfText = knopf.textContent;
   var mitDienst = WEB3FORMS_SCHLUESSEL.length > 0;
 
   var hinweis = form.querySelector("[data-hinweis-mail]");
   if (mitDienst && hinweis) hinweis.textContent = "Ihre Anfrage geht direkt an uns.";
 
-  function setze(input, fehlerId, text) {
+  var meldungen = {
+    Name: "Bitte geben Sie Ihren Namen an.",
+    Nachricht: "Bitte schreiben Sie kurz, was gemacht werden soll."
+  };
+
+  function setze(input, text) {
     input.setAttribute("aria-invalid", text ? "true" : "false");
-    feld(fehlerId).textContent = text;
+    var ziel = document.getElementById(input.getAttribute("aria-describedby"));
+    if (ziel) ziel.textContent = text;
   }
 
   function pruefen() {
-    var name = feld("f-name");
-    var kontakt = feld("f-kontakt");
-    var text = feld("f-nachricht");
     var erstes = null;
-
-    if (!name.value.trim()) {
-      setze(name, "f-name-fehler", "Bitte geben Sie Ihren Namen an.");
-      erstes = erstes || name;
-    } else {
-      setze(name, "f-name-fehler", "");
-    }
-
-    var wert = kontakt.value.trim();
-    var istTel = wert.replace(/[^0-9]/g, "").length >= 6;
-    var istMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wert);
-    if (!istTel && !istMail) {
-      setze(kontakt, "f-kontakt-fehler", wert
-        ? "Das sieht weder nach Telefonnummer noch nach E-Mail aus. Bitte prüfen Sie die Angabe."
-        : "Wie erreichen wir Sie? Bitte Telefonnummer oder E-Mail angeben.");
-      erstes = erstes || kontakt;
-    } else {
-      setze(kontakt, "f-kontakt-fehler", "");
-    }
-
-    if (!text.value.trim()) {
-      setze(text, "f-nachricht-fehler", "Bitte schreiben Sie kurz, was gemacht werden soll.");
-      erstes = erstes || text;
-    } else {
-      setze(text, "f-nachricht-fehler", "");
-    }
+    form.querySelectorAll("[required]").forEach(function (input) {
+      var wert = input.value.trim();
+      var text = "";
+      if (input.name === "Kontakt") {
+        var nurTelefon = input.type === "tel";
+        var istTel = wert.replace(/[^0-9]/g, "").length >= 6;
+        var istMail = !nurTelefon && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wert);
+        if (!istTel && !istMail) {
+          if (nurTelefon) {
+            text = wert ? "Bitte prüfen Sie die Telefonnummer." : "Unter welcher Nummer erreichen wir Sie?";
+          } else {
+            text = wert
+              ? "Das sieht weder nach Telefonnummer noch nach E-Mail aus. Bitte prüfen Sie die Angabe."
+              : "Wie erreichen wir Sie? Bitte Telefonnummer oder E-Mail angeben.";
+          }
+        }
+      } else if (!wert) {
+        text = meldungen[input.name] || "Bitte ausfüllen.";
+      }
+      setze(input, text);
+      if (text && !erstes) erstes = input;
+    });
     return erstes;
   }
 
   function daten() {
     var d = new FormData(form);
-    var leistung = d.get("Leistung") || "nicht angegeben";
+    function wert(k, ersatz) {
+      var v = d.get(k);
+      return (v && String(v).trim()) || ersatz;
+    }
     return {
-      name: d.get("Name").trim(),
-      kontakt: d.get("Kontakt").trim(),
-      ort: d.get("Ort").trim() || "nicht angegeben",
-      leistung: leistung,
-      nachricht: d.get("Nachricht").trim(),
+      name: wert("Name", ""),
+      kontakt: wert("Kontakt", ""),
+      ort: wert("Ort", "nicht angegeben"),
+      leistung: wert("Leistung", "nicht angegeben"),
+      nachricht: wert("Nachricht", "Bitte um Rückruf."),
       falle: d.get("botcheck")
     };
+  }
+
+  function betreff(a) {
+    return (rueckruf ? "Bitte um Rückruf: " : "Anfrage über die Website: ") + a.leistung;
   }
 
   function perMail(a) {
@@ -280,7 +321,7 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
       "Leistung: " + a.leistung, "Ort: " + a.ort, "", a.name, a.kontakt
     ];
     window.location.href = "mailto:kameribau@hotmail.com"
-      + "?subject=" + encodeURIComponent("Anfrage über die Website: " + a.leistung)
+      + "?subject=" + encodeURIComponent(betreff(a))
       + "&body=" + encodeURIComponent(zeilen.join("\n"));
     status.className = "formular-status";
     status.textContent = "Ihr E-Mail-Programm sollte sich jetzt öffnen. Bitte senden Sie die Nachricht dort ab. Falls sich nichts öffnet: kameribau@hotmail.com oder 0152 36695793.";
@@ -291,8 +332,11 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
     box.className = "formular-danke";
     box.setAttribute("role", "status");
     box.setAttribute("tabindex", "-1");
-    box.innerHTML = "<h3>" + HAKEN_SVG + "Danke, Ihre Anfrage ist angekommen.</h3>"
-      + "<p>Wir melden uns bei Ihnen. Wenn es eilt, erreichen Sie uns unter " + TELEFON_LINK + ".</p>";
+    box.innerHTML = rueckruf
+      ? "<h3>" + HAKEN_SVG + "Danke, wir rufen Sie zurück.</h3>"
+        + "<p>Wenn es eilt, erreichen Sie uns direkt unter " + TELEFON_LINK + ".</p>"
+      : "<h3>" + HAKEN_SVG + "Danke, Ihre Anfrage ist angekommen.</h3>"
+        + "<p>Wir melden uns bei Ihnen. Wenn es eilt, erreichen Sie uns unter " + TELEFON_LINK + ".</p>";
     form.replaceWith(box);
     box.focus();
   }
@@ -327,8 +371,9 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
         access_key: WEB3FORMS_SCHLUESSEL,
-        subject: "Anfrage über die Website: " + a.leistung,
+        subject: betreff(a),
         from_name: "Website Kameri",
+        Art: rueckruf ? "Rückruf" : "Anfrage",
         Name: a.name,
         Kontakt: a.kontakt,
         Ort: a.ort,
@@ -344,7 +389,7 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
       .catch(function () {
         form.removeAttribute("aria-busy");
         knopf.disabled = false;
-        knopf.textContent = "Anfrage senden";
+        knopf.textContent = knopfText;
         fehlgeschlagen();
       });
   });
@@ -352,4 +397,4 @@ document.querySelectorAll("[data-jahr]").forEach(function (el) {
   form.addEventListener("input", function (ev) {
     if (ev.target.getAttribute("aria-invalid") === "true") pruefen();
   });
-})();
+});

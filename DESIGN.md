@@ -106,19 +106,25 @@ components:
 
 Vom Inhaber aus drei Entwürfen gewählt: Entwurf B (hell und modern, Bildercollage) als Grundlage, dazu dunkle Abschnitte aus Entwurf A. Auf Wunsch des Inhabers an die Prüfregeln angepasst: keine Rahmen, kein Hinweis-Kästchen über der Überschrift, zweizeilige Überschrift, weniger verbreitete Schrift. Die Seite steht auf warm-hellem Grund, trägt fette, eng gesetzte Überschriften in Hanken Grotesk, große Fotos mit runden Ecken und weiche Pill-Knöpfe. Zwei dunkle Abschnitte (Ablauf und Kontakt) geben Gewicht und wirken edel. Rot bleibt für Handlungen.
 
-Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen, der Firmenname als riesige Schrift, die erste schlichte Fassung mit dünner Schrift (vom Inhaber mit 4/10 bewertet).
+Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen, der Firmenname als riesige Schrift, die erste schlichte Fassung mit dünner Schrift (vom Inhaber mit 4/10 bewertet), große randlose Fotoflächen im Stil von haring.de.
+
+Vorbilder des Inhabers (Mischung, nicht kopieren): bomach.de (klare Gliederung, Leistungsseiten), haring.de (Markenfarbe als Fläche), ein Dribbble-Entwurf „USA Home Renovation“ (dunkle Bühne mit Formular, Bildkacheln). Die Fassung mit Collage wurde mit 6/10 bewertet.
 
 **Key Characteristics:**
-- Start: zweizeilige Überschrift „Trockenbau aus Leimen“, Pill-Knöpfe, Collage aus drei Fotos
+- Mehrere Seiten: Startseite, je eine Seite für Trockenbau, Umbau, Böden und Renovierung, dazu Impressum und Datenschutz. Alle Seiten entstehen mit `node _bauen/bauen.mjs` aus gemeinsamen Bausteinen; HTML nicht direkt bearbeiten, sondern im Generator.
+- Startseite: Bühne als abgerundete, fast randlose Fläche mit Foto und Abdunklung, weiße zweizeilige Überschrift „Trockenbau aus Leimen“, Pill-Knöpfe und ein weißes Rückruf-Formular (Name, Telefon, Leistung). Am Handy entfällt das Rückruf-Formular, dort reichen Anrufen und WhatsApp.
 - Drei Kennzahlen ohne Kasten: 0 €, 40 km, 1 Ansprechpartner
-- Trockenbau als breite weiße Fläche oben, darunter drei Leistungen als Foto mit Text, ohne Kasten
-- Dunkle Abschnitte mit dunklen Flächen und großen roten Schrittnummern
-- Schwebende Pill-Leiste am Handy
+- Leistungen als hohe Bildkacheln mit Abdunklung, Name und Pfeil-Kreis; jede führt zu ihrer Seite. Trockenbau trägt das rote Schild „Schwerpunkt“.
+- Leistungsseiten: Pfad, Überschrift „… in Leimen“, Foto rechts, weiße Flächen mit „Was dazugehört“, Ablauf, eigene Fragen, weitere Leistungen, Kontakt mit vorausgewählter Leistung.
+- Ablauf dunkel mit großen roten Schrittnummern
+- Kontakt als rote, abgerundete Fläche: Logorot als große Markenfläche, weißes Formular darauf.
+- Kopf mit Leistungen in der weißen Pill-Navigation, aktuelle Seite dunkel hinterlegt; am Handy klappt ein Menü unter dem Kopf auf.
+- Schwebende Pill-Leiste am Handy, die beim Runterscrollen weicht und beim Hochscrollen wiederkommt
 
 ## Colors
 
 ### Primary
-- **Logorot** (`#c2262b`): Hauptknöpfe, Schrittnummern, Punkt im Hinweis, Leimen auf der Karte. Hover `#a51f24`.
+- **Logorot** (`#c2262b`): Hauptknöpfe, Schrittnummern, Schild „Schwerpunkt“, Leimen auf der Karte und die Kontaktfläche. Hover `#a51f24`.
 
 ### Neutral
 - **Grund** (`#f3f3f1`), **Weiß** für Flächen. Flächen setzen sich durch Tonstufe ab, nicht durch Rahmen; Linien nur an Formularfeldern.
@@ -126,7 +132,7 @@ Abgelehnt und nicht wieder aufnehmen: Gipskarton-Motive mit Punkten und Kästen,
 - **Dunkel** (`#141416`) mit **dunklen Karten** (`#1e1e22`) für Ablauf und Kontakt.
 
 ### Named Rules
-**The Red Means Act Rule.** Rot nur auf Handlungen und kleinen Orientierungszeichen.
+**The Red Means Act Rule.** Rot auf Handlungen und kleinen Orientierungszeichen. Einzige große rote Fläche ist der Kontakt am Seitenende, denn dort wird gehandelt.
 
 ## Typography
 

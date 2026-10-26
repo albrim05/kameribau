@@ -8,7 +8,9 @@ web
 
 ## Stack
 
-Statisches HTML/CSS (vom Nutzer gewählt). Hosting: noch offen.
+Statisches HTML/CSS (vom Nutzer gewählt). Die Seiten werden mit `node _bauen/bauen.mjs` aus gemeinsamen Bausteinen erzeugt. Hosting: GitHub Pages.
+
+Seiten: Startseite, Trockenbau, Umbau, Böden, Renovierung, Impressum, Datenschutz. Eine Seite „Projekte“ folgt, sobald echte Fotos da sind.
 
 ## Users
 
@@ -70,7 +72,7 @@ Firmenname: **Kameri**, Zusatz **„alles rund ums Haus“**. „Kameribau“ is
 
 ## Look
 
-Vom Inhaber gewählt: modern, hochwertig, „premium“. Aus drei Entwürfen: B (hell, fette Überschrift, Bildercollage mit runden Ecken, Pill-Knöpfe) als Grundlage plus dunkle Abschnitte aus A. Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift, die schlichte Fassung mit dünner Schrift (4/10).
+Vom Inhaber gewählt: modern, hochwertig, „premium“. Aus drei Entwürfen: B (hell, fette Überschrift, Bildercollage mit runden Ecken, Pill-Knöpfe) als Grundlage plus dunkle Abschnitte aus A. Logo normal groß, Rot nur für Handlungen. Abgelehnt: Gipskarton-Motive, gepunktete Kästen, der Firmenname als riesige Schrift, die schlichte Fassung mit dünner Schrift (4/10), große randlose Fotoflächen wie bei haring.de. Die Collage-Fassung bekam 6/10; danach wurden Bühne mit Foto, Bildkacheln, Unterseiten und die rote Kontaktfläche eingeführt.
 
 ## Voice
 

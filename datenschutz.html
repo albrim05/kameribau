@@ -7,21 +7,49 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#f3f3f1">
   <link rel="icon" type="image/png" href="bilder/favicon.png">
-  <link rel="stylesheet" href="stil.css?v=8">
+  <link rel="apple-touch-icon" href="bilder/favicon.png">
+  <link rel="preload" href="schriften/hanken-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="schriften/hanken-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="stil.css?v=9">
+  <meta property="og:title" content="Datenschutzerklärung – Kameri">
+  <meta property="og:image" content="bilder/fotos/wohnraum-1200.jpg">
+  <meta property="og:locale" content="de_DE">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
+  <a class="springen" href="#inhalt">Zum Inhalt springen</a>
+
+  <svg width="0" height="0" class="symbole" aria-hidden="true">
+    <symbol id="i-telefon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.5l1.8 4.6-2.4 1.5a11 11 0 0 0 6 6l1.5-2.4L20 14.5V18a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1 0 12 3.5Z"/></symbol>
+    <symbol id="i-post" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+    <symbol id="i-haken" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-pfeil" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+  </svg>
+
   <header class="kopf">
     <div class="kopf-innen">
-      <a class="marke" href="index.html" aria-label="Kameri – zur Startseite">
+      <a class="marke" href="index.html" aria-label="Kameri – alles rund ums Haus, zur Startseite">
         <img src="bilder/logo-260.png" width="260" height="159" alt="Kameri – alles rund ums Haus">
       </a>
-      <nav class="navi" aria-label="Navigation">
-        <a href="index.html">Startseite</a>
+      <nav class="navi" id="navi" aria-label="Hauptnavigation">
+        <a href="trockenbau.html">Trockenbau</a>
+          <a href="umbau.html">Umbau</a>
+          <a href="boeden.html">Böden</a>
+          <a href="renovierung.html">Renovierung</a>
+        <a href="index.html#gebiet">Einsatzgebiet</a>
         <a href="index.html#kontakt">Kontakt</a>
       </nav>
+      <a class="kopf-telefon" href="tel:+4915236695793">
+        <svg aria-hidden="true"><use href="#i-telefon"/></svg>
+        <span>0152 36695793</span>
+      </a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="navi" aria-label="Menü öffnen"><span></span><span></span></button>
     </div>
   </header>
-  <main>
+
+  <main id="inhalt">
     <article class="innen recht">
       <div class="recht-innen">
         <h1>Datenschutzerklärung</h1>
@@ -37,7 +65,7 @@
         </address>
 
         <h2>2. Das Wichtigste in Kürze</h2>
-        <p>Diese Website setzt keine Cookies, verwendet keine Analyse- oder Werbedienste und lädt keine Inhalte von fremden Servern. Schriftarten und Bilder sind auf unserem eigenen Webspace gespeichert. Nur wenn Sie das Anfrageformular absenden, werden Daten an den unten genannten Formulardienst übertragen.</p>
+        <p>Diese Website setzt keine Cookies, verwendet keine Analyse- oder Werbedienste und lädt keine Inhalte von fremden Servern. Schriftarten und Bilder sind auf unserem eigenen Webspace gespeichert. Nur wenn Sie eines der Formulare absenden, werden Daten an den unten genannten Formulardienst übertragen.</p>
 
         <h2>3. Hosting und Server-Logdateien</h2>
         <p>Beim Aufruf der Website verarbeitet unser Hosting-Anbieter technisch notwendige Daten, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, Browsertyp und Betriebssystem sowie die zuvor besuchte Seite. Diese Daten werden benötigt, um die Website auszuliefern und ihre Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). Sie werden nach kurzer Zeit gelöscht und nicht mit anderen Daten zusammengeführt.</p>
@@ -46,8 +74,8 @@
         <h2>4. Kontaktaufnahme</h2>
         <h3>Telefon und E-Mail</h3>
         <p>Wenn Sie uns anrufen oder eine E-Mail schreiben, verarbeiten wir Ihre Angaben (zum Beispiel Name, Telefonnummer, E-Mail-Adresse und Ihr Anliegen), um Ihre Anfrage zu beantworten und gegebenenfalls ein Angebot zu erstellen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (Beantwortung allgemeiner Anfragen).</p>
-        <h3>Anfrageformular</h3>
-        <p>Wenn Sie das Anfrageformular nutzen, werden Ihre Angaben (Name, Telefonnummer oder E-Mail-Adresse, Ort, gewünschte Leistung und Ihre Nachricht) über den Dienst Web3Forms an unser E-Mail-Postfach weitergeleitet. Wir verwenden die Angaben nur, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Informationen zum Datenschutz bei Web3Forms finden Sie unter <a href="https://web3forms.com/privacy">web3forms.com/privacy</a>.</p>
+        <h3>Anfrage- und Rückrufformular</h3>
+        <p>Wenn Sie das Anfrageformular oder das Rückrufformular nutzen, werden Ihre Angaben (Name, Telefonnummer oder E-Mail-Adresse, gegebenenfalls Ort, gewünschte Leistung und Ihre Nachricht) über den Dienst Web3Forms an unser E-Mail-Postfach weitergeleitet. Wir verwenden die Angaben nur, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Informationen zum Datenschutz bei Web3Forms finden Sie unter <a href="https://web3forms.com/privacy">web3forms.com/privacy</a>.</p>
         <p>Ist der Dienst nicht erreichbar, öffnet sich stattdessen Ihr eigenes E-Mail-Programm mit einer vorbereiteten Nachricht; dann gelten die Angaben zur E-Mail.</p>
         <h3>WhatsApp</h3>
         <p>Sie können uns auch über WhatsApp kontaktieren. Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, ein Unternehmen der Meta-Gruppe. Dabei können Daten auch in die USA übermittelt werden. Die Nachrichteninhalte sind Ende-zu-Ende-verschlüsselt; WhatsApp verarbeitet jedoch Metadaten wie Telefonnummer und Zeitpunkt der Kommunikation. Die Nutzung ist freiwillig – Sie können uns jederzeit auch telefonisch oder per E-Mail erreichen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO. Weitere Informationen finden Sie in der Datenschutzrichtlinie von WhatsApp.</p>
@@ -60,22 +88,34 @@
       </div>
     </article>
   </main>
+
   <footer class="fuss">
     <div class="innen fuss-innen">
-      <img class="fuss-logo" src="bilder/logo-260.png" width="260" height="159" alt="Kameri – alles rund ums Haus" loading="lazy">
-      <div>
-        <p class="fuss-titel">Adresse</p>
+      <div class="fuss-marke">
+        <img class="fuss-logo" src="bilder/logo-260.png" width="260" height="159" alt="Kameri – alles rund ums Haus" loading="lazy">
         <p>Julius-Becker-Straße 14<br>69181 Leimen</p>
       </div>
       <div>
+        <p class="fuss-titel">Leistungen</p>
+        <p class="fuss-links"><a href="trockenbau.html">Trockenbau</a><a href="umbau.html">Umbau</a><a href="boeden.html">Böden</a><a href="renovierung.html">Renovierung</a></p>
+      </div>
+      <div>
         <p class="fuss-titel">Kontakt</p>
-        <p class="fuss-links"><a href="tel:+4915236695793">0152 36695793</a><a href="mailto:kameribau@hotmail.com">kameribau@hotmail.com</a></p>
+        <p class="fuss-links"><a href="tel:+4915236695793">0152 36695793</a><a href="https://wa.me/4915236695793">WhatsApp</a><a href="mailto:kameribau@hotmail.com">kameribau@hotmail.com</a></p>
       </div>
       <div>
         <p class="fuss-titel">Rechtliches</p>
         <p class="fuss-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></p>
       </div>
+      <p class="fuss-recht">© <span data-jahr>2026</span> Kameri – alles rund ums Haus. Einsatzgebiet: Leimen, Heidelberg, Mannheim, Wiesloch, Walldorf, Schwetzingen, Hockenheim, Sinsheim, Speyer und Umgebung. Fotos: Unsplash (Beispielbilder).</p>
     </div>
   </footer>
+
+  <div class="leiste" data-leiste>
+    <a class="leiste-anruf" href="tel:+4915236695793"><svg aria-hidden="true"><use href="#i-telefon"/></svg>Anrufen</a>
+    <a class="leiste-whatsapp" href="https://wa.me/4915236695793"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+  </div>
+
+  <script src="seite.js?v=9" defer></script>
 </body>
 </html>

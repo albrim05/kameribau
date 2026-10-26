@@ -10,10 +10,10 @@
   <link rel="apple-touch-icon" href="bilder/favicon.png">
   <link rel="preload" href="schriften/hanken-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="schriften/hanken-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="stil.css?v=8">
-  <meta property="og:title" content="Kameri – alles rund ums Haus">
-  <meta property="og:description" content="Trockenbau, Umbau, Böden und Renovierung aus Leimen. Beratung und Angebot kostenlos.">
-  <meta property="og:image" content="bilder/fotos/wohnkueche-1200.jpg">
+  <link rel="stylesheet" href="stil.css?v=9">
+  <meta property="og:title" content="Kameri – Trockenbau und Innenausbau in Leimen">
+  <meta property="og:description" content="Kameri aus Leimen: Trockenbau, Umbau, Böden und Renovierung für Privatkunden und Firmen im Umkreis von 40 km. Beratung und Angebot kostenlos. Tel. 0152 36695793.">
+  <meta property="og:image" content="bilder/fotos/wohnraum-1200.jpg">
   <meta property="og:locale" content="de_DE">
   <script type="application/ld+json">
   {
@@ -51,39 +51,71 @@
 
   <header class="kopf">
     <div class="kopf-innen">
-      <a class="marke" href="#inhalt" aria-label="Kameri – alles rund ums Haus, zum Seitenanfang">
+      <a class="marke" href="index.html" aria-label="Kameri – alles rund ums Haus, zur Startseite">
         <img src="bilder/logo-260.png" width="260" height="159" alt="Kameri – alles rund ums Haus">
       </a>
-      <nav class="navi" aria-label="Hauptnavigation">
-        <a href="#leistungen">Leistungen</a>
-        <a href="#ablauf">Ablauf</a>
+      <nav class="navi" id="navi" aria-label="Hauptnavigation">
+        <a href="trockenbau.html">Trockenbau</a>
+          <a href="umbau.html">Umbau</a>
+          <a href="boeden.html">Böden</a>
+          <a href="renovierung.html">Renovierung</a>
         <a href="#gebiet">Einsatzgebiet</a>
-        <a href="#fragen">Fragen</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
       <a class="kopf-telefon" href="tel:+4915236695793">
         <svg aria-hidden="true"><use href="#i-telefon"/></svg>
         <span>0152 36695793</span>
       </a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="navi" aria-label="Menü öffnen"><span></span><span></span></button>
     </div>
   </header>
 
   <main id="inhalt">
-    <section class="start" aria-labelledby="titel">
-      <div class="start-text">
-        <h1 id="titel">Trockenbau aus Leimen</h1>
-        <p class="start-lead">Innenausbau aus einer Hand: neue Wände und Decken, Umbauten, Böden und Renovierung. Beratung und Angebot sind kostenlos, und Sie sprechen direkt mit dem Inhaber.</p>
-        <div class="aktionen">
-          <a class="knopf knopf-rot" href="tel:+4915236695793"><svg aria-hidden="true"><use href="#i-telefon"/></svg>0152 36695793 anrufen</a>
-          <a class="knopf knopf-weiss" href="https://wa.me/4915236695793"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp schreiben</a>
+    <div class="buehne-rahmen">
+      <section class="buehne" aria-labelledby="titel">
+        <div class="buehne-bild">
+          <img src="bilder/fotos/wohnraum-1200.jpg" srcset="bilder/fotos/wohnraum-800.jpg 800w, bilder/fotos/wohnraum-1200.jpg 1200w, bilder/fotos/wohnraum-1600.jpg 1600w" sizes="100vw" width="1200" height="633" fetchpriority="high" alt="Heller, großer Wohnraum mit Holzboden und langen Fenstern">
         </div>
-      </div>
-      <div class="collage">
-        <img class="collage-gross" src="bilder/fotos/wohnkueche-1200.jpg" srcset="bilder/fotos/wohnkueche-800.jpg 800w, bilder/fotos/wohnkueche-1200.jpg 1200w, bilder/fotos/wohnkueche-1600.jpg 1600w" sizes="(max-width: 860px) 60vw, 25vw" width="1200" height="816" fetchpriority="high" alt="Heller Wohnraum mit offener Küche und Holzboden">
-        <img src="bilder/fotos/trockenbau-bogen-800.jpg" srcset="bilder/fotos/trockenbau-bogen-800.jpg 800w, bilder/fotos/trockenbau-bogen-1200.jpg 1200w" sizes="(max-width: 860px) 40vw, 22vw" width="800" height="1200" alt="Weißer Raum mit gerundetem Wanddurchgang">
-        <img src="bilder/fotos/raum-eichenboden-800.jpg" srcset="bilder/fotos/raum-eichenboden-800.jpg 800w, bilder/fotos/raum-eichenboden-1200.jpg 1200w" sizes="(max-width: 860px) 40vw, 22vw" width="800" height="1481" alt="Frisch renovierter Flur mit Holzboden">
-      </div>
-    </section>
+        <div class="buehne-text">
+          <h1 id="titel">Trockenbau aus Leimen</h1>
+          <p class="buehne-lead">Wände, Decken, Umbauten, Böden und Renovierung für Privatkunden und Firmen. Beratung und Angebot sind kostenlos, und Sie sprechen direkt mit dem Inhaber.</p>
+          <div class="aktionen">
+            <a class="knopf knopf-rot" href="tel:+4915236695793"><svg aria-hidden="true"><use href="#i-telefon"/></svg>0152 36695793 anrufen</a>
+            <a class="knopf knopf-glas" href="https://wa.me/4915236695793"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp schreiben</a>
+          </div>
+        </div>
+
+        <form class="rueckruf" id="rueckruf" data-anfrage="rueckruf" action="mailto:kameribau@hotmail.com" method="post" enctype="text/plain" novalidate>
+          <p class="rueckruf-titel"><b>Rückruf anfordern</b> Name und Nummer genügen, wir rufen Sie zurück.</p>
+          <div class="rueckruf-felder">
+            <div class="feld">
+              <label for="r-name">Name</label>
+              <input id="r-name" name="Name" type="text" autocomplete="name" required aria-describedby="r-name-fehler">
+              <span class="fehler" id="r-name-fehler"></span>
+            </div>
+            <div class="feld">
+              <label for="r-telefon">Telefonnummer</label>
+              <input id="r-telefon" name="Kontakt" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="r-telefon-fehler">
+              <span class="fehler" id="r-telefon-fehler"></span>
+            </div>
+            <div class="feld">
+              <label for="r-leistung">Worum geht es?</label>
+              <select id="r-leistung" name="Leistung">
+                <option value="" selected>Bitte wählen</option>
+                <option>Trockenbau</option>
+                <option>Umbau</option>
+                <option>Boden</option>
+                <option>Renovierung</option>
+                <option>Etwas anderes</option>
+              </select>
+            </div>
+            <button class="knopf knopf-rot" type="submit">Rückruf anfordern</button>
+          </div>
+          <input class="falle" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="formular-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
 
     <section class="werte" aria-label="Auf einen Blick">
       <div class="wert"><b>0 €</b><span>für Beratung, Ausmessen und Angebot</span></div>
@@ -95,47 +127,67 @@
       <div class="innen">
         <div class="abschnitt-kopf" data-zeigen>
           <h2 id="leistungen-titel">Leistungen</h2>
-          <p>Trockenbau ist unser Schwerpunkt. Was dazugehört, machen wir gleich mit: den Umbau, den neuen Boden, die Renovierung.</p>
+          <p>Trockenbau ist unser Schwerpunkt. Umbau, Böden und Renovierung kommen aus derselben Hand.</p>
         </div>
+        <div class="kacheln">
+          <a class="kachel" href="trockenbau.html" data-zeigen>
+            <img src="bilder/fotos/trockenbau-bogen-1200.jpg" srcset="bilder/fotos/trockenbau-bogen-800.jpg 800w, bilder/fotos/trockenbau-bogen-1200.jpg 1200w, bilder/fotos/trockenbau-bogen-1600.jpg 1600w" sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" width="1200" height="1800" loading="lazy" alt="Weißer Raum mit gerundetem Wanddurchgang">
+            <span class="kachel-marke">Schwerpunkt</span>
+            <span class="kachel-pfeil"><svg aria-hidden="true"><use href="#i-pfeil"/></svg></span>
+            <span class="kachel-text">
+              <span class="kachel-name">Trockenbau</span>
+              <span class="kachel-kurz">Wände, Decken, Dachgeschoss</span>
+            </span>
+          </a>
+          <a class="kachel" href="umbau.html" data-zeigen>
+            <img src="bilder/fotos/umbau-altbau-1200.jpg" srcset="bilder/fotos/umbau-altbau-800.jpg 800w, bilder/fotos/umbau-altbau-1200.jpg 1200w, bilder/fotos/umbau-altbau-1600.jpg 1600w" sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" width="1200" height="798" loading="lazy" alt="Altbauwohnung im Umbau mit geöffneter Wand und Stützen">
+            
+            <span class="kachel-pfeil"><svg aria-hidden="true"><use href="#i-pfeil"/></svg></span>
+            <span class="kachel-text">
+              <span class="kachel-name">Umbau</span>
+              <span class="kachel-kurz">Räume teilen, Türen versetzen</span>
+            </span>
+          </a>
+          <a class="kachel" href="boeden.html" data-zeigen>
+            <img src="bilder/fotos/boden-fischgraet-1200.jpg" srcset="bilder/fotos/boden-fischgraet-800.jpg 800w, bilder/fotos/boden-fischgraet-1200.jpg 1200w, bilder/fotos/boden-fischgraet-1600.jpg 1600w" sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" width="1200" height="1800" loading="lazy" alt="Wohnzimmer mit Parkett und hellen Wänden">
+            
+            <span class="kachel-pfeil"><svg aria-hidden="true"><use href="#i-pfeil"/></svg></span>
+            <span class="kachel-text">
+              <span class="kachel-name">Böden</span>
+              <span class="kachel-kurz">Laminat, Vinyl, Parkett</span>
+            </span>
+          </a>
+          <a class="kachel" href="renovierung.html" data-zeigen>
+            <img src="bilder/fotos/renovierung-farbe-1200.jpg" srcset="bilder/fotos/renovierung-farbe-800.jpg 800w, bilder/fotos/renovierung-farbe-1200.jpg 1200w, bilder/fotos/renovierung-farbe-1600.jpg 1600w" sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" width="1200" height="839" loading="lazy" alt="Farbroller streicht eine Wand hellblau">
+            
+            <span class="kachel-pfeil"><svg aria-hidden="true"><use href="#i-pfeil"/></svg></span>
+            <span class="kachel-text">
+              <span class="kachel-name">Renovierung</span>
+              <span class="kachel-kurz">Räume wieder bezugsfertig</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <div class="leistungen">
-          <article class="leistung leistung-gross" data-zeigen>
-            <div class="leistung-bild"><img src="bilder/fotos/trockenbau-bogen-1200.jpg" srcset="bilder/fotos/trockenbau-bogen-800.jpg 800w, bilder/fotos/trockenbau-bogen-1200.jpg 1200w, bilder/fotos/trockenbau-bogen-1600.jpg 1600w" sizes="(max-width: 720px) 100vw, 50vw" width="1200" height="1800" loading="lazy" alt="Weißer Raum mit gerundetem Wanddurchgang"></div>
-            <div class="leistung-text">
-              <h3>Trockenbau</h3>
-              <p>Neue Wände und Decken aus Metallständern und Gipskarton. Ohne Mörtel und ohne lange Trocknungszeit, deshalb ist der Raum schnell wieder nutzbar.</p>
-              <ul>
-                <li>Trennwände</li>
-                <li>Abgehängte Decken</li>
-                <li>Dachgeschossausbau</li>
-                <li>Wandverkleidungen</li>
-                <li>Wände für Leitungen</li>
-                <li>Spachteln</li>
-              </ul>
+    <section class="abschnitt abschnitt-oben-frei" aria-labelledby="kunden-titel">
+      <div class="innen">
+        <div class="abschnitt-kopf" data-zeigen>
+          <h2 id="kunden-titel">Für Privatkunden und Firmen</h2>
+        </div>
+        <div class="kunden">
+          <article class="kunde" data-zeigen>
+            <img src="bilder/fotos/wohnkueche-1200.jpg" srcset="bilder/fotos/wohnkueche-800.jpg 800w, bilder/fotos/wohnkueche-1200.jpg 1200w, bilder/fotos/wohnkueche-1600.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="816" loading="lazy" alt="Heller Wohnraum mit offener Küche und Holzboden">
+            <div class="kunde-text">
+              <h3>Privatkunden</h3>
+              <p>Das Dachgeschoss ausbauen, ein Kinderzimmer teilen, ein neuer Boden im Wohnzimmer. Wir kommen zu Ihnen nach Hause und sagen Ihnen vorher, was es kostet.</p>
             </div>
           </article>
-
-          <article class="leistung" data-zeigen>
-            <div class="leistung-bild"><img src="bilder/fotos/umbau-altbau-800.jpg" srcset="bilder/fotos/umbau-altbau-800.jpg 800w, bilder/fotos/umbau-altbau-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 30vw" width="800" height="532" loading="lazy" alt="Altbauwohnung im Umbau mit geöffneter Wand und Stützen"></div>
-            <div class="leistung-text">
-              <h3>Umbau</h3>
-              <p>Ein Zimmer teilen, eine Tür versetzen, eine Öffnung schließen. Wir passen den Grundriss an das an, was Sie heute brauchen.</p>
-            </div>
-          </article>
-
-          <article class="leistung" data-zeigen>
-            <div class="leistung-bild"><img src="bilder/fotos/boden-fischgraet-800.jpg" srcset="bilder/fotos/boden-fischgraet-800.jpg 800w, bilder/fotos/boden-fischgraet-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 30vw" width="800" height="1200" loading="lazy" alt="Wohnzimmer mit Fischgrätparkett und hellen Wänden"></div>
-            <div class="leistung-text">
-              <h3>Böden</h3>
-              <p>Laminat, Vinyl oder Parkett. Wir entfernen den alten Belag, gleichen den Untergrund aus und verlegen den neuen bis zur Sockelleiste.</p>
-            </div>
-          </article>
-
-          <article class="leistung" data-zeigen>
-            <div class="leistung-bild"><img src="bilder/fotos/renovierung-farbe-800.jpg" srcset="bilder/fotos/renovierung-farbe-800.jpg 800w, bilder/fotos/renovierung-farbe-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 30vw" width="800" height="559" loading="lazy" alt="Farbroller streicht eine Wand hellblau"></div>
-            <div class="leistung-text">
-              <h3>Renovierung</h3>
-              <p>Die Mietwohnung nach dem Auszug, das Büro vor dem Einzug, das Haus nach vielen Jahren. Wir machen die Räume wieder bezugsfertig.</p>
+          <article class="kunde" data-zeigen>
+            <img src="bilder/fotos/buero-1200.jpg" srcset="bilder/fotos/buero-800.jpg 800w, bilder/fotos/buero-1200.jpg 1200w, bilder/fotos/buero-1600.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="801" loading="lazy" alt="Bürofläche mit Glastrennwänden und abgehängter Decke">
+            <div class="kunde-text">
+              <h3>Firmen und Hausverwaltungen</h3>
+              <p>Büros umbauen, Praxen einrichten, Mietwohnungen nach dem Auszug herrichten. Wir stimmen die Termine mit Ihnen ab und arbeiten nach Angebot.</p>
             </div>
           </article>
         </div>
@@ -145,12 +197,12 @@
     <section class="dunkel" id="ablauf" aria-labelledby="ablauf-titel">
       <div class="innen ablauf-innen">
         <div class="ablauf-text" data-zeigen>
-          <h2 id="ablauf-titel">Beratung und Angebot kosten Sie nichts</h2>
-          <p>Wir kommen vorbei, sehen uns alles an und messen aus. Danach bekommen Sie ein schriftliches Angebot und entscheiden in Ruhe.</p>
+          <h2 id="ablauf-titel">So kommen Sie zu Ihrem Angebot</h2>
+          <p>Beratung, Ausmessen und Angebot kosten Sie nichts. Danach entscheiden Sie in Ruhe.</p>
           <div class="aktionen">
             <a class="knopf knopf-rot" href="tel:+4915236695793"><svg aria-hidden="true"><use href="#i-telefon"/></svg>0152 36695793 anrufen</a>
           </div>
-          <img class="ablauf-bild" src="bilder/fotos/kueche-dunkel-800.jpg" srcset="bilder/fotos/kueche-dunkel-800.jpg 800w, bilder/fotos/kueche-dunkel-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 40vw" width="800" height="874" loading="lazy" alt="Dunkle, edle Küche mit Holzfronten und Fischgrätboden">
+          <img class="ablauf-bild" src="bilder/fotos/kueche-dunkel-1200.jpg" srcset="bilder/fotos/kueche-dunkel-800.jpg 800w, bilder/fotos/kueche-dunkel-1200.jpg 1200w, bilder/fotos/kueche-dunkel-1600.jpg 1600w" sizes="(max-width: 860px) 100vw, 40vw" width="1200" height="1311" loading="lazy" alt="Dunkle, edle Küche mit Holzfronten und Fischgrätboden">
         </div>
         <ol class="ablauf">
           <li data-zeigen>
@@ -173,31 +225,7 @@
       </div>
     </section>
 
-    <section class="abschnitt" aria-labelledby="kunden-titel">
-      <div class="innen">
-        <div class="abschnitt-kopf" data-zeigen>
-          <h2 id="kunden-titel">Für Privatkunden und Firmen</h2>
-        </div>
-        <div class="kunden">
-          <article class="kunde" data-zeigen>
-            <img src="bilder/fotos/wohnraum-1200.jpg" srcset="bilder/fotos/wohnraum-800.jpg 800w, bilder/fotos/wohnraum-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="633" loading="lazy" alt="Großer, heller Wohnraum mit Sofa und Holzboden">
-            <div class="kunde-text">
-              <h3>Privatkunden</h3>
-              <p>Das Dachgeschoss ausbauen, ein Kinderzimmer teilen, ein neuer Boden im Wohnzimmer. Wir kommen zu Ihnen nach Hause und sagen Ihnen vorher, was es kostet.</p>
-            </div>
-          </article>
-          <article class="kunde" data-zeigen>
-            <img src="bilder/fotos/buero-1200.jpg" srcset="bilder/fotos/buero-800.jpg 800w, bilder/fotos/buero-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="801" loading="lazy" alt="Bürofläche mit Glastrennwänden und abgehängter Decke">
-            <div class="kunde-text">
-              <h3>Firmen und Hausverwaltungen</h3>
-              <p>Büros umbauen, Praxen einrichten, Mietwohnungen nach dem Auszug herrichten. Wir stimmen die Termine mit Ihnen ab und arbeiten nach Angebot.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="abschnitt abschnitt-oben-frei" id="gebiet" aria-labelledby="gebiet-titel">
+    <section class="abschnitt" id="gebiet" aria-labelledby="gebiet-titel">
       <div class="innen">
         <div class="gebiet-karte">
           <div class="gebiet-text" data-zeigen>
@@ -217,7 +245,7 @@
             <form class="ortcheck" id="ortcheck" novalidate>
               <label for="ort-eingabe">Ort oder Postleitzahl prüfen</label>
               <div class="ortcheck-zeile">
-                <input id="ort-eingabe" name="ort" type="text" list="ortliste" autocomplete="address-level2" enterkeyhint="search" placeholder="z. B. Nußloch oder 69226" autocapitalize="words">
+                <input id="ort-eingabe" name="ort" type="text" list="ortliste" autocomplete="address-level2" enterkeyhint="search" placeholder="z. B. Nußloch" autocapitalize="words">
                 <button class="knopf knopf-dunkel" type="submit">Prüfen</button>
               </div>
               <datalist id="ortliste"></datalist>
@@ -292,45 +320,46 @@
       </div>
     </section>
 
-    <section class="dunkel kontakt" id="kontakt" aria-labelledby="kontakt-titel">
-      <div class="innen kontakt-innen">
-        <div class="kontakt-text" data-zeigen>
-          <h2 id="kontakt-titel">Rufen Sie uns an</h2>
-          <a class="kontakt-nummer" href="tel:+4915236695793">0152 36695793</a>
-          <p>Am Telefon erreichen Sie direkt den Inhaber, Besim Kameri. Sie können auch per WhatsApp oder E-Mail schreiben.</p>
-          <div class="aktionen">
-            <a class="knopf knopf-rot" href="tel:+4915236695793"><svg aria-hidden="true"><use href="#i-telefon"/></svg>Anrufen</a>
-            <a class="knopf knopf-glas" href="https://wa.me/4915236695793"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
-            <a class="knopf knopf-glas" href="mailto:kameribau@hotmail.com"><svg aria-hidden="true"><use href="#i-post"/></svg>E-Mail</a>
+    <section class="kontakt" id="kontakt" aria-labelledby="kontakt-titel">
+      <div class="kontakt-flaeche">
+        <div class="innen kontakt-innen">
+          <div class="kontakt-text" data-zeigen>
+            <h2 id="kontakt-titel">Rufen Sie uns an</h2>
+            <a class="kontakt-nummer" href="tel:+4915236695793">0152 36695793</a>
+            <p>Am Telefon erreichen Sie direkt den Inhaber, Besim Kameri. Sie können auch per WhatsApp oder E-Mail schreiben.</p>
+            <div class="aktionen">
+              <a class="knopf knopf-weiss" href="tel:+4915236695793"><svg aria-hidden="true"><use href="#i-telefon"/></svg>Anrufen</a>
+              <a class="knopf knopf-glas" href="https://wa.me/4915236695793"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+              <a class="knopf knopf-glas" href="mailto:kameribau@hotmail.com"><svg aria-hidden="true"><use href="#i-post"/></svg>E-Mail</a>
+            </div>
+            <address>
+              Kameri – alles rund ums Haus<br>
+              Inhaber Besim Kameri<br>
+              Julius-Becker-Straße 14, 69181 Leimen<br>
+              <a class="textlink" href="mailto:kameribau@hotmail.com">kameribau@hotmail.com</a>
+            </address>
           </div>
-          <address>
-            Kameri – alles rund ums Haus<br>
-            Inhaber Besim Kameri<br>
-            Julius-Becker-Straße 14, 69181 Leimen<br>
-            <a class="textlink" href="mailto:kameribau@hotmail.com">kameribau@hotmail.com</a>
-          </address>
-        </div>
 
-        <form class="formular" id="anfrage" action="mailto:kameribau@hotmail.com" method="post" enctype="text/plain" novalidate data-zeigen>
-          <h3>Anfrage schreiben</h3>
-          <div class="feld">
-            <label for="f-name">Name</label>
-            <input id="f-name" name="Name" type="text" autocomplete="name" required aria-describedby="f-name-fehler">
-            <span class="fehler" id="f-name-fehler"></span>
-          </div>
-          <div class="feld">
-            <label for="f-kontakt">Telefon oder E-Mail</label>
-            <input id="f-kontakt" name="Kontakt" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" required aria-describedby="f-kontakt-fehler">
-            <span class="fehler" id="f-kontakt-fehler"></span>
-          </div>
-          <div class="feld-reihe">
+          <form class="formular" id="anfrage" data-anfrage action="mailto:kameribau@hotmail.com" method="post" enctype="text/plain" novalidate data-zeigen>
+            <h3>Anfrage schreiben</h3>
             <div class="feld">
-              <label for="f-ort">Ort</label>
-              <input id="f-ort" name="Ort" type="text" autocomplete="address-level2">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="Name" type="text" autocomplete="name" required aria-describedby="f-name-fehler">
+              <span class="fehler" id="f-name-fehler"></span>
             </div>
             <div class="feld">
-              <label for="f-leistung">Worum geht es?</label>
-              <select id="f-leistung" name="Leistung">
+              <label for="f-kontakt">Telefon oder E-Mail</label>
+              <input id="f-kontakt" name="Kontakt" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" required aria-describedby="f-kontakt-fehler">
+              <span class="fehler" id="f-kontakt-fehler"></span>
+            </div>
+            <div class="feld-reihe">
+              <div class="feld">
+                <label for="f-ort">Ort</label>
+                <input id="f-ort" name="Ort" type="text" autocomplete="address-level2">
+              </div>
+              <div class="feld">
+                <label for="f-leistung">Worum geht es?</label>
+                <select id="f-leistung" name="Leistung">
                 <option value="" selected>Bitte wählen</option>
                 <option>Trockenbau</option>
                 <option>Umbau</option>
@@ -338,38 +367,42 @@
                 <option>Renovierung</option>
                 <option>Etwas anderes</option>
               </select>
+              </div>
             </div>
-          </div>
-          <div class="feld">
-            <label for="f-nachricht">Was soll gemacht werden?</label>
-            <textarea id="f-nachricht" name="Nachricht" required aria-describedby="f-nachricht-fehler" placeholder="Zum Beispiel: Wohnzimmer teilen, mit Tür, ca. 4 m Wand"></textarea>
-            <span class="fehler" id="f-nachricht-fehler"></span>
-          </div>
-          <input class="falle" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="knopf knopf-rot knopf-breit" type="submit">Anfrage senden</button>
-          <p class="formular-hinweis"><span data-hinweis-mail>Öffnet Ihr E-Mail-Programm mit der fertigen Nachricht.</span> Mehr zum <a class="textlink" href="datenschutz.html">Datenschutz</a>.</p>
-          <p class="formular-status" role="status" aria-live="polite"></p>
-        </form>
+            <div class="feld">
+              <label for="f-nachricht">Was soll gemacht werden?</label>
+              <textarea id="f-nachricht" name="Nachricht" required aria-describedby="f-nachricht-fehler" placeholder="Zum Beispiel: Wohnzimmer teilen, mit Tür, ca. 4 m Wand"></textarea>
+              <span class="fehler" id="f-nachricht-fehler"></span>
+            </div>
+            <input class="falle" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="knopf knopf-rot knopf-breit" type="submit">Anfrage senden</button>
+            <p class="formular-hinweis"><span data-hinweis-mail>Öffnet Ihr E-Mail-Programm mit der fertigen Nachricht.</span> Mehr zum <a class="textlink" href="datenschutz.html">Datenschutz</a>.</p>
+            <p class="formular-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="fuss">
     <div class="innen fuss-innen">
-      <img class="fuss-logo" src="bilder/logo-260.png" width="260" height="159" alt="Kameri – alles rund ums Haus" loading="lazy">
-      <div>
-        <p class="fuss-titel">Adresse</p>
+      <div class="fuss-marke">
+        <img class="fuss-logo" src="bilder/logo-260.png" width="260" height="159" alt="Kameri – alles rund ums Haus" loading="lazy">
         <p>Julius-Becker-Straße 14<br>69181 Leimen</p>
       </div>
       <div>
+        <p class="fuss-titel">Leistungen</p>
+        <p class="fuss-links"><a href="trockenbau.html">Trockenbau</a><a href="umbau.html">Umbau</a><a href="boeden.html">Böden</a><a href="renovierung.html">Renovierung</a></p>
+      </div>
+      <div>
         <p class="fuss-titel">Kontakt</p>
-        <p class="fuss-links"><a href="tel:+4915236695793">0152 36695793</a><a href="mailto:kameribau@hotmail.com">kameribau@hotmail.com</a></p>
+        <p class="fuss-links"><a href="tel:+4915236695793">0152 36695793</a><a href="https://wa.me/4915236695793">WhatsApp</a><a href="mailto:kameribau@hotmail.com">kameribau@hotmail.com</a></p>
       </div>
       <div>
         <p class="fuss-titel">Rechtliches</p>
         <p class="fuss-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></p>
       </div>
-      <p class="fuss-recht">© <span data-jahr>2026</span> Kameri – alles rund ums Haus. Fotos: Unsplash (Beispielbilder).</p>
+      <p class="fuss-recht">© <span data-jahr>2026</span> Kameri – alles rund ums Haus. Einsatzgebiet: Leimen, Heidelberg, Mannheim, Wiesloch, Walldorf, Schwetzingen, Hockenheim, Sinsheim, Speyer und Umgebung. Fotos: Unsplash (Beispielbilder).</p>
     </div>
   </footer>
 
@@ -378,6 +411,6 @@
     <a class="leiste-whatsapp" href="https://wa.me/4915236695793"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
   </div>
 
-  <script src="seite.js?v=8" defer></script>
+  <script src="seite.js?v=9" defer></script>
 </body>
 </html>
